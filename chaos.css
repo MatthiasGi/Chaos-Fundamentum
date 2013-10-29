@@ -56,8 +56,6 @@ template {
  *    user zoom.
  */
 html {
-  font-family: sans-serif;
-  /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
@@ -587,6 +585,58 @@ textarea {
     page-break-after: avoid;
   }
 }
+html {
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #333333;
+}
+
+body {
+  background: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+h1, h2, h3 {
+  margin-top: .5em;
+  margin-bottom: .25em;
+}
+
+h4, h5, h6 {
+  margin: .25em 0;
+}
+
 h1 {
-  color: red;
+  font-size: 3.444em;
+}
+
+h2 {
+  font-size: 2.889em;
+}
+
+h3 {
+  font-size: 2.222em;
+}
+
+h4 {
+  font-size: 1.611em;
+}
+
+h5 {
+  font-size: 1.556em;
+}
+
+h6 {
+  font-size: 1.333em;
 }

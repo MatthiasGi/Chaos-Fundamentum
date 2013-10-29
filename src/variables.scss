@@ -1,0 +1,44 @@
+// Colors (as seen at https://github.com/designmodo/Flat-UI) as reference//
+// $color-turquoise:     #1abc9c;
+// $color-green-sea:     #16a085;
+// $color-emerald:       #2ecc71;
+// $color-nephritis:     #27ae60;
+// $color-peter-river:   #3498db;
+// $color-belize-hole:   #2980b9;
+// $color-amethyst:      #9b59b6;
+// $color-wisteria:      #8e44ad;
+// $color-wet-asphalt:   #34495e;
+// $color-midnight-blue: #2c3e50;
+// $color-sun-flower:    #f1c40f;
+// $color-orange:        #f39c12;
+// $color-carrot:        #e67e22;
+// $color-pumpkin:       #d35400;
+// $color-alizarin:      #e74c3c;
+// $color-pomegranate:   #c0392b;
+// $color-clouds:        #ecf0f1;
+// $color-silver:        #bdc3c7;
+// $color-concrete:      #95a5a6;
+// $color-asbestos:      #7f8c8d;
+
+// Colors
+// -----------------------------------------------------------------------------
+$color-background:    #fff;
+$color-text:          #333;
+
+
+// Typography
+// -----------------------------------------------------------------------------
+
+$font-family-sans-serif:     "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:          Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:      Monaco, Menlo, Consolas, "Courier New", monospace;
+
+$font-family:                $font-family-sans-serif;
+$font-heading-family:        $font-family;
+
+$font-heading-weight:        700;
+
+$font-size:                  1em;
+
+$line-height:                1.6;
+$line-height-actual:         floor($font-size * $line-height * 1000) / 1000;

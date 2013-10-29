@@ -1,6 +1,7 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 @import "normalize.scss";
 @import "boilerplate.scss";
 
-h1 { color: red; }
+@import "typography.scss";
