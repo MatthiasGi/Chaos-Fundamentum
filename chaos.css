@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -588,6 +589,13 @@ textarea {
 @font-face {
   font-family: 'Lato';
   font-style: normal;
+  font-weight: 300;
+  src: local("Lato Light"), local("Lato-Light"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
   font-weight: 400;
   src: local("Lato Regular"), local("Lato-Regular"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format("woff");
 }
@@ -597,6 +605,20 @@ textarea {
   font-style: normal;
   font-weight: 700;
   src: local("Lato Bold"), local("Lato-Bold"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Lato Black"), local("Lato-Black"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/BVtM30trf7q_jfqYeHfjtA.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local("Lato Light Italic"), local("Lato-LightItalic"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/2HG_tEPiQ4Z6795cGfdivD8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
 }
 
 @font-face {
@@ -613,17 +635,20 @@ textarea {
   src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/HkF_qI1x_noxlxhrhMQYED8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
 }
 
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 900;
+  src: local("Lato Black Italic"), local("Lato-BlackItalic"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/VNUH7ZAcagYBWsAiBBCEYz8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
 html {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.6;
 }
 
-html,
-button,
-input,
-select,
-textarea {
+html, button, input, select, textarea {
   color: #333333;
 }
 
@@ -660,6 +685,27 @@ h5 {
 
 h6 {
   font-size: 1.333em;
+}
+
+:lang(fr) > q {
+  quotes: "«" "»" "“" "”";
+}
+
+:lang(de) > q {
+  quotes: "„" "“" "‚" "‘";
+}
+
+:lang(ja) > q {
+  quotes: "「" "」" "『" "』";
+}
+
+blockquote {
+  margin: 1.5em 1.5em 1.5em 2em;
+  padding-left: 1em;
+  border-left: 5px solid #222;
+}
+blockquote cite:before {
+  content: "— ";
 }
 
 body {

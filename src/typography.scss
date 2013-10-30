@@ -4,11 +4,7 @@ html {
 	line-height: $line-height;
 }
 
-html,
-button,
-input,
-select,
-textarea {
+html, button, input, select, textarea {
 	color: $color-text;
 }
 
@@ -45,4 +41,18 @@ h5 {
 
 h6 {
 	@include heading(1.333);
+}
+
+:lang(fr) > q {quotes: "«" "»" "“" "”"}
+:lang(de) > q {quotes: "„" "“" "‚" "‘"}
+:lang(ja) > q {quotes: "「" "」" "『" "』"}
+
+blockquote {
+	margin: 1.5em 1.5em 1.5em 2em;
+	padding-left: 1em;
+	border-left: 5px solid #222;
+	
+	cite:before {
+		content: "— ";
+	}
 }
