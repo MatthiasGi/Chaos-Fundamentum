@@ -4,4 +4,9 @@
 @import "normalize.scss";
 @import "boilerplate.scss";
 
+@import "fonts.scss";
 @import "typography.scss";
+
+body {
+	padding: 0 20%;
+}
