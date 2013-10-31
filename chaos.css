@@ -702,10 +702,18 @@ h6 {
 blockquote {
   margin: 1.5em 1.5em 1.5em 2em;
   padding-left: 1em;
-  border-left: 5px solid #222;
+  border-left: 5px solid #222222;
 }
 blockquote cite:before {
   content: "— ";
+}
+
+pre {
+  background: #eeeeee;
+  padding: .5em 1em;
+  border: 1px solid #999999;
+  overflow: auto;
+  max-height: 16em;
 }
 
 body {

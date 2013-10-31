@@ -22,8 +22,14 @@
 
 // Colors
 // -----------------------------------------------------------------------------
+$color-gray-darker:   lighten(#000, 13.5%);
+$color-gray-dark:     lighten(#000, 20%);
+$color-gray:          lighten(#000, 33.5%);
+$color-gray-light:    lighten(#000, 60%);
+$color-gray-lighter:  lighten(#000, 93.5%);
+
 $color-background:    #fff;
-$color-text:          #333;
+$color-text:          $color-gray-dark;
 
 
 // Typography
@@ -42,3 +48,4 @@ $font-size:                  1em;
 
 $line-height:                1.6;
 $line-height-actual:         floor($font-size * $line-height * 1000) / 1000;
+$line-pre:                   10;
