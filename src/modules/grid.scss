@@ -1,4 +1,10 @@
+//
+// Module: Grid
+// -----------------------------------------------------------------------------
+
+// Basic cell mixin
 @mixin grid-cell {
+	position: relative;
 	padding: $grid-gutter / 2;
 	box-sizing: border-box;
 	background: $color-gray-lighter;
@@ -7,6 +13,8 @@
 }
 
 .grid {
+	
+	// Container style
 	display: flex;
 	flex-flow: row wrap;
 	
@@ -23,6 +31,7 @@
 	}
 
 
+	// Cell format
 	@each $size in "xs" $screen-xs, "sm" $screen-sm, "md" $screen-md, "lg" $screen-lg {
 	
 		.cell-#{nth($size, 1)} {
@@ -43,7 +52,18 @@
 
 			@each $width in $grid-widths {
 				.cell-#{nth($size, 1)}-#{$width} {
+					// Overwrite 100%-rule of mixin
 					width: $width * 1% !important;
+				}
+
+				// Push
+				.cell-#{nth($size, 1)}-push-#{$width} {
+					left: $width * 1%;
+				}
+
+				// Pull
+				.cell-#{nth($size, 1)}-pull-#{$width} {
+					right: $width * 1%;
 				}
 			}
 
