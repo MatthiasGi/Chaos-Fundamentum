@@ -598,6 +598,22 @@ body {
   background: white;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 h1,
 h2,
 h3,
@@ -725,7 +741,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -740,7 +755,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -755,7 +769,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -770,7 +783,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -785,7 +797,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -800,7 +811,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -815,7 +825,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -830,7 +839,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -845,7 +853,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -860,7 +867,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -875,7 +881,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -890,7 +895,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -905,7 +909,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -920,7 +923,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -935,7 +937,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -950,7 +951,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1155,7 +1155,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1170,7 +1169,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1185,7 +1183,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1200,7 +1197,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1215,7 +1211,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1230,7 +1225,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1245,7 +1239,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1260,7 +1253,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1275,7 +1267,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1290,7 +1281,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1305,7 +1295,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1320,7 +1309,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1335,7 +1323,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1350,7 +1337,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1365,7 +1351,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1380,7 +1365,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1585,7 +1569,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1600,7 +1583,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1615,7 +1597,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1630,7 +1611,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1645,7 +1625,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1660,7 +1639,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1675,7 +1653,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1690,7 +1667,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1705,7 +1681,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1720,7 +1695,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1735,7 +1709,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1750,7 +1723,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1765,7 +1737,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1780,7 +1751,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1795,7 +1765,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -1810,7 +1779,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2015,7 +1983,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2030,7 +1997,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2045,7 +2011,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2060,7 +2025,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2075,7 +2039,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2090,7 +2053,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2105,7 +2067,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2120,7 +2081,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2135,7 +2095,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2150,7 +2109,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2165,7 +2123,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2180,7 +2137,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2195,7 +2151,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2210,7 +2165,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2225,7 +2179,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
@@ -2240,7 +2193,6 @@ hr {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #eeeeee;
   -webkit-box-flex: none;
   -webkit-flex: none;
   -moz-box-flex: none;
