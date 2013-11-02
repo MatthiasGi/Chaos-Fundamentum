@@ -1,33 +1,19 @@
-// Colors (as seen at https://github.com/designmodo/Flat-UI) as reference//
-// $color-turquoise:     #1abc9c;
-// $color-green-sea:     #16a085;
-// $color-emerald:       #2ecc71;
-// $color-nephritis:     #27ae60;
-// $color-peter-river:   #3498db;
-// $color-belize-hole:   #2980b9;
-// $color-amethyst:      #9b59b6;
-// $color-wisteria:      #8e44ad;
-// $color-wet-asphalt:   #34495e;
-// $color-midnight-blue: #2c3e50;
-// $color-sun-flower:    #f1c40f;
-// $color-orange:        #f39c12;
-// $color-carrot:        #e67e22;
-// $color-pumpkin:       #d35400;
-// $color-alizarin:      #e74c3c;
-// $color-pomegranate:   #c0392b;
-// $color-clouds:        #ecf0f1;
-// $color-silver:        #bdc3c7;
-// $color-concrete:      #95a5a6;
-// $color-asbestos:      #7f8c8d;
+//
+// Customizable Variables
+// -----------------------------------------------------------------------------
+
 
 // Colors
 // -----------------------------------------------------------------------------
+
+// Gray colors
 $color-gray-darker:  lighten(#000, 13.5%);
 $color-gray-dark:    lighten(#000, 20%);
 $color-gray:         lighten(#000, 33.5%);
 $color-gray-light:   lighten(#000, 60%);
 $color-gray-lighter: lighten(#000, 93.5%);
 
+// Layout colors
 $color-background:   #fff;
 $color-text:         $color-gray-dark;
 
@@ -35,24 +21,30 @@ $color-text:         $color-gray-dark;
 // Typography
 // -----------------------------------------------------------------------------
 
+// Font families presets
 $font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:      Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:  Monaco, Menlo, Consolas, "Courier New", monospace;
 
+// Specific families
 $font-family:            $font-family-sans-serif;
 $font-heading-family:    $font-family;
 
+// Various font settings
 $font-heading-weight:    700;
-
 $font-size:              1em;
 
+// Line heights
 $line-height:            1.6;
 $line-height-actual:     floor($font-size * $line-height * 1000) / 1000;
+
+// Lines to display in <pre>-block
 $line-pre:               10;
 
 
 // Responsiveness
 // -----------------------------------------------------------------------------
+
 $screen-xs: 30em; // 480 px
 $screen-sm: 48em; // 768 px
 $screen-md: 62em; // 992 px

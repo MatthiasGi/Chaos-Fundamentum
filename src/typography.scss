@@ -1,3 +1,11 @@
+//
+// Typography
+// -----------------------------------------------------------------------------
+
+
+// Basic elements
+// -----------------------------------------------------------------------------
+
 html {
 	font-family: $font-family;
 	font-size: $font-size;
@@ -11,6 +19,10 @@ html, button, input, select, textarea {
 body {
 	background: $color-background;
 }
+
+
+// Headings
+// -----------------------------------------------------------------------------
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-heading-family;
@@ -47,6 +59,10 @@ h6 {
 	@include heading(1.333);
 }
 
+
+// Quotes
+// -----------------------------------------------------------------------------
+
 :lang(fr) > q {quotes: "«" "»" "“" "”"}
 :lang(de) > q {quotes: "„" "“" "‚" "‘"}
 :lang(ja) > q {quotes: "「" "」" "『" "』"}
@@ -61,10 +77,33 @@ blockquote {
 	}
 }
 
+
+// Code
+// -----------------------------------------------------------------------------
+
 pre {
 	background: $color-gray-lighter;
 	padding: .5em 1em;
 	border: 1px solid $color-gray-light;
 	overflow: auto;
 	max-height: $line-pre * $line-height-actual;
+}
+
+code, kbd, pre, samp {
+    font-family: $font-family-monospace;
+    font-size: 1em;
+}
+
+
+// Horizontal rule
+// -----------------------------------------------------------------------------
+
+hr {
+    display: block;
+    height: 1px;
+	background: $color-gray;
+    border: 0;
+    margin: 1em 0;
+    padding: 0;
+    box-sizing: content-box;
 }

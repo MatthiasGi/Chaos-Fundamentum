@@ -1,3 +1,0 @@
-@mixin heading($size) {
-	font-size: $font-size * (round($size * 1000) / 1000);
-}
