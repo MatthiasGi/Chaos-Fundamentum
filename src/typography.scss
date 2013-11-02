@@ -30,6 +30,14 @@ body {
 }
 
 
+// Text colors
+// -----------------------------------------------------------------------------
+
+.text-muted {
+	color: $color-gray-light;
+}
+
+
 // Headings
 // -----------------------------------------------------------------------------
 
@@ -38,10 +46,19 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: $font-heading-weight;
 	line-height: 1.1;
 	margin: 0.6em 0;
+	
+	small {
+		color: $color-gray;
+		margin-left: 1em;
+	}
 }
 
 @mixin heading($size) {
 	font-size: $font-size * (round($size * 1000) / 1000);
+	
+	small {
+		font-size: $font-size / (round($size * 1000) / 1000);
+	}
 }
 
 h1 {

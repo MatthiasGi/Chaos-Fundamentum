@@ -1,44 +1,46 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 	<head>
 		<title>Chaos Fundamentum Testsite</title>
 		
 		<link rel="stylesheet" href="chaos.css">
+		<link rel="stylesheet" href="demo.css">
 	</head>
 
-	<body class="grid">
-		<div class="cell-md-80 cell-md-push-10 cell-lg-70 cell-lg-push-15">
-			<h1 class="text-center">Chaos Fundamentum</h1>
-			
-			<h2>Typography</h2>
+	<body class="container">
+		<h1 class="text-center">Chaos Fundamentum</h1>
+		<h2>Typography</h2>
 		
-			<h1>Heading 1</h1>
-			<h2>Heading 2</h2>
-			<h3>Heading 3</h3>
-			<h4>Heading 4</h4>
-			<h5>Heading 5</h5>
-			<h6>Heading 6</h6>
+		<div class="grid">
+			<p class="cell-xs-15 cell-center"><small class="text-muted">Heading 1</small></p>
+			<h1 class="cell-xs-85">Lorem ipsum dolor sit amet.</h1>
+			<p class="cell-xs-15 cell-center"><small class="text-muted">Heading 2</small></p>
+			<h2 class="cell-xs-85">Eveniet, quas consectetur dolorum tempore.</h2>
+			<p class="cell-xs-15 cell-center"><small class="text-muted">Heading 3</small></p>
+			<h3 class="cell-xs-85">Culpa, aliquid a facilis tempora?</h3>
+			<p class="cell-xs-15 cell-center"><small class="text-muted">Heading 4</small></p>
+			<h4 class="cell-xs-85">Repellat id illo et nulla.</h4>
+			<p class="cell-xs-15 cell-center"><small class="text-muted">Heading 5</small></p>
+			<h5 class="cell-xs-85">Voluptate, atque praesentium porro quasi.</h5>
+			<p class="cell-xs-15 cell-center"><small class="text-muted">Heading 6</small></p>
+			<h6 class="cell-xs-85">Numquam, doloremque culpa magni enim.</h6>
 			
-			<h3>Marking</h3>
-			<p>Lorem ipsum <em>dolor sit</em> amet, <i>consectetur adipisicing</i> elit. <b>Quidem nemo quam</b> expedita <small>amet illo accusantium</small> ut placeat <strong>distinctio architecto</strong> aut!</p>
-			<p>Lorem ipsum <mark>dolor sit amet</mark>, consectetur <ins>adipisicing elit. Vitae</ins>, <del>aliquid aut sapiente</del> dolor <s>ea qui culpa modi</s> voluptate dignissimos mollitia?</p>
-			<p><small>Small Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat labore rem adipisci. Laboriosam, enim cum iste nobis nam laborum voluptates!</small></p>
+			<p class="cell-xs-15 cell-top"><small class="text-muted">Simple paragraph</small></p>
+			<div class="cell-xs-85">
+				<p>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing</strong> elit. Est, rerum <b>ipsum in odit</b> nemo debitis veritatis totam. <em>Accusamus, tenetur</em>, deserunt expedita <i>eaque enim</i> molestias quasi animi doloribus <small>debitis odit ad quis quaerat</small> aspernatur iure tempora <mark>mollitia est excepturi</mark> voluptate inventore iusto assumenda <del>impedit laboriosam nesciunt blanditiis</del> <ins>consequatur quia totam vero corrupti</ins> maiores alias harum <s>nemo rem natus dolorem temporibus</s> atque pariatur sint aliquam praesentium voluptatibus minima velit eos veniam magnam fugiat dicta. Pariatur, dicta ad voluptates distinctio libero minus voluptatibus tenetur molestias recusandae aliquid nam repudiandae quae voluptate debitis error doloremque atque. Modi quis numquam neque consequatur rerum commodi temporibus.</p>
+				<p>Dolorem, <cite>facere labore culpa ullam</cite>. Assumenda, <dfn><abbr title="Abbrevation">reiciendis</abbr></dfn> aut obcaecati saepe itaque repudiandae fuga sint unde vel maiores soluta culpa illo sit voluptatibus mollitia repellendus porro. <q cite="http://chaoticlabs.org">Possimus, soluta, ab</q>, laudantium eius atque sunt quisquam optio quasi illo repellat veniam adipisci ullam autem. Incidunt, vero vitae laudantium rem veniam dignissimos quibusdam porro optio culpa facilis blanditiis assumenda perferendis ea nihil nam veritatis exercitationem quis earum voluptatibus temporibus et corrupti repellat obcaecati illum animi aliquid dolorem quia eum delectus architecto quo consequuntur inventore ipsa. Optio, earum, magnam? Repellat iste suscipit accusantium dolorem nemo quod. Sequi, minus architecto quaerat quam omnis cupiditate dicta unde.</p>
+			</div>
 			
-			<h3>References</h3>
-			<p>Ita <cite> Lorem ipsum</cite> dolor sit amet, <dfn><abbr title="Abbrevation">consectetur adipisicing</abbr></dfn> elit. <q cite="http://chaoticlabs.org">Eos, impedit, deserunt</q> odio quam voluptatibus.</p>	
-			<blockquote cite="http://en.wikipedia.org/wiki/Lorem_ipsum">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, recusandae, nesciunt fuga aperiam harum animi amet odit voluptate doloribus voluptatem.</p>
-				<cite>Marcus Tullius Cicero</cite>
-			</blockquote>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, voluptates.</p>
+			<p class="cell-xs-15 cell-top"><small class="text-muted">Blockquote</small></p>
+			<div class="cell-xs-85">
+				<blockquote cite="http://en.wikipedia.org/wiki/Lorem_ipsum">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, recusandae, nesciunt fuga aperiam harum animi amet odit voluptate doloribus voluptatem.</p>
+					<cite><a href="http://en.wikipedia.org/wiki/Lorem_ipsum">Marcus Tullius Cicero</a></cite>
+				</blockquote>
+			</div>
 			
-			<h3>Coding elements</h3>
-			<p>Lorem ipsum at <time datetime="2001-05-15 19:00">15. May 2001, 19:00</time> dolor sit amet, <var>consectetur</var> adipisicing elit. <samp>Natus, ratione, ex qui in</samp> numquam <code>molestias architecto deleniti</code> doloribus <kbd>doloribus sint</kbd> vitae.</p>
-			<pre>body {
-    color: red;
-}
-Veryveryveryveryveryveryverylonglonglonglonglonglonglonglonglonglongcodecodecodecodecodecodecodelinelinelinelinelinelineline</pre>
-			<pre>h1, h2, h3, h4, h5, h6 {
+			<p class="cell-xs-15 cell-top"><small class="text-muted">Codeblock</small></p>
+			<pre class="cell-xs-85">h1, h2, h3, h4, h5, h6 {
 	font-family: $font-heading-family;
 	font-weight: $font-heading-weight;
 	line-height: 1.1;
@@ -69,8 +71,72 @@ h6 {
 	@include heading(1.333);
 }</pre>
 		
-			<h3>Miscellaneous</h3>
-			<p>Lorem <sup>ipsum dolor</sup> sit amet, <sub>consectetur</sub> adipisicing elit.</p>
+			<p class="cell-xs-15 cell-top"><small class="text-muted">Miscellaneous</small></p>
+			<div class="cell-xs-85">
+				<p>Lorem ipsum at <time datetime="2001-05-15 19:00">15. May 2001, 19:00</time> dolor sit amet, <var>consectetur</var> adipisicing elit. <samp>Natus, ratione, ex qui in</samp> numquam <code>molestias architecto deleniti</code> doloribus <kbd>doloribus sint</kbd> vitae.</p>
+				<p>Lorem <sup>ipsum dolor</sup> sit amet, <sub>consectetur</sub> adipisicing elit.</p>
+			</div>
+		</div>
+		
+		<h2>Modules</h2>
+		
+		<h3>Grid <small>Not supported by Firefox</small></h3>
+		<div class="grid">
+			<div class="cell-md-10"><div class="demo-cell"><code>.cell-md-10</code></div></div>
+			<div class="cell-md-20"><div class="demo-cell"><code>.cell-md-20</code></div></div>
+			<div class="cell-md-30"><div class="demo-cell"><code>.cell-md-30</code></div></div>
+			<div class="cell-md-40"><div class="demo-cell"><code>.cell-md-40</code></div></div>
+			<div class="cell-md-50"><div class="demo-cell"><code>.cell-md-50</code></div></div>
+			<div class="cell-md"><div class="demo-cell"><code>.cell-md</code></div></div>
+			<div class="cell-md"><div class="demo-cell"><code>.cell-md</code></div></div>
+		</div>
+		
+		<p>It's responsive! Try it out! The example below shows three different layouts.</p>
+		
+		<div class="grid">
+			<div class="cell-md-33 cell-xs-50">
+				<div class="demo-cell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, dolorem.</div>
+			</div>
+			<div class="cell-md-33 cell-xs-50">
+				<div class="demo-cell">Consectetur illum odit velit itaque sapiente cumque reprehenderit dolorem inventore.</div>
+			</div>
+			<div class="cell-md-33 cell-xs-50">
+				<div class="demo-cell">Cum, magnam repudiandae harum eius cumque ipsum numquam ab itaque!</div>
+			</div>
+			<div class="cell-md-33 cell-xs-50">
+				<div class="demo-cell">Voluptas ipsum quod incidunt dolore molestiae iure laudantium ducimus minima.</div>
+			</div>
+			<div class="cell-md-33 cell-xs-50">
+				<div class="demo-cell">Rem molestias culpa suscipit officiis ab voluptates nesciunt molestiae veniam.</div>
+			</div>
+			<div class="cell-md-33 cell-xs-50">
+				<div class="demo-cell">Libero, deserunt omnis quia repudiandae rerum numquam esse aliquam perferendis!</div>
+			</div>
+		</div>
+		
+		<p>It also does support offsets. Try pushing and pulling to change the display order.</p>
+		<div class="grid">
+			<div class="cell-sm-40 cell-sm-push-30">
+				<div class="demo-cell">
+					<code>.cell-sm-40.cell-sm-push-30</code>
+				</div>
+			</div>
+			<div class="cell-sm-30">
+				<div class="demo-cell">
+					<code>.cell-sm-30</code>
+				</div>
+			</div>
+			
+			<div class="cell-sm-40 cell-sm-push-30">
+				<div class="demo-cell">
+					<code>.cell-sm-40.cell-sm-push-30</code>
+				</div>
+			</div>
+			<div class="cell-sm-30 cell-sm-pull-70">
+				<div class="demo-cell">
+					<code>.cell-sm-30.cell-sm-pull-70</code>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

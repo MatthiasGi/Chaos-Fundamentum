@@ -4,19 +4,22 @@
 
 // Basic cell mixin
 @mixin grid-cell {
-	position: relative;
+	// position: relative;
 	padding: $grid-gutter / 2;
 	box-sizing: border-box;
 	flex: none;
 	width: 100%;
 }
 
+
+// Actual grid
 .grid {
 	
 	// Container style
 	display: flex;
 	flex-flow: row wrap;
 	
+	// Global alignment
 	&.grid-top {
 		align-items: flex-start;
 	}
@@ -29,6 +32,22 @@
 		align-items: flex-end;
 	}
 
+	// Individual alignment
+	.cell-top {
+		align-self: flex-start;
+	}
+
+	.cell-center {
+		align-self: center;
+	}
+	
+	.cell-bottom {
+		align-self: flex-end;
+	}
+	
+	.cell-stretch {
+		align-self: stretch;
+	}
 
 	// Cell format
 	@each $size in "xs" $screen-xs, "sm" $screen-sm, "md" $screen-md, "lg" $screen-lg {
@@ -57,12 +76,12 @@
 
 				// Push
 				.cell-#{nth($size, 1)}-push-#{$width} {
-					left: $width * 1%;
+					margin-left: $width * 1%;
 				}
 
 				// Pull
 				.cell-#{nth($size, 1)}-pull-#{$width} {
-					right: $width * 1%;
+					margin-left: -$width * 1%;
 				}
 			}
 
@@ -70,4 +89,19 @@
 
 	}
 
+}
+
+
+// Container for fixed layouts
+.container {
+	width: $screen-xs;
+	margin: 0 auto;
+}
+	
+@each $size in $screen-sm, $screen-md, $screen-lg {
+	@media (min-width: #{$size}) {
+		.container {
+			width: $size - 2;
+		}
+	}
 }
