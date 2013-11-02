@@ -19,6 +19,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0.6em 0;
 }
 
+@mixin heading($size) {
+	font-size: $font-size * (round($size * 1000) / 1000);
+}
+
 h1 {
 	@include heading(3.444);
 }

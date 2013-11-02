@@ -22,30 +22,45 @@
 
 // Colors
 // -----------------------------------------------------------------------------
-$color-gray-darker:   lighten(#000, 13.5%);
-$color-gray-dark:     lighten(#000, 20%);
-$color-gray:          lighten(#000, 33.5%);
-$color-gray-light:    lighten(#000, 60%);
-$color-gray-lighter:  lighten(#000, 93.5%);
+$color-gray-darker:  lighten(#000, 13.5%);
+$color-gray-dark:    lighten(#000, 20%);
+$color-gray:         lighten(#000, 33.5%);
+$color-gray-light:   lighten(#000, 60%);
+$color-gray-lighter: lighten(#000, 93.5%);
 
-$color-background:    #fff;
-$color-text:          $color-gray-dark;
+$color-background:   #fff;
+$color-text:         $color-gray-dark;
 
 
 // Typography
 // -----------------------------------------------------------------------------
 
-$font-family-sans-serif:     "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif:          Georgia, "Times New Roman", Times, serif;
-$font-family-monospace:      Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-sans-serif: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:  Monaco, Menlo, Consolas, "Courier New", monospace;
 
-$font-family:                $font-family-sans-serif;
-$font-heading-family:        $font-family;
+$font-family:            $font-family-sans-serif;
+$font-heading-family:    $font-family;
 
-$font-heading-weight:        700;
+$font-heading-weight:    700;
 
-$font-size:                  1em;
+$font-size:              1em;
 
-$line-height:                1.6;
-$line-height-actual:         floor($font-size * $line-height * 1000) / 1000;
-$line-pre:                   10;
+$line-height:            1.6;
+$line-height-actual:     floor($font-size * $line-height * 1000) / 1000;
+$line-pre:               10;
+
+
+// Responsiveness
+// -----------------------------------------------------------------------------
+$screen-xs: 30em; // 480 px
+$screen-sm: 48em; // 768 px
+$screen-md: 62em; // 992 px
+$screen-lg: 75em; // 1200 px
+
+
+// Grid
+// -----------------------------------------------------------------------------
+
+$grid-gutter: .5em;
+$grid-widths: 10, 20, 25, 30, 33, 40, 50, 60, 66, 70, 75, 80, 90;

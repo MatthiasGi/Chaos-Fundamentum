@@ -1,11 +1,16 @@
 @charset "UTF-8";
+
+
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
+
 /**
  * Correct `block` display not defined in IE 8/9.
  */
+
 article,
 aside,
 details,
@@ -24,6 +29,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
+
 audio,
 canvas,
 video {
@@ -34,6 +40,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
+
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -43,6 +50,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
+
 [hidden],
 template {
   display: none;
@@ -51,11 +59,13 @@ template {
 /* ==========================================================================
    Base
    ========================================================================== */
+
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+
 html {
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -66,6 +76,7 @@ html {
 /**
  * Remove default margin.
  */
+
 body {
   margin: 0;
 }
@@ -73,9 +84,11 @@ body {
 /* ==========================================================================
    Links
    ========================================================================== */
+
 /**
  * Remove the gray background color from active links in IE 10.
  */
+
 a {
   background: transparent;
 }
@@ -83,6 +96,7 @@ a {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
+
 a:focus {
   outline: thin dotted;
 }
@@ -90,6 +104,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
+
 a:active,
 a:hover {
   outline: 0;
@@ -98,10 +113,12 @@ a:hover {
 /* ==========================================================================
    Typography
    ========================================================================== */
+
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -110,6 +127,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
+
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -117,6 +135,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
+
 b,
 strong {
   font-weight: bold;
@@ -125,6 +144,7 @@ strong {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
+
 dfn {
   font-style: italic;
 }
@@ -132,8 +152,10 @@ dfn {
 /**
  * Address differences between Firefox and other browsers.
  */
+
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -141,6 +163,7 @@ hr {
 /**
  * Address styling not present in IE 8/9.
  */
+
 mark {
   background: #ff0;
   color: #000;
@@ -149,6 +172,7 @@ mark {
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
+
 code,
 kbd,
 pre,
@@ -160,6 +184,7 @@ samp {
 /**
  * Improve readability of pre-formatted text in all browsers.
  */
+
 pre {
   white-space: pre-wrap;
 }
@@ -167,6 +192,7 @@ pre {
 /**
  * Set consistent quote types.
  */
+
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
@@ -174,6 +200,7 @@ q {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
+
 small {
   font-size: 80%;
 }
@@ -181,6 +208,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
+
 sub,
 sup {
   font-size: 75%;
@@ -200,9 +228,11 @@ sub {
 /* ==========================================================================
    Embedded content
    ========================================================================== */
+
 /**
  * Remove border when inside `a` element in IE 8/9.
  */
+
 img {
   border: 0;
 }
@@ -210,6 +240,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
+
 svg:not(:root) {
   overflow: hidden;
 }
@@ -217,9 +248,11 @@ svg:not(:root) {
 /* ==========================================================================
    Figures
    ========================================================================== */
+
 /**
  * Address margin not present in IE 8/9 and Safari 5.
  */
+
 figure {
   margin: 0;
 }
@@ -227,9 +260,11 @@ figure {
 /* ==========================================================================
    Forms
    ========================================================================== */
+
 /**
  * Define consistent border, margin, and padding.
  */
+
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -240,6 +275,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
+
 legend {
   border: 0;
   /* 1 */
@@ -252,6 +288,7 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
+
 button,
 input,
 select,
@@ -268,6 +305,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
+
 button,
 input {
   line-height: normal;
@@ -279,6 +317,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
+
 button,
 select {
   text-transform: none;
@@ -291,6 +330,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
+
 button,
 html input[type="button"],
 input[type="reset"],
@@ -304,6 +344,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
+
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -313,8 +354,11 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
+
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -326,6 +370,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
+
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -339,6 +384,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -347,6 +393,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -357,6 +404,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
  */
+
 textarea {
   overflow: auto;
   /* 1 */
@@ -367,28 +415,34 @@ textarea {
 /* ==========================================================================
    Tables
    ========================================================================== */
+
 /**
  * Remove most spacing between table cells.
  */
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -402,10 +456,12 @@ table {
 /*
  * A better looking default horizontal rule
  */
+
 /*
  * Remove the gap between images, videos, audio and canvas and the bottom of
  * their containers: h5bp.com/i/440
  */
+
 audio,
 canvas,
 img,
@@ -417,6 +473,7 @@ video {
 /*
  * Remove default fieldset styles.
  */
+
 fieldset {
   border: 0;
   margin: 0;
@@ -426,6 +483,7 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
+
 textarea {
   resize: vertical;
 }
@@ -433,9 +491,11 @@ textarea {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
 /*
  * Image replacement
  */
+
 .ir {
   background-color: transparent;
   border: 0;
@@ -452,6 +512,7 @@ textarea {
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
+
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -460,6 +521,7 @@ textarea {
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
+
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -475,6 +537,7 @@ textarea {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
+
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -488,6 +551,7 @@ textarea {
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
+
 .invisible {
   visibility: hidden;
 }
@@ -503,6 +567,7 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -519,11 +584,13 @@ textarea {
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
+
 @media print {
   * {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -544,6 +611,7 @@ textarea {
   /*
    * Don't show links for images, or javascript/internal links
    */
+
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
@@ -570,7 +638,7 @@ textarea {
     max-width: 100% !important;
   }
 
-  @page {
+@page {
     margin: 0.5cm;
 }
 
@@ -586,6 +654,7 @@ textarea {
     page-break-after: avoid;
   }
 }
+
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -648,7 +717,11 @@ html {
   line-height: 1.6;
 }
 
-html, button, input, select, textarea {
+html,
+button,
+input,
+select,
+textarea {
   color: #333333;
 }
 
@@ -656,7 +729,12 @@ body {
   background: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.1;
@@ -704,6 +782,7 @@ blockquote {
   padding-left: 1em;
   border-left: 5px solid #222222;
 }
+
 blockquote cite:before {
   content: "— ";
 }
@@ -716,6 +795,1198 @@ pre {
   max-height: 16em;
 }
 
-body {
-  padding: 0 20%;
+.grid .cell,
+.grid .cell10,
+.grid .cell20,
+.grid .cell25,
+.grid .cell30,
+.grid .cell33,
+.grid .cell40,
+.grid .cell50,
+.grid .cell60,
+.grid .cell66,
+.grid .cell70,
+.grid .cell75,
+.grid .cell80,
+.grid .cell90,
+.grid-xs .cell,
+.grid-xs .cell10,
+.grid-xs .cell20,
+.grid-xs .cell25,
+.grid-xs .cell30,
+.grid-xs .cell33,
+.grid-xs .cell40,
+.grid-xs .cell50,
+.grid-xs .cell60,
+.grid-xs .cell66,
+.grid-xs .cell70,
+.grid-xs .cell75,
+.grid-xs .cell80,
+.grid-xs .cell90,
+.grid-sm .cell,
+.grid-sm .cell10,
+.grid-sm .cell20,
+.grid-sm .cell25,
+.grid-sm .cell30,
+.grid-sm .cell33,
+.grid-sm .cell40,
+.grid-sm .cell50,
+.grid-sm .cell60,
+.grid-sm .cell66,
+.grid-sm .cell70,
+.grid-sm .cell75,
+.grid-sm .cell80,
+.grid-sm .cell90,
+.grid-md .cell,
+.grid-md .cell10,
+.grid-md .cell20,
+.grid-md .cell25,
+.grid-md .cell30,
+.grid-md .cell33,
+.grid-md .cell40,
+.grid-md .cell50,
+.grid-md .cell60,
+.grid-md .cell66,
+.grid-md .cell70,
+.grid-md .cell75,
+.grid-md .cell80,
+.grid-md .cell90,
+.grid-lg .cell,
+.grid-lg .cell10,
+.grid-lg .cell20,
+.grid-lg .cell25,
+.grid-lg .cell30,
+.grid-lg .cell33,
+.grid-lg .cell40,
+.grid-lg .cell50,
+.grid-lg .cell60,
+.grid-lg .cell66,
+.grid-lg .cell70,
+.grid-lg .cell75,
+.grid-lg .cell80,
+.grid-lg .cell90 {
+  background: #eeeeee;
+  padding: 0.25em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media (min-width: 30em) {
+  .grid-xs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .grid-xs.grid-top {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .grid-xs.grid-center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .grid-xs.grid-bottom {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  .grid-xs .cell,
+  .grid-xs .cell10,
+  .grid-xs .cell20,
+  .grid-xs .cell25,
+  .grid-xs .cell30,
+  .grid-xs .cell33,
+  .grid-xs .cell40,
+  .grid-xs .cell50,
+  .grid-xs .cell60,
+  .grid-xs .cell66,
+  .grid-xs .cell70,
+  .grid-xs .cell75,
+  .grid-xs .cell80,
+  .grid-xs .cell90 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .grid-xs .cell.cell-top,
+  .grid-xs .cell-top.cell10,
+  .grid-xs .cell-top.cell20,
+  .grid-xs .cell-top.cell25,
+  .grid-xs .cell-top.cell30,
+  .grid-xs .cell-top.cell33,
+  .grid-xs .cell-top.cell40,
+  .grid-xs .cell-top.cell50,
+  .grid-xs .cell-top.cell60,
+  .grid-xs .cell-top.cell66,
+  .grid-xs .cell-top.cell70,
+  .grid-xs .cell-top.cell75,
+  .grid-xs .cell-top.cell80,
+  .grid-xs .cell-top.cell90 {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .grid-xs .cell.cell-center,
+  .grid-xs .cell-center.cell10,
+  .grid-xs .cell-center.cell20,
+  .grid-xs .cell-center.cell25,
+  .grid-xs .cell-center.cell30,
+  .grid-xs .cell-center.cell33,
+  .grid-xs .cell-center.cell40,
+  .grid-xs .cell-center.cell50,
+  .grid-xs .cell-center.cell60,
+  .grid-xs .cell-center.cell66,
+  .grid-xs .cell-center.cell70,
+  .grid-xs .cell-center.cell75,
+  .grid-xs .cell-center.cell80,
+  .grid-xs .cell-center.cell90 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .grid-xs .cell.cell-bottom,
+  .grid-xs .cell-bottom.cell10,
+  .grid-xs .cell-bottom.cell20,
+  .grid-xs .cell-bottom.cell25,
+  .grid-xs .cell-bottom.cell30,
+  .grid-xs .cell-bottom.cell33,
+  .grid-xs .cell-bottom.cell40,
+  .grid-xs .cell-bottom.cell50,
+  .grid-xs .cell-bottom.cell60,
+  .grid-xs .cell-bottom.cell66,
+  .grid-xs .cell-bottom.cell70,
+  .grid-xs .cell-bottom.cell75,
+  .grid-xs .cell-bottom.cell80,
+  .grid-xs .cell-bottom.cell90 {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+
+  .grid-xs .cell.cell-stretch,
+  .grid-xs .cell-stretch.cell10,
+  .grid-xs .cell-stretch.cell20,
+  .grid-xs .cell-stretch.cell25,
+  .grid-xs .cell-stretch.cell30,
+  .grid-xs .cell-stretch.cell33,
+  .grid-xs .cell-stretch.cell40,
+  .grid-xs .cell-stretch.cell50,
+  .grid-xs .cell-stretch.cell60,
+  .grid-xs .cell-stretch.cell66,
+  .grid-xs .cell-stretch.cell70,
+  .grid-xs .cell-stretch.cell75,
+  .grid-xs .cell-stretch.cell80,
+  .grid-xs .cell-stretch.cell90 {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+
+  .grid-xs .cell10 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 10%;
+  }
+
+  .grid-xs .cell20 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 20%;
+  }
+
+  .grid-xs .cell25 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 25%;
+  }
+
+  .grid-xs .cell30 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 30%;
+  }
+
+  .grid-xs .cell33 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 33%;
+  }
+
+  .grid-xs .cell40 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 40%;
+  }
+
+  .grid-xs .cell50 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 50%;
+  }
+
+  .grid-xs .cell60 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 60%;
+  }
+
+  .grid-xs .cell66 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 66%;
+  }
+
+  .grid-xs .cell70 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 70%;
+  }
+
+  .grid-xs .cell75 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 75%;
+  }
+
+  .grid-xs .cell80 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 80%;
+  }
+
+  .grid-xs .cell90 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 90%;
+  }
+}
+
+@media (min-width: 48em) {
+  .grid-sm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .grid-sm.grid-top {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .grid-sm.grid-center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .grid-sm.grid-bottom {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  .grid-sm .cell,
+  .grid-sm .cell10,
+  .grid-sm .cell20,
+  .grid-sm .cell25,
+  .grid-sm .cell30,
+  .grid-sm .cell33,
+  .grid-sm .cell40,
+  .grid-sm .cell50,
+  .grid-sm .cell60,
+  .grid-sm .cell66,
+  .grid-sm .cell70,
+  .grid-sm .cell75,
+  .grid-sm .cell80,
+  .grid-sm .cell90 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .grid-sm .cell.cell-top,
+  .grid-sm .cell-top.cell10,
+  .grid-sm .cell-top.cell20,
+  .grid-sm .cell-top.cell25,
+  .grid-sm .cell-top.cell30,
+  .grid-sm .cell-top.cell33,
+  .grid-sm .cell-top.cell40,
+  .grid-sm .cell-top.cell50,
+  .grid-sm .cell-top.cell60,
+  .grid-sm .cell-top.cell66,
+  .grid-sm .cell-top.cell70,
+  .grid-sm .cell-top.cell75,
+  .grid-sm .cell-top.cell80,
+  .grid-sm .cell-top.cell90 {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .grid-sm .cell.cell-center,
+  .grid-sm .cell-center.cell10,
+  .grid-sm .cell-center.cell20,
+  .grid-sm .cell-center.cell25,
+  .grid-sm .cell-center.cell30,
+  .grid-sm .cell-center.cell33,
+  .grid-sm .cell-center.cell40,
+  .grid-sm .cell-center.cell50,
+  .grid-sm .cell-center.cell60,
+  .grid-sm .cell-center.cell66,
+  .grid-sm .cell-center.cell70,
+  .grid-sm .cell-center.cell75,
+  .grid-sm .cell-center.cell80,
+  .grid-sm .cell-center.cell90 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .grid-sm .cell.cell-bottom,
+  .grid-sm .cell-bottom.cell10,
+  .grid-sm .cell-bottom.cell20,
+  .grid-sm .cell-bottom.cell25,
+  .grid-sm .cell-bottom.cell30,
+  .grid-sm .cell-bottom.cell33,
+  .grid-sm .cell-bottom.cell40,
+  .grid-sm .cell-bottom.cell50,
+  .grid-sm .cell-bottom.cell60,
+  .grid-sm .cell-bottom.cell66,
+  .grid-sm .cell-bottom.cell70,
+  .grid-sm .cell-bottom.cell75,
+  .grid-sm .cell-bottom.cell80,
+  .grid-sm .cell-bottom.cell90 {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+
+  .grid-sm .cell.cell-stretch,
+  .grid-sm .cell-stretch.cell10,
+  .grid-sm .cell-stretch.cell20,
+  .grid-sm .cell-stretch.cell25,
+  .grid-sm .cell-stretch.cell30,
+  .grid-sm .cell-stretch.cell33,
+  .grid-sm .cell-stretch.cell40,
+  .grid-sm .cell-stretch.cell50,
+  .grid-sm .cell-stretch.cell60,
+  .grid-sm .cell-stretch.cell66,
+  .grid-sm .cell-stretch.cell70,
+  .grid-sm .cell-stretch.cell75,
+  .grid-sm .cell-stretch.cell80,
+  .grid-sm .cell-stretch.cell90 {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+
+  .grid-sm .cell10 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 10%;
+  }
+
+  .grid-sm .cell20 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 20%;
+  }
+
+  .grid-sm .cell25 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 25%;
+  }
+
+  .grid-sm .cell30 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 30%;
+  }
+
+  .grid-sm .cell33 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 33%;
+  }
+
+  .grid-sm .cell40 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 40%;
+  }
+
+  .grid-sm .cell50 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 50%;
+  }
+
+  .grid-sm .cell60 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 60%;
+  }
+
+  .grid-sm .cell66 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 66%;
+  }
+
+  .grid-sm .cell70 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 70%;
+  }
+
+  .grid-sm .cell75 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 75%;
+  }
+
+  .grid-sm .cell80 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 80%;
+  }
+
+  .grid-sm .cell90 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 90%;
+  }
+}
+
+@media (min-width: 62em) {
+  .grid,
+  .grid-md {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .grid.grid-top,
+  .grid-md.grid-top {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .grid.grid-center,
+  .grid-md.grid-center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .grid.grid-bottom,
+  .grid-md.grid-bottom {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  .grid .cell,
+  .grid .cell10,
+  .grid .cell20,
+  .grid .cell25,
+  .grid .cell30,
+  .grid .cell33,
+  .grid .cell40,
+  .grid .cell50,
+  .grid .cell60,
+  .grid .cell66,
+  .grid .cell70,
+  .grid .cell75,
+  .grid .cell80,
+  .grid .cell90,
+  .grid-md .cell,
+  .grid-md .cell10,
+  .grid-md .cell20,
+  .grid-md .cell25,
+  .grid-md .cell30,
+  .grid-md .cell33,
+  .grid-md .cell40,
+  .grid-md .cell50,
+  .grid-md .cell60,
+  .grid-md .cell66,
+  .grid-md .cell70,
+  .grid-md .cell75,
+  .grid-md .cell80,
+  .grid-md .cell90 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .grid .cell.cell-top,
+  .grid .cell-top.cell10,
+  .grid .cell-top.cell20,
+  .grid .cell-top.cell25,
+  .grid .cell-top.cell30,
+  .grid .cell-top.cell33,
+  .grid .cell-top.cell40,
+  .grid .cell-top.cell50,
+  .grid .cell-top.cell60,
+  .grid .cell-top.cell66,
+  .grid .cell-top.cell70,
+  .grid .cell-top.cell75,
+  .grid .cell-top.cell80,
+  .grid .cell-top.cell90,
+  .grid-md .cell.cell-top,
+  .grid-md .cell-top.cell10,
+  .grid-md .cell-top.cell20,
+  .grid-md .cell-top.cell25,
+  .grid-md .cell-top.cell30,
+  .grid-md .cell-top.cell33,
+  .grid-md .cell-top.cell40,
+  .grid-md .cell-top.cell50,
+  .grid-md .cell-top.cell60,
+  .grid-md .cell-top.cell66,
+  .grid-md .cell-top.cell70,
+  .grid-md .cell-top.cell75,
+  .grid-md .cell-top.cell80,
+  .grid-md .cell-top.cell90 {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .grid .cell.cell-center,
+  .grid .cell-center.cell10,
+  .grid .cell-center.cell20,
+  .grid .cell-center.cell25,
+  .grid .cell-center.cell30,
+  .grid .cell-center.cell33,
+  .grid .cell-center.cell40,
+  .grid .cell-center.cell50,
+  .grid .cell-center.cell60,
+  .grid .cell-center.cell66,
+  .grid .cell-center.cell70,
+  .grid .cell-center.cell75,
+  .grid .cell-center.cell80,
+  .grid .cell-center.cell90,
+  .grid-md .cell.cell-center,
+  .grid-md .cell-center.cell10,
+  .grid-md .cell-center.cell20,
+  .grid-md .cell-center.cell25,
+  .grid-md .cell-center.cell30,
+  .grid-md .cell-center.cell33,
+  .grid-md .cell-center.cell40,
+  .grid-md .cell-center.cell50,
+  .grid-md .cell-center.cell60,
+  .grid-md .cell-center.cell66,
+  .grid-md .cell-center.cell70,
+  .grid-md .cell-center.cell75,
+  .grid-md .cell-center.cell80,
+  .grid-md .cell-center.cell90 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .grid .cell.cell-bottom,
+  .grid .cell-bottom.cell10,
+  .grid .cell-bottom.cell20,
+  .grid .cell-bottom.cell25,
+  .grid .cell-bottom.cell30,
+  .grid .cell-bottom.cell33,
+  .grid .cell-bottom.cell40,
+  .grid .cell-bottom.cell50,
+  .grid .cell-bottom.cell60,
+  .grid .cell-bottom.cell66,
+  .grid .cell-bottom.cell70,
+  .grid .cell-bottom.cell75,
+  .grid .cell-bottom.cell80,
+  .grid .cell-bottom.cell90,
+  .grid-md .cell.cell-bottom,
+  .grid-md .cell-bottom.cell10,
+  .grid-md .cell-bottom.cell20,
+  .grid-md .cell-bottom.cell25,
+  .grid-md .cell-bottom.cell30,
+  .grid-md .cell-bottom.cell33,
+  .grid-md .cell-bottom.cell40,
+  .grid-md .cell-bottom.cell50,
+  .grid-md .cell-bottom.cell60,
+  .grid-md .cell-bottom.cell66,
+  .grid-md .cell-bottom.cell70,
+  .grid-md .cell-bottom.cell75,
+  .grid-md .cell-bottom.cell80,
+  .grid-md .cell-bottom.cell90 {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+
+  .grid .cell.cell-stretch,
+  .grid .cell-stretch.cell10,
+  .grid .cell-stretch.cell20,
+  .grid .cell-stretch.cell25,
+  .grid .cell-stretch.cell30,
+  .grid .cell-stretch.cell33,
+  .grid .cell-stretch.cell40,
+  .grid .cell-stretch.cell50,
+  .grid .cell-stretch.cell60,
+  .grid .cell-stretch.cell66,
+  .grid .cell-stretch.cell70,
+  .grid .cell-stretch.cell75,
+  .grid .cell-stretch.cell80,
+  .grid .cell-stretch.cell90,
+  .grid-md .cell.cell-stretch,
+  .grid-md .cell-stretch.cell10,
+  .grid-md .cell-stretch.cell20,
+  .grid-md .cell-stretch.cell25,
+  .grid-md .cell-stretch.cell30,
+  .grid-md .cell-stretch.cell33,
+  .grid-md .cell-stretch.cell40,
+  .grid-md .cell-stretch.cell50,
+  .grid-md .cell-stretch.cell60,
+  .grid-md .cell-stretch.cell66,
+  .grid-md .cell-stretch.cell70,
+  .grid-md .cell-stretch.cell75,
+  .grid-md .cell-stretch.cell80,
+  .grid-md .cell-stretch.cell90 {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+
+  .grid .cell10,
+  .grid-md .cell10 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 10%;
+  }
+
+  .grid .cell20,
+  .grid-md .cell20 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 20%;
+  }
+
+  .grid .cell25,
+  .grid-md .cell25 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 25%;
+  }
+
+  .grid .cell30,
+  .grid-md .cell30 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 30%;
+  }
+
+  .grid .cell33,
+  .grid-md .cell33 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 33%;
+  }
+
+  .grid .cell40,
+  .grid-md .cell40 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 40%;
+  }
+
+  .grid .cell50,
+  .grid-md .cell50 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 50%;
+  }
+
+  .grid .cell60,
+  .grid-md .cell60 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 60%;
+  }
+
+  .grid .cell66,
+  .grid-md .cell66 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 66%;
+  }
+
+  .grid .cell70,
+  .grid-md .cell70 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 70%;
+  }
+
+  .grid .cell75,
+  .grid-md .cell75 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 75%;
+  }
+
+  .grid .cell80,
+  .grid-md .cell80 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 80%;
+  }
+
+  .grid .cell90,
+  .grid-md .cell90 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 90%;
+  }
+}
+
+@media (min-width: 75em) {
+  .grid-lg {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .grid-lg.grid-top {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .grid-lg.grid-center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .grid-lg.grid-bottom {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  .grid-lg .cell,
+  .grid-lg .cell10,
+  .grid-lg .cell20,
+  .grid-lg .cell25,
+  .grid-lg .cell30,
+  .grid-lg .cell33,
+  .grid-lg .cell40,
+  .grid-lg .cell50,
+  .grid-lg .cell60,
+  .grid-lg .cell66,
+  .grid-lg .cell70,
+  .grid-lg .cell75,
+  .grid-lg .cell80,
+  .grid-lg .cell90 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .grid-lg .cell.cell-top,
+  .grid-lg .cell-top.cell10,
+  .grid-lg .cell-top.cell20,
+  .grid-lg .cell-top.cell25,
+  .grid-lg .cell-top.cell30,
+  .grid-lg .cell-top.cell33,
+  .grid-lg .cell-top.cell40,
+  .grid-lg .cell-top.cell50,
+  .grid-lg .cell-top.cell60,
+  .grid-lg .cell-top.cell66,
+  .grid-lg .cell-top.cell70,
+  .grid-lg .cell-top.cell75,
+  .grid-lg .cell-top.cell80,
+  .grid-lg .cell-top.cell90 {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .grid-lg .cell.cell-center,
+  .grid-lg .cell-center.cell10,
+  .grid-lg .cell-center.cell20,
+  .grid-lg .cell-center.cell25,
+  .grid-lg .cell-center.cell30,
+  .grid-lg .cell-center.cell33,
+  .grid-lg .cell-center.cell40,
+  .grid-lg .cell-center.cell50,
+  .grid-lg .cell-center.cell60,
+  .grid-lg .cell-center.cell66,
+  .grid-lg .cell-center.cell70,
+  .grid-lg .cell-center.cell75,
+  .grid-lg .cell-center.cell80,
+  .grid-lg .cell-center.cell90 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .grid-lg .cell.cell-bottom,
+  .grid-lg .cell-bottom.cell10,
+  .grid-lg .cell-bottom.cell20,
+  .grid-lg .cell-bottom.cell25,
+  .grid-lg .cell-bottom.cell30,
+  .grid-lg .cell-bottom.cell33,
+  .grid-lg .cell-bottom.cell40,
+  .grid-lg .cell-bottom.cell50,
+  .grid-lg .cell-bottom.cell60,
+  .grid-lg .cell-bottom.cell66,
+  .grid-lg .cell-bottom.cell70,
+  .grid-lg .cell-bottom.cell75,
+  .grid-lg .cell-bottom.cell80,
+  .grid-lg .cell-bottom.cell90 {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+
+  .grid-lg .cell.cell-stretch,
+  .grid-lg .cell-stretch.cell10,
+  .grid-lg .cell-stretch.cell20,
+  .grid-lg .cell-stretch.cell25,
+  .grid-lg .cell-stretch.cell30,
+  .grid-lg .cell-stretch.cell33,
+  .grid-lg .cell-stretch.cell40,
+  .grid-lg .cell-stretch.cell50,
+  .grid-lg .cell-stretch.cell60,
+  .grid-lg .cell-stretch.cell66,
+  .grid-lg .cell-stretch.cell70,
+  .grid-lg .cell-stretch.cell75,
+  .grid-lg .cell-stretch.cell80,
+  .grid-lg .cell-stretch.cell90 {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+
+  .grid-lg .cell10 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 10%;
+  }
+
+  .grid-lg .cell20 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 20%;
+  }
+
+  .grid-lg .cell25 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 25%;
+  }
+
+  .grid-lg .cell30 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 30%;
+  }
+
+  .grid-lg .cell33 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 33%;
+  }
+
+  .grid-lg .cell40 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 40%;
+  }
+
+  .grid-lg .cell50 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 50%;
+  }
+
+  .grid-lg .cell60 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 60%;
+  }
+
+  .grid-lg .cell66 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 66%;
+  }
+
+  .grid-lg .cell70 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 70%;
+  }
+
+  .grid-lg .cell75 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 75%;
+  }
+
+  .grid-lg .cell80 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 80%;
+  }
+
+  .grid-lg .cell90 {
+    -webkit-box-flex: none;
+    -webkit-flex: none;
+    -moz-box-flex: none;
+    -ms-flex: none;
+    flex: none;
+    width: 90%;
+  }
 }
