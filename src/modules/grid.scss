@@ -1,6 +1,13 @@
+@mixin grid-cell {
+	padding: $grid-gutter / 2;
+	box-sizing: border-box;
+	background: $color-gray-lighter;
+	flex: none;
+	width: 100%;
+}
+
 .grid {
 	display: flex;
-	flex: 0 1 auto; // IE Fix
 	flex-flow: row wrap;
 	
 	&.grid-top {
@@ -19,15 +26,12 @@
 	@each $size in "xs" $screen-xs, "sm" $screen-sm, "md" $screen-md, "lg" $screen-lg {
 	
 		.cell-#{nth($size, 1)} {
-			padding: $grid-gutter / 2;
-			box-sizing: border-box;
-			flex: none;
-			width: 100%;
+			@include grid-cell;
 		}
 
 		@each $width in $grid-widths {
 			.cell-#{nth($size, 1)}-#{$width} {
-				@extend .cell-#{nth($size, 1)};
+				@include grid-cell;
 			}
 		}
 
@@ -39,8 +43,7 @@
 
 			@each $width in $grid-widths {
 				.cell-#{nth($size, 1)}-#{$width} {
-					flex: none;
-					width: $width * 1%;
+					width: $width * 1% !important;
 				}
 			}
 
