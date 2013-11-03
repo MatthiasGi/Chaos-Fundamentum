@@ -118,13 +118,15 @@
 		// Offsets
 		@if $grid-offset-breakpoint <= nth($breakpoint, 2) and
 				$grid-cell-breakpoint <= nth($breakpoint, 2) {
-			@each $width in $grid-widths {
-				.cell-#{nth($breakpoint, 1)}-push-#{$width} {
-					@include grid-cell-offset($width);
-				}
-	
-				.cell-#{nth($breakpoint, 1)}-pull-#{$width} {
-					@include grid-cell-offset(-$width);
+			@media (min-width: #{nth($breakpoint, 2)}) {
+				@each $width in $grid-widths {
+					.cell-#{nth($breakpoint, 1)}-push-#{$width} {
+						@include grid-cell-offset($width);
+					}
+		
+					.cell-#{nth($breakpoint, 1)}-pull-#{$width} {
+						@include grid-cell-offset(-$width);
+					}
 				}
 			}
 		}
