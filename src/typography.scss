@@ -110,8 +110,10 @@ pre {
 	padding: .5em 1em;
 	border: 1px solid $color-gray-light;
 	overflow: auto;
-	max-height: $line-pre * $line-height-actual;
 	-webkit-overflow-scrolling: touch;
+	
+	// Take maximal available height (save kb)
+	max-height: $line-pre * $line-height-actual * nth(nth($breakpoints, length($breakpoints)), 3);
 }
 
 code, kbd, pre, samp {
