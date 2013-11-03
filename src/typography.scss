@@ -11,9 +11,9 @@ html {
 	font-size: $font-size;
 	line-height: $line-height;
 	
-	@each $size in $screen-sm $screen-sm-factor, $screen-md $screen-md-factor, $screen-lg $screen-lg-factor {
-		@media (min-width: #{nth($size, 1)}) {
-			line-height: $line-height * nth($size, 2);
+	@each $breakpoint in $breakpoints {
+		@media (min-width: #{nth($breakpoint, 2)}) {
+			line-height: $line-height * nth($breakpoint, 3);
 		}
 	}
 }
@@ -25,6 +25,7 @@ html, button, input, select, textarea {
 body {
 	background: $color-background;
 }
+
 
 // Alignment
 // -----------------------------------------------------------------------------
@@ -50,7 +51,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-heading-family;
 	font-weight: $font-heading-weight;
-	line-height: 1.1;
 	margin: $font-heading-margin 0;
 	
 	small {
@@ -63,18 +63,17 @@ h1, h2, h3, h4, h5, h6 {
 
 	font-size: $font-size * (round($factor * 1000) / 1000);
 	
-	@each $size in $screen-sm $screen-sm-factor, $screen-md $screen-md-factor, $screen-lg $screen-lg-factor {
-		@media (min-width: #{nth($size, 1)}) {
-			$font-heading-margin-calculated: $font-heading-margin * nth($size, 2);
-	
-			font-size: $font-size * (round($factor * 1000) / 1000) * nth($size, 2);
-			margin-top: $font-heading-margin-calculated;
-			margin-bottom: $font-heading-margin-calculated;
+	@each $breakpoint in $breakpoints {
+		@media (min-width: #{nth($breakpoint, 2)}) {
+			$margin: $font-heading-margin * nth($breakpoint, 3);
+			font-size: $font-size * $factor * nth($breakpoint, 3);
+			margin-top: $margin;
+			margin-bottom: $margin;
 		}
 	}
 	
 	small {
-		font-size: $font-size / (round($factor * 1000) / 1000);
+		font-size: $font-size / $factor;
 	}
 }
 
@@ -132,4 +131,21 @@ hr {
     margin: 1em 0;
     padding: 0;
     box-sizing: content-box;
+}
+
+
+// Container for fixed layouts
+// -----------------------------------------------------------------------------
+
+.container {
+	margin: 0 auto;
+	padding: 1em;
+	box-sizing: border-box;
+	
+	// Responsiveness
+	@each $breakpoint in $breakpoints {
+		@media (min-width: #{nth($breakpoint, 2)}) {
+			width: #{nth($breakpoint, 4)};
+		}
+	}
 }

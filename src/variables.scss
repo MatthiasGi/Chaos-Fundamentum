@@ -21,20 +21,14 @@ $color-text:         $color-gray-dark;
 // Responsiveness
 // -----------------------------------------------------------------------------
 
-// Screen size presets (below: xs), Line height factors, 
-$screen-sm:           48em; // 768 px
-$screen-md:           62em; // 992 px
-$screen-lg:           75em; // 1200 px
+// Screen size presets (name, breakpoint, factor, container)
+$breakpoints:
+	"xs" 30em 1.05 100%,
+	"sm" 48em 1.1 100%,
+	"md" 62em 1.15 45em,
+	"lg" 75em 1.2 70em,
+	"xl" 90em 1.3 85em;
 
-// Resize factors for headlines etc.
-$screen-sm-factor:    1.1;
-$screen-md-factor:    1.2;
-$screen-lg-factor:    1.3;
-
-// Screen container presets
-$screen-sm-container: $screen-sm - 2;
-$screen-md-container: $screen-md - 4;
-$screen-lg-container: $screen-lg - 6;
 
 // Typography
 // -----------------------------------------------------------------------------
@@ -62,9 +56,10 @@ $line-height-actual:        floor($font-size * $line-height * 1000) / 1000;
 $line-pre:                  10;
 
 
-
 // Grid
 // -----------------------------------------------------------------------------
 
-$grid-gutter: .5em;
-$grid-widths: 10, 15, 20, 25, 30, 33, 40, 50, 60, 66, 70, 75, 80, 85, 90, 100;
+$grid-gutter:            .5em;
+$grid-widths:            10, 15, 20, 25, 30, 33, 40, 50, 60, 66, 70, 75, 80, 85, 90, 100;
+$grid-offset-breakpoint: nth(nth($breakpoints, 2), 2);
+$grid-cell-breakpoint:   nth(nth($breakpoints, 2), 2);

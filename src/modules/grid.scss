@@ -3,9 +3,6 @@
 // -----------------------------------------------------------------------------
 
 
-// Actual Grid
-// -----------------------------------------------------------------------------
-
 // Basic cell mixin
 @mixin grid-cell {
 	padding: $grid-gutter / 2;
@@ -24,6 +21,7 @@
 	}
 }
 
+// Cell with offset mixin
 @mixin grid-cell-offset($offset) {
 	margin-left: percentage($offset / 100);
 }
@@ -65,73 +63,71 @@
 		align-self: stretch;
 	}
 
-	// Cell preparations
-	@each $size in "xs", "sm", "md", "lg" {
-		.cell-#{$size} {
+	// Basic Cell preparations
+	@if $grid-cell-breakpoint <= 0 {
+		.cell {
 			@include grid-cell;
-			@if $size == "xs" {
-				@include grid-cell-flex;
-			}
+			@include grid-cell-flex;
 		}
 
 		@each $width in $grid-widths {
-			.cell-#{$size}-#{$width} {
+			.cell-#{$width} {
 				@include grid-cell;
-				@if $size == "xs" {
-					@include grid-cell-flex($width);
-				}
+				@include grid-cell-flex($width);
 			}
 		}
 	}
 
-	// Cell responsiveness
-	@each $size in "sm" $screen-sm, "md" $screen-md, "lg" $screen-lg {
-		@media (min-width: #{nth($size, 2)}) {
-			
-			.cell-#{nth($size, 1)} {
-				@include grid-cell-flex;
+	// Basic Cell offsets
+	@if $grid-offset-breakpoint <= 0 {
+		@each $width in $grid-widths {
+			.cell-push-#{$width} {
+				@include grid-cell-offset($width);
+			}
+
+			.cell-pull-#{$width} {
+				@include grid-cell-offset(-$width);
+			}
+		}
+	}
+
+	// Responsive cell preparations
+	@each $breakpoint in $breakpoints {
+		@if $grid-cell-breakpoint <= nth($breakpoint, 2) {
+			.cell-#{nth($breakpoint, 1)} {
+				@include grid-cell;
+
+				// Responsiveness
+				@media (min-width: #{nth($breakpoint, 2)}) {
+					@include grid-cell-flex;
+				}
 			}
 
 			@each $width in $grid-widths {
-				.cell-#{nth($size, 1)}-#{$width} {
-					@include grid-cell-flex($width);
-				}
+				.cell-#{nth($breakpoint, 1)}-#{$width} {
+					@include grid-cell;
 
-				// Push: No offsets for xs
-				.cell-#{nth($size, 1)}-push-#{$width} {
-					margin-left: $width * 1%;
-				}
-
-				// Pull
-				.cell-#{nth($size, 1)}-pull-#{$width} {
-					margin-left: -$width * 1%;
+					// Responsiveness
+					@media (min-width: #{nth($breakpoint, 2)}) {
+						@include grid-cell-flex($width);
+					}
 				}
 			}
-
 		}
-	}
 
-}
-
-
-// Container for fixed layouts
-// -----------------------------------------------------------------------------
-
-.container {
-	margin: 0 auto;
-	padding: 1em;
+		// Offsets
+		@if $grid-offset-breakpoint <= nth($breakpoint, 2) and
+				$grid-cell-breakpoint <= nth($breakpoint, 2) {
+			@each $width in $grid-widths {
+				.cell-#{nth($breakpoint, 1)}-push-#{$width} {
+					@include grid-cell-offset($width);
+				}
 	
-	// Remove extra padding on bigger screens
-	@media (min-width: #{$screen-sm}) {
-		padding: 0;
-	}
-	
-	// Responsiveness
-	@each $size in $screen-sm $screen-sm-container, $screen-md $screen-md-container, $screen-lg $screen-lg-container {
-		@media (min-width: #{nth($size, 1)}) {
-			& {
-				width: #{nth($size, 2)};
+				.cell-#{nth($breakpoint, 1)}-pull-#{$width} {
+					@include grid-cell-offset(-$width);
+				}
 			}
 		}
 	}
+
 }
