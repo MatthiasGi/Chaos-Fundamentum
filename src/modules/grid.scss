@@ -2,15 +2,31 @@
 // Module: Grid
 // -----------------------------------------------------------------------------
 
+
+// Actual Grid
+// -----------------------------------------------------------------------------
+
 // Basic cell mixin
 @mixin grid-cell {
-	// position: relative;
 	padding: $grid-gutter / 2;
 	box-sizing: border-box;
 	flex: none;
 	width: 100%;
 }
 
+// Flexible cell mixin
+@mixin grid-cell-flex($width: auto) {
+	@if $width == auto {
+		flex: 1;
+	} @else {
+		// Overwrite 100%-rule of grid-cell
+		width: percentage($width / 100) !important;
+	}
+}
+
+@mixin grid-cell-offset($offset) {
+	margin-left: percentage($offset / 100);
+}
 
 // Actual grid
 .grid {
@@ -49,32 +65,39 @@
 		align-self: stretch;
 	}
 
-	// Cell format
-	@each $size in "xs" $screen-xs, "sm" $screen-sm, "md" $screen-md, "lg" $screen-lg {
-	
-		.cell-#{nth($size, 1)} {
+	// Cell preparations
+	@each $size in "xs", "sm", "md", "lg" {
+		.cell-#{$size} {
 			@include grid-cell;
-		}
-
-		@each $width in $grid-widths {
-			.cell-#{nth($size, 1)}-#{$width} {
-				@include grid-cell;
+			@if $size == "xs" {
+				@include grid-cell-flex;
 			}
 		}
 
+		@each $width in $grid-widths {
+			.cell-#{$size}-#{$width} {
+				@include grid-cell;
+				@if $size == "xs" {
+					@include grid-cell-flex($width);
+				}
+			}
+		}
+	}
+
+	// Cell responsiveness
+	@each $size in "sm" $screen-sm, "md" $screen-md, "lg" $screen-lg {
 		@media (min-width: #{nth($size, 2)}) {
 			
 			.cell-#{nth($size, 1)} {
-				flex: 1;
+				@include grid-cell-flex;
 			}
 
 			@each $width in $grid-widths {
 				.cell-#{nth($size, 1)}-#{$width} {
-					// Overwrite 100%-rule of mixin
-					width: $width * 1% !important;
+					@include grid-cell-flex($width);
 				}
 
-				// Push
+				// Push: No offsets for xs
 				.cell-#{nth($size, 1)}-push-#{$width} {
 					margin-left: $width * 1%;
 				}
@@ -86,22 +109,29 @@
 			}
 
 		}
-
 	}
 
 }
 
 
 // Container for fixed layouts
+// -----------------------------------------------------------------------------
+
 .container {
-	width: $screen-xs;
 	margin: 0 auto;
-}
+	padding: 1em;
 	
-@each $size in $screen-sm, $screen-md, $screen-lg {
-	@media (min-width: #{$size}) {
-		.container {
-			width: $size - 2;
+	// Remove extra padding on bigger screens
+	@media (min-width: #{$screen-sm}) {
+		padding: 0;
+	}
+	
+	// Responsiveness
+	@each $size in $screen-sm $screen-sm-container, $screen-md $screen-md-container, $screen-lg $screen-lg-container {
+		@media (min-width: #{nth($size, 1)}) {
+			& {
+				width: #{nth($size, 2)};
+			}
 		}
 	}
 }
