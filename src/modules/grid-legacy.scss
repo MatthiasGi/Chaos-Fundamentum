@@ -2,6 +2,14 @@
 // Module: Grid
 // -----------------------------------------------------------------------------
 
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !! Not for productive use. As most browsers don't support it, the development
+// !! for a "complete" grid is halted. Try the grid-row.scss instead for now.
+// !!
+// !! Development will be restarted as soon as Firefox & Co. support the great
+// !! flexbox-capabilities.
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 // Basic cell mixin
 @mixin grid-cell {
@@ -28,11 +36,11 @@
 
 // Actual grid
 .grid {
-	
+
 	// Container style
 	display: flex;
 	flex-flow: row wrap;
-	
+
 	// Global alignment
 	&.grid-top {
 		align-items: flex-start;
@@ -54,11 +62,11 @@
 	.cell-center {
 		align-self: center;
 	}
-	
+
 	.cell-bottom {
 		align-self: flex-end;
 	}
-	
+
 	.cell-stretch {
 		align-self: stretch;
 	}
@@ -123,7 +131,7 @@
 					.cell-#{nth($breakpoint, 1)}-push-#{$width} {
 						@include grid-cell-offset($width);
 					}
-		
+
 					.cell-#{nth($breakpoint, 1)}-pull-#{$width} {
 						@include grid-cell-offset(-$width);
 					}
