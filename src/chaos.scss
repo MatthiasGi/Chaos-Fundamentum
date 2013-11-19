@@ -19,9 +19,17 @@
 
 // Core components
 // -----------------------------------------------------------------------------
+@import "utilities.scss";
 @import "typography.scss";
 
 
 // Optional modules
 // -----------------------------------------------------------------------------
 @import "modules/grid-row.scss";
+
+
+// Printing styles
+// -----------------------------------------------------------------------------
+@media print {
+	@import "print.scss";
+}

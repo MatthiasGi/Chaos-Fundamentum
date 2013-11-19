@@ -45,9 +45,28 @@ body {
 }
 
 
+// Anchors
+// -----------------------------------------------------------------------------
+
+a {
+	text-decoration: none;
+	color: $color-brand-primary;
+	transition: color .3s ease-out;
+	position: realtive;
+	padding: .5em;
+	margin: -.5em;
+	
+	&:hover {
+		color: lighten($color-brand-primary, 20%);
+		text-decoration: underline;
+	}
+}
+
+
 // Headings
 // -----------------------------------------------------------------------------
 
+// Shared style
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-heading-family;
 	font-weight: $font-heading-weight;
@@ -59,27 +78,28 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-@mixin heading($factor) {
-
-	font-size: $font-size * (round($factor * 1000) / 1000);
+// Font-sizes mobile first
+@for $i from 1 through 6 {
+	h#{$i} {
+		font-size: $font-size * nth($font-heading-factors, $i);
 	
-	@each $breakpoint in $breakpoints {
-		@media (min-width: #{nth($breakpoint, 2)}) {
-			$margin: $font-heading-margin * nth($breakpoint, 3);
-			font-size: $font-size * $factor * nth($breakpoint, 3);
-			margin-top: $margin;
-			margin-bottom: $margin;
+		small {
+			font-size: $font-size / nth($font-heading-factors, $i);
 		}
-	}
-	
-	small {
-		font-size: $font-size / $factor;
 	}
 }
 
-@for $i from 1 through 6 {
-	h#{$i} {
-		@include heading(nth($font-heading-factors, $i));
+// Responsive font-size
+@each $breakpoint in $breakpoints {
+	@media (min-width: #{nth($breakpoint, 2)}) {
+		@for $i from 1 through 6 {
+			h#{$i} {
+				$margin: $font-heading-margin * nth($breakpoint, 3);
+				font-size: $font-size * nth($font-heading-factors, $i);
+				margin-top: $margin;
+				margin-bottom: $margin;
+			}
+		}
 	}
 }
 
@@ -111,14 +131,27 @@ pre {
 	border: 1px solid $color-gray-light;
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 	
 	// Take maximal available height (save kb)
-	max-height: $line-pre * $line-height-actual * nth(nth($breakpoints, length($breakpoints)), 3);
+	max-height: $line-pre * $line-height-actual *
+			nth(nth($breakpoints, length($breakpoints)), 3);
 }
 
 code, kbd, pre, samp {
     font-family: $font-family-monospace;
     font-size: 1em;
+}
+
+
+// Mark element
+// -----------------------------------------------------------------------------
+
+mark {
+    background: $color-brand-primary;
+    color: $font-color-mark;
+	padding: 0 .25em;
 }
 
 
@@ -133,21 +166,4 @@ hr {
     margin: 1em 0;
     padding: 0;
     box-sizing: content-box;
-}
-
-
-// Container for fixed layouts
-// -----------------------------------------------------------------------------
-
-.container {
-	margin: 0 auto;
-	padding: 1em;
-	box-sizing: border-box;
-	
-	// Responsiveness
-	@each $breakpoint in $breakpoints {
-		@media (min-width: #{nth($breakpoint, 2)}) {
-			width: #{nth($breakpoint, 4)};
-		}
-	}
 }
