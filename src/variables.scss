@@ -7,18 +7,42 @@
 // -----------------------------------------------------------------------------
 
 // Gray colors
-$color-gray-darker:    lighten(#000, 13.5%);
-$color-gray-dark:      lighten(#000, 20%);
-$color-gray:           lighten(#000, 33.5%);
-$color-gray-light:     lighten(#000, 60%);
-$color-gray-lighter:   lighten(#000, 93.5%);
-
-// Layout colors
-$color-background:     #fff;
-$color-text:           $color-gray-dark;
+$color-gray-darker:   lighten(#000, 13.5%);
+$color-gray-dark:     lighten(#000, 20%);
+$color-gray:          lighten(#000, 33.5%);
+$color-gray-light:    lighten(#000, 60%);
+$color-gray-lighter:  lighten(#000, 93.5%);
 
 // Brand colors
-$color-brand-primary:   #2980b9;
+$color-brand-primary: #2980b9;
+$color-brand-success: #27ae60;
+$color-brand-info:    #3498db;
+$color-brand-warning: #f39c12;
+$color-brand-danger:  #c0392b;
+
+
+// Colors for different elements
+// -----------------------------------------------------------------------------
+
+// Layout colors
+$color-background:        #fff;
+$color-text:              $color-gray-dark;
+
+// Mark element
+$color-mark-background:   $color-brand-primary;
+$color-mark-font:         #fff;
+
+// Anchor
+$color-link:              $color-brand-primary;
+
+// Horizontal rules
+$color-hr:                $color-gray;
+
+// Blockquote border
+$color-blockquote-border: $color-gray-darker;
+
+// Button font for special colors
+$color-button-font:       #fff;
 
 // Responsiveness
 // -----------------------------------------------------------------------------
@@ -56,9 +80,6 @@ $line-height-actual:        floor($font-size * $line-height * 1000) / 1000;
 
 // Lines to display in <pre>-block
 $line-pre:                  10;
-
-// Color of text in mark-element
-$font-color-mark:           #fff;
 
 
 // Grid

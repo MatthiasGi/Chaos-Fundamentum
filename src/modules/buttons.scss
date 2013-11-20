@@ -1,0 +1,122 @@
+//
+// Buttons
+// -----------------------------------------------------------------------------
+
+
+// Basic element
+// -----------------------------------------------------------------------------
+
+// Mixin for the button-creation
+@mixin button($color, $font-color: $color-button-font) {
+	background: $color;
+	border-color: darken($color, 10%);
+	color: $font-color;
+	
+	&:hover, &:focus {
+		background-color: darken($color, 10%);
+	}
+
+	&:active, &.active {
+		background-color: darken($color, 20%);
+	}
+}
+
+// The actual buttons
+.btn {
+	background: transparent;
+	cursor: pointer;
+	padding: .6em 1em;
+	margin: .25em .1em;
+	border-width: 1px;
+	border-style: solid;
+	transition: background-color .3s ease-out;
+		
+	// Different color-shemes
+	&.btn-default {
+		@include button(#fff, $color-gray-darker);
+	}
+
+	&.btn-primary {
+		@include button($color-brand-primary);
+	}
+
+	&.btn-success {
+		@include button($color-brand-success);
+	}
+
+	&.btn-info {
+		@include button($color-brand-info);
+	}
+
+	&.btn-warning {
+		@include button($color-brand-warning);
+	}
+
+	&.btn-danger {
+		@include button($color-brand-danger);
+	}
+
+	&.btn-invert {
+		@include button($color-gray-darker);
+	}
+
+	// Link-like-button
+	&.btn-link {
+		color: $color-link;
+		transition: color .3s ease-out;
+		border: none;
+		background: none;
+		
+		&:hover, &:focus, &:active {
+			color: lighten($color-link, 20%);
+			text-decoration: underline;
+			background: none;
+		}
+	}
+
+	// Different button-sizes
+	&.btn-lg {
+		font-size: 1.2em;
+	}
+
+	&.btn-sm {
+		font-size: .9em;
+	}
+
+	&.btn-xs {
+		font-size: .75em;
+	}
+
+	// Block style buttons
+	&.btn-block {
+		display: block;
+		width: 100%;
+	}
+}
+
+
+// Button groups
+// -----------------------------------------------------------------------------
+
+// Basic groups
+.btn-group {
+	@extend .clearfix;
+	
+	.btn {
+		margin: 0;
+		float: left;
+		
+		&:not(:first-child) {
+			border-left: none;
+		}
+	}
+}
+
+// Toolbars (Groups of groups)
+.btn-toolbar .btn-group {
+	display: inline-block;
+		
+	&:not(:first-child) {
+		margin-left: 1em;
+	}
+}

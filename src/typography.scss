@@ -50,14 +50,14 @@ body {
 
 a {
 	text-decoration: none;
-	color: $color-brand-primary;
+	color: $color-link;
 	transition: color .3s ease-out;
-	position: realtive;
+	position: relative;
 	padding: .5em;
 	margin: -.5em;
 	
 	&:hover {
-		color: lighten($color-brand-primary, 20%);
+		color: lighten($color-link, 20%);
 		text-decoration: underline;
 	}
 }
@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 blockquote {
 	margin: 1.5em 1.5em 1.5em 2em;
 	padding-left: 1em;
-	border-left: 5px solid $color-gray-darker;
+	border-left: 5px solid $color-blockquote-border;
 	
 	cite:before {
 		content: "— ";
@@ -150,8 +150,8 @@ code, kbd, pre, samp {
 // -----------------------------------------------------------------------------
 
 mark {
-    background: $color-brand-primary;
-    color: $font-color-mark;
+    background: $color-mark-background;
+    color: $color-mark-font;
 	padding: 0 .25em;
 }
 
@@ -162,7 +162,7 @@ mark {
 hr {
     display: block;
     height: 1px;
-	background: $color-gray;
+	background: $color-hr;
     border: 0;
     margin: 1em 0;
     padding: 0;

@@ -1,17 +1,12 @@
-.demo {
-  background: #2980b9;
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-}
-
 .demo > * {
-  background: #7fbbe3;
+  background: #eeeeee;
   margin: .5em;
   text-align: center;
   padding: .5em;
 }
 
 .demo > * .cell {
-  background: #e7f2fa;
+  background: #fff;
   margin: .5em;
   text-align: center;
   padding: .5em;
