@@ -1,12 +1,20 @@
 @import "src/variables";
 
-.demo-cell {
-	background: $color-gray-lighter;
-}
+.demo {
+	background: $color-brand-primary;
+	font-family: $font-family-monospace;
 
-.grid {
-	h1, h2, h3, h4, h5, h6 {
-		margin: 0 !important;
-		line-height: 1.1;
+	& > * {
+		background: lighten($color-brand-primary, 25%);
+		margin: .5em;
+		text-align: center;
+		padding: .5em;
+
+		.cell {
+			background: lighten($color-brand-primary, 50%);
+			margin: .5em;
+			text-align: center;
+			padding: .5em;
+		}
 	}
 }

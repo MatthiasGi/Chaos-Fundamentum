@@ -1,13 +1,18 @@
-.demo-cell {
-  background: #eeeeee;
+.demo {
+  background: #2980b9;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-.grid h1,
-.grid h2,
-.grid h3,
-.grid h4,
-.grid h5,
-.grid h6 {
-  margin: 0 !important;
-  line-height: 1.1;
+.demo > * {
+  background: #7fbbe3;
+  margin: .5em;
+  text-align: center;
+  padding: .5em;
+}
+
+.demo > * .cell {
+  background: #e7f2fa;
+  margin: .5em;
+  text-align: center;
+  padding: .5em;
 }

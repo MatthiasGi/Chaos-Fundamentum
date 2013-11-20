@@ -4,7 +4,7 @@
 
 // Base properties for all grid-cells.
 .cell {
-	flex: 0 1 auto;
+	flex: 1 1 auto;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0 ($grid-gutter / 2);

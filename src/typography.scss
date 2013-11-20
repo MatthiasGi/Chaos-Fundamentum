@@ -70,7 +70,8 @@ a {
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-heading-family;
 	font-weight: $font-heading-weight;
-	margin: $font-heading-margin 0;
+	margin-left: $font-heading-margin;
+	margin-right: $font-heading-margin;
 	
 	small {
 		color: $color-gray;
