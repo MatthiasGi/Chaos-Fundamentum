@@ -1815,6 +1815,15 @@ hr {
   }
 }
 
+.btn {
+  background: #2980b9;
+  border: none;
+  cursor: pointer;
+  padding: .5em 1em;
+  border-radius: .5em;
+  color: #fff;
+}
+
 @media print {
   * {
     background: transparent !important;
