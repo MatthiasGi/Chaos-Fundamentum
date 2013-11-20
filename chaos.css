@@ -1957,21 +1957,28 @@ hr {
   background: none;
 }
 
-.btn.btn-lg {
+.btn.btn-lg,
+.btn-group-lg .btn {
   font-size: 1.2em;
 }
 
-.btn.btn-sm {
+.btn.btn-sm,
+.btn-group-sm .btn {
   font-size: .9em;
 }
 
-.btn.btn-xs {
+.btn.btn-xs,
+.btn-group-xs .btn {
   font-size: .75em;
 }
 
 .btn.btn-block {
   display: block;
   width: 100%;
+}
+
+.btn-group {
+  margin: .25em 0;
 }
 
 .btn-group .btn {
@@ -1989,6 +1996,38 @@ hr {
 
 .btn-toolbar .btn-group:not(:first-child) {
   margin-left: 1em;
+}
+
+.btn-group-vertical .btn {
+  margin: 0;
+  display: block;
+}
+
+.btn-group-vertical .btn:not(:first-child) {
+  border-top: none;
+}
+
+.btn-group.btn-group-justified {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.btn-group.btn-group-justified .btn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -moz-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 @media print {
