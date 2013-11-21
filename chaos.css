@@ -1819,6 +1819,7 @@ hr {
 }
 
 .btn {
+  display: inline-block;
   background: transparent;
   cursor: pointer;
   padding: .6em 1em;
@@ -1975,6 +1976,10 @@ hr {
 .btn.btn-block {
   display: block;
   width: 100%;
+}
+
+a.btn:hover {
+  text-decoration: none;
 }
 
 .btn-group {

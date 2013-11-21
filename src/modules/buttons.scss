@@ -23,6 +23,7 @@
 
 // The actual buttons
 .btn {
+	display: inline-block;
 	background: transparent;
 	cursor: pointer;
 	padding: .6em 1em;
@@ -94,6 +95,10 @@
 	}
 }
 
+// Special rule for anchor as button
+a.btn:hover {
+	text-decoration: none;
+}
 
 // Button groups
 // -----------------------------------------------------------------------------
