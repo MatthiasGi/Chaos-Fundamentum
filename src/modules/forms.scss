@@ -1,0 +1,18 @@
+//
+// Forms
+// -----------------------------------------------------------------------------
+
+
+// Input elements
+// -----------------------------------------------------------------------------
+
+input[type="text"] {
+	border: 1px solid $color-gray-light;
+	background: #fff;
+	padding: .5em;
+	text-overflow: ellipsis;
+	
+	&::placeholder {
+		color: $color-gray-light;
+	}
+}

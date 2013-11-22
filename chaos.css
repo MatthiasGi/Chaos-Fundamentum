@@ -1966,23 +1966,6 @@ a.btn:hover {
   border-left: none;
 }
 
-.btn-toolbar .btn-group {
-  display: inline-block;
-}
-
-.btn-toolbar .btn-group:not(:first-child) {
-  margin-left: 1em;
-}
-
-.btn-group-vertical .btn {
-  margin: 0;
-  display: block;
-}
-
-.btn-group-vertical .btn:not(:first-child) {
-  border-top: none;
-}
-
 .btn-group.btn-group-justified {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2004,6 +1987,23 @@ a.btn:hover {
   -moz-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+}
+
+.btn-toolbar .btn-group {
+  display: inline-block;
+}
+
+.btn-toolbar .btn-group:not(:first-child) {
+  margin-left: 1em;
+}
+
+.btn-group-vertical .btn {
+  margin: 0;
+  display: block;
+}
+
+.btn-group-vertical .btn:not(:first-child) {
+  border-top: none;
 }
 
 table.table {
@@ -2173,6 +2173,29 @@ table.table.table-hover tbody tr.invert:hover {
 
 table.table tr.invert {
   color: white;
+}
+
+input[type="text"] {
+  border: 1px solid #999999;
+  background: #fff;
+  padding: .5em;
+  text-overflow: ellipsis;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: #999999;
+}
+
+input[type="text"]::-moz-placeholder {
+  color: #999999;
+}
+
+input[type="text"]:-ms-input-placeholder {
+  color: #999999;
+}
+
+input[type="text"]::placeholder {
+  color: #999999;
 }
 
 @media print {

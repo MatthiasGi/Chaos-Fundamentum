@@ -117,6 +117,16 @@ a.btn:hover {
 			border-left: none;
 		}
 	}
+
+	// Justified button group
+	&.btn-group-justified {
+		display: flex;
+		flex-direction: row;
+		
+		.btn {
+			flex: 1 1 auto;
+		}
+	}
 }
 
 // Toolbars (Groups of groups)
@@ -142,15 +152,5 @@ a.btn:hover {
 @each $size in "lg", "sm", "xs" {
 	.btn-group-#{$size} .btn {
 		@extend .btn.btn-#{$size};
-	}
-}
-
-// Justified button group
-.btn-group.btn-group-justified {
-	display: flex;
-	flex-direction: row;
-	
-	.btn {
-		flex: 1 1 auto;
 	}
 }
