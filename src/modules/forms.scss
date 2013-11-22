@@ -3,16 +3,98 @@
 // -----------------------------------------------------------------------------
 
 
-// Input elements
+// Baisc input elements
 // -----------------------------------------------------------------------------
 
-input[type="text"] {
+input[type="text"], input[type="email"], input[type="password"] {
 	border: 1px solid $color-gray-light;
 	background: #fff;
 	padding: .5em;
 	text-overflow: ellipsis;
+	margin: .25em;
 	
 	&::placeholder {
 		color: $color-gray-light;
 	}
+}
+
+
+// Radio- and checkboxes
+// -----------------------------------------------------------------------------
+
+.checkbox, .radio {
+	
+	// Basic styling
+	display: inline-block;
+	margin: .25em .5em;
+	
+	// Hiding the default browser input and replacing checked / disabled state
+	input[type=checkbox], input[type=radio] {
+		display: none;
+		
+		&:checked + label::before {
+			background-color: $color-brand-primary;
+			color: darken($color-brand-primary, 10%);
+		}
+		
+		&[disabled] + label {
+			@extend .disabled;
+		}
+	}
+
+	// Label which also holds the whole logic
+	label {
+	
+		// Make the cursor pointy and make room for the state-indicator
+		cursor: pointer;
+		padding-left: .5em;
+	
+		// The state indicator, here it is!
+		&::before {
+			position: relative;
+			right: .5em;
+			background: $color-background;
+			content: "";
+			display: inline-block;
+			width: 1.2em;
+			height: 1.2em;
+			vertical-align: middle;
+			box-shadow: 0 0 0 1px;
+			color: $color-gray-light;
+			transition: background-color #{$animation-spec}, color #{$animation-spec};
+		}
+
+		// Simple hover state
+		&:hover::before {
+			background-color: $color-gray-light;
+		}
+
+	}
+	
+}
+
+// Padding for radios
+.radio label::before {
+	border: 2px solid $color-background;
+}
+
+
+// Form elements
+// -----------------------------------------------------------------------------
+
+.form-group {
+	margin: .25em;
+	
+	label {
+		font-weight: bold;
+		display: block;
+	}
+
+	input {
+		margin: 0;
+	}
+}
+
+.form-control {
+	width: 100%;
 }

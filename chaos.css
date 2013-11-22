@@ -547,6 +547,10 @@ textarea {
 }
 
 .disabled,
+.checkbox input[type=checkbox][disabled] + label,
+.checkbox input[type=radio][disabled] + label,
+.radio input[type=checkbox][disabled] + label,
+.radio input[type=radio][disabled] + label,
 [disabled] {
   pointer-events: none;
   opacity: .7;
@@ -578,6 +582,10 @@ textarea {
 
 body {
   background: white;
+}
+
+p {
+  margin: .5em 0 1em;
 }
 
 .text-left {
@@ -2175,27 +2183,108 @@ table.table tr.invert {
   color: white;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
   border: 1px solid #999999;
   background: #fff;
   padding: .5em;
   text-overflow: ellipsis;
+  margin: .25em;
 }
 
-input[type="text"]::-webkit-input-placeholder {
+input[type="text"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="password"]::-webkit-input-placeholder {
   color: #999999;
 }
 
-input[type="text"]::-moz-placeholder {
+input[type="text"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="password"]::-moz-placeholder {
   color: #999999;
 }
 
-input[type="text"]:-ms-input-placeholder {
+input[type="text"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder {
   color: #999999;
 }
 
-input[type="text"]::placeholder {
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
   color: #999999;
+}
+
+.checkbox,
+.radio {
+  display: inline-block;
+  margin: .25em .5em;
+}
+
+.checkbox input[type=checkbox],
+.checkbox input[type=radio],
+.radio input[type=checkbox],
+.radio input[type=radio] {
+  display: none;
+}
+
+.checkbox input[type=checkbox]:checked + label::before,
+.checkbox input[type=radio]:checked + label::before,
+.radio input[type=checkbox]:checked + label::before,
+.radio input[type=radio]:checked + label::before {
+  background-color: #2980b9;
+  color: #20638f;
+}
+
+.checkbox label,
+.radio label {
+  cursor: pointer;
+  padding-left: .5em;
+}
+
+.checkbox label::before,
+.radio label::before {
+  position: relative;
+  right: .5em;
+  background: white;
+  content: "";
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: middle;
+  -webkit-box-shadow: 0 0 0 1px;
+  box-shadow: 0 0 0 1px;
+  color: #999999;
+  -webkit-transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.checkbox label:hover::before,
+.radio label:hover::before {
+  background-color: #999999;
+}
+
+.radio label::before {
+  border: 2px solid white;
+}
+
+.form-group {
+  margin: .25em;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+}
+
+.form-group input {
+  margin: 0;
+}
+
+.form-control {
+  width: 100%;
 }
 
 @media print {
