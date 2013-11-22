@@ -7,7 +7,7 @@
 // -----------------------------------------------------------------------------
 
 // Mixin for the button-creation
-@mixin button($color, $font-color: $color-button-font) {
+@mixin button($color, $font-color: $color-background-font) {
 	background: $color;
 	border-color: darken($color, 10%);
 	color: $font-color;
