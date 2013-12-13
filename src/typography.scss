@@ -51,9 +51,9 @@ p {
 // -----------------------------------------------------------------------------
 
 a {
-  color: $color-link;
+  color: $link-color;
   text-decoration: none;
-  transition: color .3s ease-out;
+  transition: color #{$animation-spec};
 
   // Make press-area larger
   margin: -.5em;
@@ -61,7 +61,7 @@ a {
   position: relative;
 
   @include hover {
-    color: lighten($color-link, 20%);
+    color: lighten($link-color, 20%);
     text-decoration: underline;
   }
 }
@@ -102,7 +102,7 @@ h6 {
 :lang(ja) > q {quotes: '「' '」' '『' '』'}
 
 blockquote {
-  border-left: 5px solid $color-blockquote-border;
+  border-left: 5px solid $blockquote-color-border;
   margin: 1.5em;
   padding-left: 1em;
 
@@ -115,7 +115,10 @@ blockquote {
 // Code
 // -----------------------------------------------------------------------------
 
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: $font-family-monospace;
 }
 
@@ -129,7 +132,7 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
 
-  max-height: #{strip($line-pre * $line-height) + 2}em;
+  max-height: #{strip($pre-lines * $line-height) + 1}em;
 }
 
 
@@ -137,16 +140,21 @@ pre {
 // -----------------------------------------------------------------------------
 
 mark {
-  background: $color-mark-background;
-  color: $color-mark-font;
+  background: $mark-color-background;
+  color: $mark-color-font;
   padding: 0 .25em;
 }
 
 hr {
-  background: $color-hr;
+  background: $hr-color;
   border: 0;
   box-sizing: content-box;
   display: block;
   height: 1px;
   margin: 1em 0;
+}
+
+::selection {
+    background: $color-selection;
+    text-shadow: none;
 }

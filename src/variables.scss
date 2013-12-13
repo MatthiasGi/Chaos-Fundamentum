@@ -7,50 +7,32 @@
 // -----------------------------------------------------------------------------
 
 // Gray colors
-$color-gray-darker:   lighten(#000, 13.5%);
-$color-gray-dark:     lighten(#000, 20%);
-$color-gray:          lighten(#000, 33.5%);
-$color-gray-light:    lighten(#000, 60%);
-$color-gray-lighter:  lighten(#000, 93.5%);
+$color-gray-darker:     lighten(#000, 13.5%);
+$color-gray-dark:       lighten(#000, 20%);
+$color-gray:            lighten(#000, 33.5%);
+$color-gray-light:      lighten(#000, 60%);
+$color-gray-lighter:    lighten(#000, 93.5%);
 
 // Brand colors
-$color-brand-primary: #2980b9;
-$color-brand-success: #27ae60;
-$color-brand-info:    #3498db;
-$color-brand-warning: #f39c12;
-$color-brand-danger:  #c0392b;
+$color-brand-primary:   #2980b9;
 
+// Layout colors
+$color-background:      #fff;
+$color-text:            $color-gray-darker;
+$color-selection:       lighten($color-brand-primary, 50%);
+
+// Colors for batch-creating different elements
 $colors:
-  'primary' #2980b9,
+  'primary' $color-brand-primary,
   'success' #27ae60,
   'info'    #3498db,
   'warning' #f39c12,
   'danger'  #c0392b,
   'muted'   $color-gray-light;
 
+// Font infront of special colors
+$color-background-font: $color-background;
 
-// Colors for different elements
-// -----------------------------------------------------------------------------
-
-// Layout colors
-$color-background:        #fff;
-$color-text:              $color-gray-dark;
-
-// Mark element
-$color-mark-background:   $color-brand-primary;
-$color-mark-font:         #fff;
-
-// Anchor
-$color-link:              $color-brand-primary;
-
-// Horizontal rules
-$color-hr:                $color-gray;
-
-// Blockquote border
-$color-blockquote-border: $color-gray-darker;
-
-// Font infront of dark colors (e.g. buttons with special background)
-$color-background-font:   #fff;
 
 // Responsiveness
 // -----------------------------------------------------------------------------
@@ -59,51 +41,69 @@ $color-background-font:   #fff;
 $breakpoints:
   'xs' 30em 1.05 100%,
   'sm' 48em 1.10 100%,
-  'md' 62em 1.15 45em,
-  'lg' 75em 1.20 70em,
-  'xl' 90em 1.30 85em;
+  'md' 62em 1.15 40rem, // 45rem
+  'lg' 75em 1.20 58rem, // 70rem
+  'xl' 90em 1.30 65rem; // 85rem
+
+
+// Elements
+// -----------------------------------------------------------------------------
+
+// Mark
+$mark-color-background:   $color-brand-primary;
+$mark-color-font:         #fff;
+
+// Anchor
+$link-color:              $color-brand-primary;
+
+// Horizontal rule
+$hr-color:                $color-gray;
+
+// Blockquote
+$blockquote-color-border: $color-gray-darker;
+
+// Pre
+$pre-lines:               10;
 
 
 // Typography
 // -----------------------------------------------------------------------------
 
 // Font families presets
-$font-family-sans-serif:    'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-serif:         Georgia, 'Times New Roman', Times, serif;
-$font-family-monospace:     Monaco, Menlo, Consolas, 'Courier New', monospace;
+$font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-serif:      Georgia, 'Times New Roman', Times, serif;
+$font-family-monospace:  Monaco, Menlo, Consolas, 'Courier New', monospace;
 
 // Specific families
-$font-family:               $font-family-sans-serif;
-$font-heading-family:       $font-family;
+$font-family:            $font-family-sans-serif;
+$font-heading-family:    $font-family;
 
-// Various font settings
-$font-heading-weight:       700;
-$font-size:                 .9em;
-$font-heading-sizes:        2.65rem, 2.22rem, 1.71rem, 1.24rem, 1.20rem, 1.03rem;
-$font-heading-margin:       .5rem;
+// Central font-size / line-height
+$font-size:              .9em;
+$line-height:            1.7;
 
-// Line heights
-$line-height:               1.7;
-
-// Lines to display in <pre>-block
-$line-pre:                  10;
+// Heading properties
+$font-heading-sizes:     2.65rem, 2.22rem, 1.71rem, 1.24rem, 1.20rem, 1.03rem;
+$font-heading-margin:    .5rem;
+$font-heading-weight:    700;
 
 
 // Various
 // -----------------------------------------------------------------------------
 
+// Central animation specification
 $animation-spec: .3s ease-out;
 
 
-// Grid
-// -----------------------------------------------------------------------------
-
-$grid-gutter:            .5em;
-$grid-columns:           2, 3, 4, 5, 6, 12;
-
-
-// Tables
-// -----------------------------------------------------------------------------
-
-$tables-padding: .4em;
-$tables-responsive-breakpoint: nth(nth($breakpoints, 2), 2);
+//// Grid
+//// -----------------------------------------------------------------------------
+//
+//$grid-gutter:            .5em;
+//$grid-columns:           2, 3, 4, 5, 6, 12;
+//
+//
+//// Tables
+//// -----------------------------------------------------------------------------
+//
+//$tables-padding: .4em;
+//$tables-responsive-breakpoint: nth(nth($breakpoints, 2), 2);

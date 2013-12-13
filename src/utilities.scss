@@ -3,16 +3,6 @@
 // -----------------------------------------------------------------------------
 
 
-// Disable pointer events on scroll
-// (http://www.thecssninja.com/javascript/pointer-events-60fps)
-// -----------------------------------------------------------------------------
-
-.c-hover-disable,
-.c-hover-disable * {
-  pointer-events: none !important;
-}
-
-
 // Floats
 // -----------------------------------------------------------------------------
 
@@ -32,23 +22,12 @@
 }
 
 
-// Image-replaced text
-// -----------------------------------------------------------------------------
-
-.ir {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-
 // Container for fixed layouts
 // -----------------------------------------------------------------------------
 
 .container {
   margin: 0 auto;
-  padding: 1em;
-  box-sizing: border-box;
+  padding: 1rem;
 
   // Responsiveness
   @each $breakpoint in $breakpoints {
@@ -59,18 +38,23 @@
 }
 
 
-// Disabled elements
+// Various
 // -----------------------------------------------------------------------------
 
+// Disabled elements
 .disabled, [disabled], [readonly] {
   pointer-events: none;
   opacity: .7;
 }
 
-
-// Box-model
-// -----------------------------------------------------------------------------
-
+// Adjust box-sizing
 *, *:before, *:after, *::before, *::after {
   box-sizing: border-box;
+}
+
+// Disable pointer events on scroll
+// (http://www.thecssninja.com/javascript/pointer-events-60fps)
+.c-hover-disable,
+.c-hover-disable * {
+  pointer-events: none !important;
 }

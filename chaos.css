@@ -311,22 +311,6 @@ table {
    ========================================================================== */
 
 /*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
  * Remove the gap between images, videos, audio and canvas and the bottom of
  * their containers: h5bp.com/i/440
  */
@@ -481,6 +465,81 @@ textarea {
   src: local("Lato Black Italic"), local("Lato-BlackItalic"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/VNUH7ZAcagYBWsAiBBCEYz8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
 }
 
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (min-width: 30em) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 48em) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 62em) {
+  .container {
+    width: 40rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .container {
+    width: 58rem;
+  }
+}
+
+@media (min-width: 90em) {
+  .container {
+    width: 65rem;
+  }
+}
+
+.disabled,
+[disabled],
+[readonly] {
+  pointer-events: none;
+  opacity: .7;
+}
+
+*,
+*:before,
+*:after,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.c-hover-disable,
+.c-hover-disable * {
+  pointer-events: none !important;
+}
+
 html {
   font: 100%/1.7 "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -520,7 +579,7 @@ button,
 input,
 select,
 textarea {
-  color: #333333;
+  color: #222222;
 }
 
 body {
@@ -575,8 +634,8 @@ p {
 a {
   color: #2980b9;
   text-decoration: none;
-  -webkit-transition: color .3s ease-out;
-  transition: color .3s ease-out;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
   margin: -.5em;
   padding: .5em;
   position: relative;
@@ -671,7 +730,7 @@ pre {
   overflow: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
-  max-height: 19em;
+  max-height: 18em;
 }
 
 mark {
@@ -689,4 +748,14 @@ hr {
   display: block;
   height: 1px;
   margin: 1em 0;
+}
+
+::-moz-selection {
+  background: #e7f2fa;
+  text-shadow: none;
+}
+
+::selection {
+  background: #e7f2fa;
+  text-shadow: none;
 }

@@ -19,23 +19,10 @@
 
 // Core components
 // -----------------------------------------------------------------------------
-//@import 'utilities.scss';
-
-@function strip($number) {
-  @return $number / ($number * 0 + 1);
-}
-
-@mixin hover {
-  &:hover,
-  &:focus,
-  &:active {
-    @content;
-  }
-}
-
+@import 'mixins.scss';
+@import 'utilities.scss';
 @import 'typography.scss';
-//
-//
+
 //// Optional modules
 //// -----------------------------------------------------------------------------
 //@import 'modules/grid-row.scss';

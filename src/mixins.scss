@@ -1,0 +1,17 @@
+//
+// Mixins
+// -----------------------------------------------------------------------------
+
+// Strips a number of its unit (http://stackoverflow.com/questions/12328259)
+@function strip($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// Creates basic active-style for various ways of "hovering"
+@mixin hover {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
