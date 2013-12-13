@@ -22,46 +22,59 @@ input[type="text"], input[type="email"], input[type="password"] {
 // Radio- and checkboxes
 // -----------------------------------------------------------------------------
 
-.checkbox, .radio {
-	
-	// Basic styling
+// Common styling for all types of boxes
+.checkbox, .radio, .switch {
+
 	display: inline-block;
-	margin: .25em .5em;
-	
-	// Hiding the default browser input and replacing checked / disabled state
+	margin: .25em;
+
 	input[type=checkbox], input[type=radio] {
 		display: none;
-		
-		&:checked + label::before {
-			background-color: $color-brand-primary;
-			color: darken($color-brand-primary, 10%);
-		}
 		
 		&[disabled] + label {
 			@extend .disabled;
 		}
 	}
 
+	label {
+		cursor: pointer;
+
+		&::before {
+			content: "";
+		}
+	}
+
+}
+
+.checkbox, .radio {
+
+	// Replacing checked state
+	input[type=checkbox], input[type=radio] {
+		&:checked + label::before {
+			background-color: $color-brand-primary;
+			color: darken($color-brand-primary, 10%);
+		}
+	}
+
 	// Label which also holds the whole logic
 	label {
 	
-		// Make the cursor pointy and make room for the state-indicator
-		cursor: pointer;
+		// Make room for the state-indicator
 		padding-left: .5em;
+		margin-left: 1px;
 	
 		// The state indicator, here it is!
 		&::before {
 			position: relative;
 			right: .5em;
-			background: $color-background;
-			content: "";
+			background: transparent;
 			display: inline-block;
 			width: 1.2em;
 			height: 1.2em;
 			vertical-align: middle;
 			box-shadow: 0 0 0 1px;
 			color: $color-gray-light;
-			transition: background-color #{$animation-spec}, color #{$animation-spec};
+			transition: background-color #{$animation-spec}, color #{$animation-spec}, box-shadow #{$animation-spec};
 		}
 
 		// Simple hover state
@@ -75,7 +88,61 @@ input[type="text"], input[type="email"], input[type="password"] {
 
 // Padding for radios
 .radio label::before {
-	border: 2px solid $color-background;
+	border: 2px solid transparent;
+	box-shadow: 0 0 0 1px, inset 0 0 0 1px;
+	background-clip: padding-box;
+}
+
+// Switches
+.switch {
+
+	input[type=checkbox], input[type=radio] {
+		&:checked + label {
+			&::after {
+				border-color: darken($color-brand-primary, 10%);
+			}
+
+			&::before {
+				margin-left: 1.6em;
+				background: $color-brand-primary;
+			}
+		}
+	}
+
+	label {
+
+		position: relative;
+		padding-left: 3.5em;
+
+		&::before, &::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 1.4em;
+		}
+
+		&::after {
+			content: "";
+			width: 3em;
+			border: 1px solid $color-gray-light;
+			transition: border-color #{$animation-spec};
+		}
+
+		&::before {
+			background: $color-gray-light;
+			width: 1.4em;
+			transition: background-color #{$animation-spec}, margin-left #{$animation-spec}, opacity #{$animation-spec};
+		}
+
+		&:hover::before {
+			opacity: .8;
+		}
+
+	}
+
+	input[type=radio]:checked + label:hover::before {
+		opacity: 1;
+	}
 }
 
 
@@ -90,11 +157,27 @@ input[type="text"], input[type="email"], input[type="password"] {
 		display: block;
 	}
 
-	input {
+	input, .checkbox, .radio, .switch {
 		margin: 0;
 	}
 }
 
 .form-control {
 	width: 100%;
+}
+
+.form-grid {
+
+	.form-group {
+		@extend .grid-row-sm;
+
+		label:first-child {
+			@extend .cell-1of4;
+		}
+
+		input:last-child {
+			@extend .cell;
+		}
+	}
+
 }

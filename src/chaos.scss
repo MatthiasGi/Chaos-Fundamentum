@@ -7,32 +7,45 @@
 
 // Customizable variables
 // -----------------------------------------------------------------------------
-@import "variables.scss";
+@import 'variables.scss';
 
 
 // Normalizing, fonts, ...
 // -----------------------------------------------------------------------------
-@import "normalize.scss";
-@import "boilerplate.scss"; // Make obsolete as soon as possible
-@import "fonts.scss";
+@import 'normalize.scss';
+@import 'boilerplate.scss'; // TODO(matthiasgi): Make obsolete as soon as possible
+@import 'fonts.scss';
 
 
 // Core components
 // -----------------------------------------------------------------------------
-@import "utilities.scss";
-@import "typography.scss";
+//@import 'utilities.scss';
 
-
-// Optional modules
-// -----------------------------------------------------------------------------
-@import "modules/grid-row.scss";
-@import "modules/buttons.scss";
-@import "modules/tables.scss";
-@import "modules/forms.scss";
-
-
-// Printing styles
-// -----------------------------------------------------------------------------
-@media print {
-	@import "print.scss";
+@function strip($number) {
+  @return $number / ($number * 0 + 1);
 }
+
+@mixin hover {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+@import 'typography.scss';
+//
+//
+//// Optional modules
+//// -----------------------------------------------------------------------------
+//@import 'modules/grid-row.scss';
+//@import 'modules/buttons.scss';
+//@import 'modules/tables.scss';
+//@import 'modules/forms.scss';
+//
+//
+//// Printing styles
+//// -----------------------------------------------------------------------------
+//@media print {
+//  @import 'print.scss';
+//}
