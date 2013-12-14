@@ -7,32 +7,32 @@
 
 // Customizable variables
 // -----------------------------------------------------------------------------
-@import 'variables.scss';
+@import 'variables';
 
 
 // Normalizing, fonts, ...
 // -----------------------------------------------------------------------------
-@import 'normalize.scss';
-@import 'boilerplate.scss'; // TODO(matthiasgi): Make obsolete as soon as possible
+@import 'normalize';
+@import 'boilerplate'; // TODO(matthiasgi): Make obsolete as soon as possible
 @import 'fonts.scss';
 
 
 // Core components
 // -----------------------------------------------------------------------------
-@import 'mixins.scss';
-@import 'utilities.scss';
-@import 'typography.scss';
+@import 'mixins';
+@import 'utilities';
+@import 'typography';
 
-//// Optional modules
-//// -----------------------------------------------------------------------------
-//@import 'modules/grid-row.scss';
-//@import 'modules/buttons.scss';
-//@import 'modules/tables.scss';
-//@import 'modules/forms.scss';
+// Optional modules
+// -----------------------------------------------------------------------------
+@import 'modules/grid-row';
+//@import 'modules/buttons';
+//@import 'modules/tables';
+//@import 'modules/forms';
 //
 //
 //// Printing styles
 //// -----------------------------------------------------------------------------
 //@media print {
-//  @import 'print.scss';
+//  @import 'print';
 //}
