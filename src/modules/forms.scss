@@ -45,7 +45,7 @@ input[type='url'] {
 // Common styling
 .checkbox,
 .radio {
-  display: inline-block;
+  display: block;
   margin: .25em;
   position: relative;
 
@@ -81,7 +81,8 @@ input[type='url'] {
   label {
     cursor: pointer;
     line-height: normal;
-    padding: .5em .5em .5em 0;
+    margin-left: -.5em;
+    padding: .5em;
 
     // Input replacement
     &::before {
@@ -106,6 +107,17 @@ input[type='url'] {
 // Make radio round
 .radio label::before {
   border-radius: 50%;
+}
+
+// Inline styles
+.checkbox-inline {
+  @extend .checkbox;
+  display: inline-block;
+}
+
+.radio-inline {
+  @extend .radio;
+  display: inline-block;
 }
 
 
@@ -153,6 +165,14 @@ input[type='url'] {
     > .radio {
       margin-left: 10em;
     }
+  }
+}
+
+// Force inline style for inline form
+.form-inline {
+  .checkbox,
+  .radio {
+    display: inline-block;
   }
 }
 
