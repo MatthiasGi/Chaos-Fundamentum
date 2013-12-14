@@ -3,108 +3,126 @@
 // -----------------------------------------------------------------------------
 
 
-// Basic table styling
+// Basic table
+// -----------------------------------------------------------------------------
+
 table.table {
-	border-collapse: collapse;
-	margin-bottom: 1em;
-	width: 100%;
-	
-	thead tr:last-child {
-		border-bottom: 2px solid $color-gray-lighter;
-	}
-	
-	th {
-		font-weight: bold;
-	}
+  margin-bottom: 1em;
+  width: 100%;
 
-	th, td {
-		text-align: left;
-		padding: $tables-padding;
-		border-bottom: 1px solid $color-gray-lighter;
-	
-		@each $breakpoint in $breakpoints {
-			@media(min-width: nth($breakpoint, 2)) {
-				padding: $tables-padding * nth($breakpoint, 3);
-			}
-		}
-	}
-	
-	tr {
-		transition: background-color .3s ease-out;
-	}
+  thead tr:last-child {
+    border-bottom: 2px solid $color-gray-lighter;
+  }
 
-	// Striped table
-	&.table-striped tbody tr:nth-child(odd) {
-		background: fade-out($color-gray-lighter, .75);
-	}
+  th {
+    font-weight: bold;
+  }
 
-	// Full-bordererd table
-	&.table-bordered {
-		td, th {
-			border: 1px solid $color-gray-lighter;
-		}
-	}
+  th,
+  td {
+    text-align: left;
+    padding: $table-padding;
+  }
 
-	// Hover-styles
-	&.table-hover tbody tr:hover {
-		background: fade-out($color-gray-lighter, .5);
-	}
+  tr {
+    transition: background-color #{$animation-spec};
+  }
 
-	// Condensed style
-	&.table-condensed {
-		th, td {
-			padding: $tables-padding / 2;
-		}
-	}
+  // Striped table
+  &.table-striped tbody tr:nth-child(odd) {
+    background-color: fade-out($color-gray-lighter, .75);
+  }
+
+  // Bordered table
+  &.table-bordered {
+    td,
+    th {
+      border: 1px solid $color-gray-lighter;
+    }
+  }
+
+  // Hover enabled table
+  &.table-hover tbody tr:hover {
+    background-color: fade-out($color-gray-lighter, .5);
+  }
+
+  // Condensed style
+  &.table-condensed {
+    th,
+    td {
+      padding: 0 $table-padding/2;
+    }
+  }
 }
 
-// Responsive min-width table
-div.table-responsive {
-	overflow-x: auto;
-	margin-bottom: 1em;
-	border: 1px solid $color-gray-lighter;
-	
-	table.table {
-		margin-bottom: 0;
-		min-width: $tables-responsive-breakpoint;
-		
-		tbody tr:last-child {
-			border-bottom: none;
-			
-			td, th {
-				border-bottom: none;
-			}
-		}
-		
-		td:first-child, th:first-child {
-			border-left: none;
-		}
 
-		td:last-child, th:last-child {
-			border-right: none;
-		}
-	}
+// Table with minimal width
+// -----------------------------------------------------------------------------
+
+.table-responsive {
+  border: 1px solid $color-gray-lighter;
+  display: block;
+  margin-bottom: 1em;
+  overflow-x: auto;
+
+  table.table {
+    margin-bottom: 0;
+    min-width: $table-responsive-breakpoint;
+
+    tbody tr:last-child {
+      border-bottom: none;
+
+      td,
+      th {
+        border-bottom: none;
+      }
+    }
+
+    td,
+    th {
+      &:first-child {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
 }
 
-// Mixin for colored rows
-@mixin tables-colored-rows($class, $color) {
-	table.table tr.#{$class} {
-		background-color: fade-out($color, .4);
-	}
-	
-	table.table.table-hover tbody tr.#{$class}:hover {
-		background-color: fade-out($color, .25);
-	}
+
+// Colored rows
+// -----------------------------------------------------------------------------
+
+// DRY mixin
+@mixin table-colored-row($class, $background: null) {
+
+  // Extract values if necessary
+  @if $background == null {
+    $background: nth($class, 2);
+    $class: nth($class, 1);
+  }
+
+  // Actual table style
+  table.table {
+    tr.#{$class} {
+      background-color: lighten($background, 30%);
+    }
+
+    &.table-hover tbody tr.#{$class}:hover {
+      background-color: lighten($background, 20%);
+    }
+  }
 }
 
-// Applying colored rows
-@include tables-colored-rows("active", $color-gray-lighter);
-@include tables-colored-rows("primary", $color-brand-primary);
-@include tables-colored-rows("success", $color-brand-success);
-@include tables-colored-rows("info", $color-brand-info);
-@include tables-colored-rows("warning", $color-brand-warning);
-@include tables-colored-rows("danger", $color-brand-danger);
-@include tables-colored-rows("invert", $color-gray-darker);
+// Generate colored rows
+@each $color in $colors {
+  @include table-colored-row($color);
+}
+
+// Inverted row
+@include table-colored-row("invert", $color-text);
 table.table tr.invert {
-	color: $color-background-font
+  color: $color-background;
 }

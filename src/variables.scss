@@ -109,8 +109,8 @@ $button-sizes: (
 );
 
 
-//// Tables
-//// -----------------------------------------------------------------------------
-//
-//$tables-padding: .4em;
-//$tables-responsive-breakpoint: nth(nth($breakpoints, 2), 2);
+// Tables
+// -----------------------------------------------------------------------------
+
+$table-padding: .4em;
+$table-responsive-breakpoint: nth(nth($breakpoints, 2), 2);
