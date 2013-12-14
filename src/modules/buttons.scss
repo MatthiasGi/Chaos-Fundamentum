@@ -18,9 +18,11 @@
   border-color: darken($background, 10%);
   color: $color;
 
-  &:hover,
-  &:focus {
-    background-color: darken($background, 10%);
+  &, &.active {
+    &:hover,
+    &:focus {
+      background-color: darken($background, 10%);
+    }
   }
 
   &:active,
@@ -45,17 +47,14 @@
   cursor: pointer;
   display: inline-block;
   margin: .25em .1em;
+  outline: 0;
   padding: .6em 1em;
   transition: #{$animation-spec};
   transition-property: background-color, border-color;
 
   // Basic button style
   @include button(#fff, $color-gray-darker);
-
-  // Disable browser outline style
-  @include hover {
-    outline: 0;
-  }
+  @extend %fix-ios-inputs;
 
   // Generate colored versions
   @each $color in $colors {
@@ -72,7 +71,6 @@
   &.btn-link {
     @extend %link;
     border: none;
-    background-color: transparent;
 
     &:focus {
       @extend a:focus;
@@ -99,6 +97,10 @@ a.btn {
 
   @include hover {
     text-decoration: none;
+  }
+
+  &:not(.btn-link):focus {
+    @include outline(transparent);
   }
 }
 

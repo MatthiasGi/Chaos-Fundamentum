@@ -15,3 +15,40 @@
     @content;
   }
 }
+
+// iOS-Fix of rounded corners
+%fix-ios-inputs {
+  -webkit-appearance: none;
+  border-radius: 0;
+  min-height: #{strip($line-height) + .5}em;
+}
+
+// Native scroll behaviour on mobile devices
+%native-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+// Standardised outline for focused elements
+%native-outline {
+
+}
+
+// Standardised Outline
+// -----------------------------------------------------------------------------
+
+@mixin outline-base($color) {
+  outline: 0;
+  box-shadow: 0 0 0 2px $color;
+}
+
+@mixin outline($color) {
+  &:focus {
+    @include outline-base($color);
+  }
+}
+
+@each $color in $colors{
+  %outline-#{nth($color, 1)} {
+    @include outline(nth($color, 2));
+  }
+}

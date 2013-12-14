@@ -42,8 +42,10 @@ table.table {
   }
 
   // Hover enabled table
-  &.table-hover tbody tr:hover {
-    background-color: fade-out($color-gray-lighter, .5);
+  &.table-hover tbody tr {
+    @include hover {
+      background-color: fade-out($color-gray-lighter, .5);
+    }
   }
 
   // Condensed style
@@ -64,6 +66,8 @@ table.table {
   display: block;
   margin-bottom: 1em;
   overflow-x: auto;
+
+  @extend %native-scroll;
 
   table.table {
     margin-bottom: 0;
@@ -110,8 +114,10 @@ table.table {
       background-color: lighten($background, 30%);
     }
 
-    &.table-hover tbody tr.#{$class}:hover {
-      background-color: lighten($background, 20%);
+    &.table-hover tbody tr.#{$class} {
+      @include hover {
+        background-color: lighten($background, 20%);
+      }
     }
   }
 }
