@@ -20,4 +20,4 @@ $RECYCLE.BIN/
 ## Custom
 #############
 
-src/*.css
+*.css
