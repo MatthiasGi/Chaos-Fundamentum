@@ -3,154 +3,157 @@
 // -----------------------------------------------------------------------------
 
 
-// Basic element
+// Basic mixins
 // -----------------------------------------------------------------------------
 
-// Mixin for the button-creation
-@mixin button($color, $font-color: $color-background-font) {
-	background: $color;
-	border-color: darken($color, 10%);
-	color: $font-color;
-	
-	&:hover, &:focus {
-		background-color: darken($color, 10%);
-	}
+@mixin button($background, $color: null) {
 
-	&:active, &.active {
-		background-color: darken($color, 20%);
-	}
+  // Extract color from list, if necessary
+  @if $color == null {
+    $color: nth($background, 3);
+    $background: nth($background, 2);
+  }
+
+  background: $background;
+  border-color: darken($background, 10%);
+  color: $color;
+
+  &:hover,
+  &:focus {
+    background-color: darken($background, 10%);
+  }
+
+  &:active,
+  &.active {
+    background-color: darken($background, 20%);
+  }
+
+  // Reset for anchor element
+  @include hover {
+    color: $color;
+  }
+
 }
 
-// The actual buttons
+
+// Actual button
+// -----------------------------------------------------------------------------
+
 .btn {
-	display: inline-block;
-	background: transparent;
-	cursor: pointer;
-	padding: .6em 1em;
-	margin: .25em .1em;
-	border-width: 1px;
-	border-style: solid;
-	transition: background-color .3s ease-out;
-		
-	// Different color-shemes
-	&.btn-default {
-		@include button(#fff, $color-gray-darker);
-	}
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  margin: .25em .1em;
+  padding: .6em 1em;
+  transition: #{$animation-spec};
+  transition-property: background-color, border-color;
 
-	&.btn-primary {
-		@include button($color-brand-primary);
-	}
+  // Basic button style
+  @include button(#fff, $color-gray-darker);
 
-	&.btn-success {
-		@include button($color-brand-success);
-	}
+  // Disable browser outline style
+  @include hover {
+    outline: 0;
+  }
 
-	&.btn-info {
-		@include button($color-brand-info);
-	}
+  // Generate colored versions
+  @each $color in $colors {
+    &.btn-#{nth($color, 1)} {
+      @include button($color);
+    }
+  }
 
-	&.btn-warning {
-		@include button($color-brand-warning);
-	}
+  &.btn-invert {
+    @include button($color-text, $color-background);
+  }
 
-	&.btn-danger {
-		@include button($color-brand-danger);
-	}
+  // Link style
+  &.btn-link {
+    @extend %link;
+    border: none;
+    background-color: transparent;
 
-	&.btn-invert {
-		@include button($color-gray-darker);
-	}
+    &:focus {
+      @extend a:focus;
+    }
+  }
 
-	// Link-like-button
-	&.btn-link {
-		color: $color-link;
-		transition: color .3s ease-out;
-		border: none;
-		background: none;
-		
-		&:hover, &:focus, &:active {
-			color: lighten($color-link, 20%);
-			text-decoration: underline;
-			background: none;
-		}
-	}
+  // Different button sizes
+  @each $size in $button-sizes {
+    &.btn-#{nth($size, 1)} {
+      font-size: nth($size, 2);
+    }
+  }
 
-	// Different button-sizes
-	&.btn-lg {
-		font-size: 1.2em;
-	}
-
-	&.btn-sm {
-		font-size: .9em;
-	}
-
-	&.btn-xs {
-		font-size: .75em;
-	}
-
-	// Block style buttons
-	&.btn-block {
-		display: block;
-		width: 100%;
-	}
+  // Block style button
+  &.btn-block {
+    display: block;
+    width: 100%;
+  }
 }
 
-// Special rule for anchor as button
-a.btn:hover {
-	text-decoration: none;
+// Reset for anchor element
+a.btn {
+  line-height: normal;
+
+  @include hover {
+    text-decoration: none;
+  }
 }
 
-// Button groups
+
+// Button group
 // -----------------------------------------------------------------------------
 
-// Basic groups
+// Basic group
 .btn-group {
-	@extend .clearfix;
-	
-	margin: .25em 0;
-	
-	.btn {
-		margin: 0;
-		float: left;
-		
-		&:not(:first-child) {
-			border-left: none;
-		}
-	}
+  @extend .clearfix;
 
-	// Justified button group
-	&.btn-group-justified {
-		display: flex;
-		flex-direction: row;
-		
-		.btn {
-			flex: 1 1 auto;
-		}
-	}
+  margin: .25em 0;
+
+  .btn {
+    float: left;
+    margin: 0;
+
+    &:not(:first-child) {
+      border-left: none;
+    }
+  }
+
+  // Justified button group
+  &.btn-group-justified {
+    display: flex;
+
+    .btn {
+      flex: 1 1 auto;
+    }
+  }
 }
 
-// Toolbars (Groups of groups)
+// Toolbars (as in group of groups)
 .btn-toolbar .btn-group {
-	display: inline-block;
-		
-	&:not(:first-child) {
-		margin-left: 1em;
-	}
+  display: inline-block;
+
+  &:not(:first-child) {
+    margin-left: 1em;
+  }
 }
 
-// Vertical
+// Vertical groups
 .btn-group-vertical .btn {
-	margin: 0;
-	display: block;
+  display: block;
+  margin: 0;
 
-	&:not(:first-child) {
-		border-top: none;
-	}
+  &:not(:first-child) {
+    border-top: none;
+  }
 }
 
 // Sizing
-@each $size in "lg", "sm", "xs" {
-	.btn-group-#{$size} .btn {
-		@extend .btn.btn-#{$size};
-	}
+@each $size in $button-sizes {
+  $size: nth($size, 1);
+  .btn-group-#{$size} {
+    @extend .btn.btn-#{$size};
+  }
 }

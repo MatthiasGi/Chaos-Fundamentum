@@ -125,7 +125,7 @@
 
     <h3>Buttons</h3>
     <p>The following <q>designs</q> are available:</p>
-    <button class="btn btn-default">button.btn.btn-default</button>
+    <button class="btn">button.btn</button>
     <button class="btn btn-primary">button.btn.btn-primary</button>
     <button class="btn btn-success">button.btn.btn-success</button>
     <button class="btn btn-info">button.btn.btn-info</button>
@@ -133,9 +133,11 @@
     <button class="btn btn-danger">button.btn.btn-danger</button>
     <button class="btn btn-invert">button.btn.btn-invert</button>
     <button class="btn btn-link">button.btn.btn-link</button>
+    <a>a</a>
+    <a class="btn btn-link">a.btn.btn-link</a>
 
     <p>Each button can be disabled via the class <code>.disabled</code> or with the corresponding attribute.</p>
-    <button disabled class="btn btn-default">button.btn.btn-default</button>
+    <button disabled class="btn">button.btn</button>
     <button disabled class="btn btn-primary">button.btn.btn-primary</button>
     <button disabled class="btn btn-success">button.btn.btn-success</button>
     <button disabled class="btn btn-info">button.btn.btn-info</button>
@@ -146,19 +148,19 @@
 
     <p>The buttons come in four different sizes:</p>
     <p>
-      <button class="btn btn-default btn-lg">button.btn.btn-default.btn-lg</button>
+      <button class="btn btn-lg">button.btn.btn-lg</button>
       <button class="btn btn-invert btn-lg">button.btn.btn-invert.btn-lg</button>
     </p>
     <p>
-      <button class="btn btn-default">button.btn.btn-default</button>
+      <button class="btn">button.btn</button>
       <button class="btn btn-invert">button.btn.btn-invert</button>
     </p>
     <p>
-      <button class="btn btn-default btn-sm">button.btn.btn-default.btn-sm</button>
+      <button class="btn btn-sm">button.btn.btn-sm</button>
       <button class="btn btn-invert btn-sm">button.btn.btn-invert.btn-sm</button>
     </p>
     <p>
-      <button class="btn btn-default btn-xs">button.btn.btn-default.btn-xs</button>
+      <button class="btn btn-xs">button.btn.btn-xs</button>
       <button class="btn btn-invert btn-xs">button.btn.btn-invert.btn-xs</button>
     </p>
 
@@ -166,84 +168,85 @@
     <div class="grid-row-sm">
       <div class="cell-1of4"></div>
       <div class="cell-2of4">
-        <button class="btn btn-default btn-block">button.btn.btn-default.btn-block</button>
+        <button class="btn btn-block">button.btn.btn-block</button>
         <button class="btn btn-primary btn-block">button.btn.btn-primary.btn-block</button>
       </div>
+      <div class="cell-1of4"></div>
     </div>
 
     <p>And beacause other frameworks<sup>TM</sup> do it, here's an active-state triggered by a class:</p>
-    <button class="btn btn-default active">button.btn.btn-default.active</button>
+    <button class="btn active">button.btn.active</button>
     <button class="btn btn-invert active">button.btn.btn-invert.active</button>
 
     <p>Oh, and if you want to use the styles with anchors or inputs... We got you covered!</p>
-    <a href="#" class="btn btn-default">a.btn.btn-default</a>
-    <button class="btn btn-default">button.btn.btn-default</button>
-    <input type="submit" class="btn btn-default" value="input[type=&quot;submit&quot;].btn.btn-default">
+    <a href="#" class="btn">a.btn</a>
+    <button class="btn">button.btn</button>
+    <input type="submit" class="btn" value="input[type=&quot;submit&quot;].btn">
 
     <h4>Button groups</h4>
     <div class="btn-group">
-      <button class="btn btn-default">Button 1</button>
-      <button class="btn btn-default active">Button 2</button>
-      <button class="btn btn-default">Button 3</button>
-      <button class="btn btn-default">Button 4</button>
+      <button class="btn">Button 1</button>
+      <button class="btn active">Button 2</button>
+      <button class="btn">Button 3</button>
+      <button class="btn">Button 4</button>
     </div>
 
     <p>Group groups in toolbars:</p>
     <div class="btn-toolbar" role="toolbar">
       <div class="btn-group">
-        <button class="btn btn-default">01</button>
-        <button class="btn btn-default">02</button>
-        <button class="btn btn-default">03</button>
-        <button class="btn btn-default">04</button>
-        <button class="btn btn-default">05</button>
-        <button class="btn btn-default">06</button>
+        <button class="btn">01</button>
+        <button class="btn">02</button>
+        <button class="btn">03</button>
+        <button class="btn">04</button>
+        <button class="btn">05</button>
+        <button class="btn">06</button>
       </div>
       <div class="btn-group">
-        <button class="btn btn-default">07</button>
-        <button class="btn btn-default">08</button>
-        <button class="btn btn-default">09</button>
-        <button class="btn btn-default">10</button>
+        <button class="btn">07</button>
+        <button class="btn">08</button>
+        <button class="btn">09</button>
+        <button class="btn">10</button>
       </div>
       <div class="btn-group">
-        <button class="btn btn-default">11</button>
-        <button class="btn btn-default">12</button>
+        <button class="btn">11</button>
+        <button class="btn">12</button>
       </div>
     </div>
 
     <p>And the whole thing can also be done vertically.</p>
     <div class="btn-group-vertical">
-      <button class="btn btn-default">Button 1</button>
-      <button class="btn btn-default active">Button 2</button>
-      <button class="btn btn-default">Button 3</button>
-      <button class="btn btn-default">Button 4</button>
+      <button class="btn">Button 1</button>
+      <button class="btn active">Button 2</button>
+      <button class="btn">Button 3</button>
+      <button class="btn">Button 4</button>
     </div>
 
     <p>Try different sizings to apply to all child buttons:</p>
     <div class="btn-group btn-group-lg">
-      <button class="btn btn-default">Button 1</button>
-      <button class="btn btn-default active">Button 2</button>
-      <button class="btn btn-default">Button 3</button>
-      <button class="btn btn-default">Button 4</button>
+      <button class="btn">Button 1</button>
+      <button class="btn active">Button 2</button>
+      <button class="btn">Button 3</button>
+      <button class="btn">Button 4</button>
     </div>
     <div class="btn-group btn-group-sm">
-      <button class="btn btn-default">Button 1</button>
-      <button class="btn btn-default active">Button 2</button>
-      <button class="btn btn-default">Button 3</button>
-      <button class="btn btn-default">Button 4</button>
+      <button class="btn">Button 1</button>
+      <button class="btn active">Button 2</button>
+      <button class="btn">Button 3</button>
+      <button class="btn">Button 4</button>
     </div>
     <div class="btn-group-vertical btn-group-xs">
-      <button class="btn btn-default">Button 1</button>
-      <button class="btn btn-default active">Button 2</button>
-      <button class="btn btn-default">Button 3</button>
-      <button class="btn btn-default">Button 4</button>
+      <button class="btn">Button 1</button>
+      <button class="btn active">Button 2</button>
+      <button class="btn">Button 3</button>
+      <button class="btn">Button 4</button>
     </div>
 
     <p>You can even force a group to take up all available space.</p>
     <div class="btn-group btn-group-justified">
-      <button class="btn btn-default">Button 1</button>
-      <button class="btn btn-default active">Button 2</button>
-      <button class="btn btn-default">Button 3</button>
-      <button class="btn btn-default">Button 4</button>
+      <button class="btn">Button 1</button>
+      <button class="btn active">Button 2</button>
+      <button class="btn">Button 3</button>
+      <button class="btn">Button 4</button>
     </div>
 
     <h3>Tables</h3>
