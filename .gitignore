@@ -1,17 +1,4 @@
 #############
-## Misc
-#############
-[Dd]ebug/
-[Rr]elease/
-[Bb]uild/
-[Bb]in/
-[Tt]mp/
-
-*.tmp
-*.log
-
-
-#############
 ## Windows detritus
 #############
 
