@@ -3,181 +3,179 @@
 // -----------------------------------------------------------------------------
 
 
-// Baisc input elements
+// Basic input elements
 // -----------------------------------------------------------------------------
 
-input[type="text"], input[type="email"], input[type="password"] {
-	border: 1px solid $color-gray-light;
-	background: #fff;
-	padding: .5em;
-	text-overflow: ellipsis;
-	margin: .25em;
-	
-	&::placeholder {
-		color: $color-gray-light;
-	}
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'] {
+  background: #fff;
+  border: 1px solid $color-gray-light;
+  margin: .25em;
+  padding: .5em;
+  text-overflow: ellipsis;
+  width: 15em;
+
+  @extend %fix-ios-inputs;
+
+  &::placeholder {
+    color: $color-gray-light;
+  }
+
+  &.form-control {
+    width: 100%;
+  }
 }
 
 
 // Radio- and checkboxes
 // -----------------------------------------------------------------------------
 
-// Common styling for all types of boxes
-.checkbox, .radio, .switch {
+// TODO(matthisgi): Cleanup the code a bit
 
-	display: inline-block;
-	margin: .25em;
+// Common styling
+.checkbox,
+.radio {
+  display: inline-block;
+  margin: .25em;
+  position: relative;
 
-	input[type=checkbox], input[type=radio] {
-		display: none;
-		
-		&[disabled] + label {
-			@extend .disabled;
-		}
-	}
+  // Hide actual input and redirect functionality
+  input[type=checkbox],
+  input[type=radio] {
 
-	label {
-		cursor: pointer;
+    // "Hack" (?) to make boxes focusable
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 
-		&::before {
-			content: "";
-		}
-	}
+    @extend %fix-ios-inputs;
 
+    &[disabled],
+    .disabled {
+      + label {
+        @extend .disabled;
+      }
+    }
+
+    &:focus,
+    &:active {
+      outline: 0;
+
+      + label {
+        outline: 5px auto $color-brand-primary;
+      }
+    }
+
+    &:checked + label::before {
+      background-color: $color-brand-primary;
+      border-color: darken($color-brand-primary, 10%);
+    }
+  }
+
+  label {
+    cursor: pointer;
+    display: inline-block;
+
+    // Input replacement
+    &::before {
+      border: 1px solid $color-gray-light;
+      box-shadow: inset 0 0 0 3px #fff;
+      content: "";
+      display: inline-block;
+      height: 1.2em;
+      margin-right: .5em;
+      transition: #{$animation-spec};
+      transition-property: background-color, border-color;
+      vertical-align: text-bottom;
+      width: 1.2em;
+    }
+
+    @include hover {
+      &::before {
+        background-color: $color-gray-light;
+      }
+    }
+  }
 }
 
-.checkbox, .radio {
-
-	// Replacing checked state
-	input[type=checkbox], input[type=radio] {
-		&:checked + label::before {
-			background-color: $color-brand-primary;
-			color: darken($color-brand-primary, 10%);
-		}
-	}
-
-	// Label which also holds the whole logic
-	label {
-	
-		// Make room for the state-indicator
-		padding-left: .5em;
-		margin-left: 1px;
-	
-		// The state indicator, here it is!
-		&::before {
-			position: relative;
-			right: .5em;
-			background: transparent;
-			display: inline-block;
-			width: 1.2em;
-			height: 1.2em;
-			vertical-align: middle;
-			box-shadow: 0 0 0 1px;
-			color: $color-gray-light;
-			transition: background-color #{$animation-spec}, color #{$animation-spec}, box-shadow #{$animation-spec};
-		}
-
-		// Simple hover state
-		&:hover::before {
-			background-color: $color-gray-light;
-		}
-
-	}
-	
-}
-
-// Padding for radios
+// Make radio round
 .radio label::before {
-	border: 2px solid transparent;
-	box-shadow: 0 0 0 1px, inset 0 0 0 1px;
-	background-clip: padding-box;
-}
-
-// Switches
-.switch {
-
-	input[type=checkbox], input[type=radio] {
-		&:checked + label {
-			&::after {
-				border-color: darken($color-brand-primary, 10%);
-			}
-
-			&::before {
-				margin-left: 1.6em;
-				background: $color-brand-primary;
-			}
-		}
-	}
-
-	label {
-
-		position: relative;
-		padding-left: 3.5em;
-
-		&::before, &::after {
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 1.4em;
-		}
-
-		&::after {
-			content: "";
-			width: 3em;
-			border: 1px solid $color-gray-light;
-			transition: border-color #{$animation-spec};
-		}
-
-		&::before {
-			background: $color-gray-light;
-			width: 1.4em;
-			transition: background-color #{$animation-spec}, margin-left #{$animation-spec}, opacity #{$animation-spec};
-		}
-
-		&:hover::before {
-			opacity: .8;
-		}
-
-	}
-
-	input[type=radio]:checked + label:hover::before {
-		opacity: 1;
-	}
+  border-radius: 50%;
 }
 
 
 // Form elements
 // -----------------------------------------------------------------------------
 
+// Element grouping
 .form-group {
-	margin: .25em;
-	
-	label {
-		font-weight: bold;
-		display: block;
-	}
+  display: block;
+  margin: .25em 0;
 
-	input, .checkbox, .radio, .switch {
-		margin: 0;
-	}
+  label{
+    font-weight: bold;
+    display: block;
+  }
+
+  input,
+  .checkbox,
+  .radio {
+    margin: 0;
+  }
 }
 
-.form-control {
-	width: 100%;
+// Aligning elements in grid-like structure
+@media (min-width: $form-responsive-breakpoint) {
+  .form-aligned .form-group {
+
+    > label {
+      display: inline-block;
+      padding-right: .5em;
+      text-align: right;
+      width: 10em;
+    }
+
+    > input {
+      display: inline-block;
+
+      &.form-control {
+        width: calc(100% - 10em);
+      }
+    }
+
+    > .checkbox,
+    > .radio {
+      margin-left: 10em;
+    }
+  }
 }
 
-.form-grid {
 
-	.form-group {
-		@extend .grid-row-sm;
+// Fieldsets
+// -----------------------------------------------------------------------------
 
-		label:first-child {
-			@extend .cell-1of4;
-		}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
 
-		input:last-child {
-			@extend .cell;
-		}
-	}
-
+  legend {
+    border-bottom: 1px solid $color-gray-light;
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    padding: .25em 0;
+    width: 100%;
+  }
 }
