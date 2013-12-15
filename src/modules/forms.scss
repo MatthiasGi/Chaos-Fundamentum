@@ -6,6 +6,64 @@
 // Basic input elements
 // -----------------------------------------------------------------------------
 
+// Base style for all inputs
+%form-inputbase {
+  background: transparent;
+
+  @each $size in $form-input-sizes {
+    &.input-#{nth($size, 1)} {
+      font-size: nth($size, 2);
+    }
+  }
+}
+
+// Base style for text-based inputs
+%form-inputtext {
+  border: 1px solid $color-gray-light;
+  display: inline-block;
+  margin: .25em;
+  padding: .5em;
+  text-overflow: ellipsis;
+  width: 15em;
+
+  // Extend more basic styling
+  @extend %form-inputbase;
+  @extend %outline-primary;
+
+  // Properly color placeholder-pseudo-element
+  &::placeholder {
+    color: $color-gray-light;
+  }
+
+  // Form controls extend to maximal available width
+  &.form-control {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  // Additionally indicate disabled state by background color.
+  &[disabled],
+  &.disabled {
+    background: $color-gray-lighter;
+  }
+
+  // Generate colored inputs
+  @each $color in $colors {
+    &.input-#{nth($color, 1)} {
+      border-color: nth($color, 2);
+      @extend %outline-#{nth($color, 1)};
+    }
+  }
+
+  // Indicate required style by tinting the element.
+  &[required] {
+    background: fade-out($form-input-required-color, .95);
+  }
+}
+
+// Generate styles for appropiate inputs
 input[type='color'],
 input[type='date'],
 input[type='datetime'],
@@ -18,24 +76,21 @@ input[type='search'],
 input[type='tel'],
 input[type='text'],
 input[type='time'],
-input[type='url'] {
-  background: #fff;
-  border: 1px solid $color-gray-light;
-  margin: .25em;
-  padding: .5em;
-  text-overflow: ellipsis;
-  width: 15em;
+input[type='url'],
+textarea {
+  @extend %form-inputtext;
+  @extend %fix-inputs;
+}
 
-  @extend %fix-ios-inputs;
-  @extend %outline-primary;
+// Allow only vertical resizing of textareas
+textarea {
+  resize: vertical;
+}
 
-  &::placeholder {
-    color: $color-gray-light;
-  }
-
-  &.form-control {
-    width: 100%;
-  }
+// Select element that preserves mobile-native style
+// TODO(matthiasgi): Flat selects also on mobile
+select {
+  @extend %form-inputtext;
 }
 
 
@@ -45,6 +100,7 @@ input[type='url'] {
 // Common styling
 .checkbox,
 .radio {
+  @extend %form-inputbase;
   display: block;
   margin: .25em;
   position: relative;
@@ -53,17 +109,28 @@ input[type='url'] {
   input[type=checkbox],
   input[type=radio] {
     height: 0;
+    opacity: 0;
     position: absolute;
     width: 0;
-    opacity: 0;
 
+    // Clearly indicate disabled state
     &[disabled],
     .disabled {
       + label {
         @extend .disabled;
+
+        &::before {
+          box-shadow: inset 0 0 0 3px $color-gray-light;
+        }
+      }
+
+      &:not(:checked) + label::before {
+        background: $color-gray-light;
+        box-shadow: none;
       }
     }
 
+    // Allow focussing the fake input
     &:focus {
       outline: 0;
 
@@ -72,12 +139,14 @@ input[type='url'] {
       }
     }
 
+    // Imitate checked style
     &:checked + label::before {
       background-color: $color-brand-primary;
       border-color: darken($color-brand-primary, 10%);
     }
   }
 
+  // Style label that replaces the input
   label {
     cursor: pointer;
     line-height: normal;
@@ -100,6 +169,33 @@ input[type='url'] {
 
     &:hover::before {
       background-color: $color-gray-light;
+    }
+  }
+
+  // Generate colored versions
+  @each $color in $colors {
+    &.input-#{nth($color, 1)} {
+      $color: nth($color, 2);
+
+      input[type='checkbox'],
+      input[type='radio'] {
+        &:focus + label {
+          @include outline-base($color);
+        }
+
+        &:checked + label::before {
+          background-color: $color;
+          border-color: $color;
+        }
+      }
+
+      label {
+        color: $color;
+
+        &::before {
+          border-color: $color;
+        }
+      }
     }
   }
 }
@@ -129,15 +225,28 @@ input[type='url'] {
   display: block;
   margin: .25em 0;
 
-  label{
-    font-weight: bold;
+  > label {
     display: block;
+    font-weight: bold;
   }
 
   input,
+  select,
   .checkbox,
   .radio {
     margin: 0;
+  }
+
+  @each $color in $colors {
+    &.input-#{nth($color, 1)} {
+      label {
+        color: nth($color, 2);
+      }
+
+      input {
+        @extend .input-#{nth($color, 1)};
+      }
+    }
   }
 }
 
@@ -147,23 +256,25 @@ input[type='url'] {
 
     > label {
       display: inline-block;
-      padding-right: .5em;
+      padding-right: 1em;
       text-align: right;
-      width: 10em;
+      width: 12em;
     }
 
-    > input {
+    > input,
+    > select,
+    > .input-static {
       display: inline-block;
 
       &.form-control {
         width: 15em;
-        width: calc(100% - 10em);
+        width: calc(100% - 12em);
       }
     }
 
     > .checkbox,
     > .radio {
-      margin-left: 10em;
+      margin-left: 12em;
     }
   }
 }
@@ -192,5 +303,30 @@ fieldset {
     margin-bottom: 1em;
     padding: .25em 0;
     width: 100%;
+  }
+
+  &[disabled],
+  &.disabled {
+    input,
+    select {
+      background: $color-gray-lighter;
+    }
+  }
+}
+
+// Stack elements tightly
+.form-stack {
+  display: block;
+  margin: .25em 0;
+
+  > input,
+  > select,
+  > textarea {
+    display: block;
+    margin: 0;
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
   }
 }

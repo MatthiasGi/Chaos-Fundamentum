@@ -22,7 +22,7 @@
       }, false);
     </script>
 
-    <meta name="viewport" content="width=device-width, inital-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   </head>
 
   <body class="container">
@@ -474,7 +474,9 @@
     <form action="" role="form" class="form-inline">
       <fieldset>
         <legend>Inline Form</legend>
-        <input type="email" id="inputExampleEmail03" placeholder="Enter email">
+        <label for="inputExampleEmail03" class="visually-hidden">Email address</label>
+        <input type="email" id="inputExampleEmail03" placeholder="Enter email" required>
+        <label for="inputExamplePassword03" class="visually-hidden">Password</label>
         <input type="password" id="inputExamplePassword03" placeholder="Password">
         <div class="checkbox"><input type="checkbox" id="inputExampleCheckForm03"><label for="inputExampleCheckForm03">Remember me</label></div>
         <button type="submit" class="btn btn-primary">Login</button>
@@ -485,8 +487,8 @@
     <form action="" role="form">
       <fieldset>
         <legend>Stacked form with form-groups</legend>
-        <div class="form-group"><label for="inputExampleEmail01">Email address</label><input type="email" class="form-control" id="inputExampleEmail01" placeholder="Enter email"></div>
-        <div class="form-group"><label for="inputExamplePassword01">Password</label><input type="password" class="form-control" id="inputExamplePassword01" placeholder="Password"></div>
+        <div class="form-group input-danger"><label for="inputExampleEmail01">Email address</label><input type="email" class="form-control" id="inputExampleEmail01" placeholder="Enter email"></div>
+        <div class="form-group"><label for="inputExamplePassword01">Password</label><input type="password" class="form-control" id="inputExamplePassword01" placeholder="Password" disabled></div>
         <div class="form-group">
           <div class="checkbox"><input type="checkbox" id="inputExampleCheckForm01"><label for="inputExampleCheckForm01">Remember me</label></div>
           <p class="text-muted">Simple block-level help text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, ratione reprehenderit suscipit voluptatum magni aliquam inventore quam quidem error consequuntur.</p>
@@ -497,8 +499,9 @@
     </form>
 
     <form action="" role="form" class="form-aligned">
-      <fieldset>
+      <fieldset disabled>
         <legend>Aligned form</legend>
+        <div class="form-group"><label>Name</label><p class="input-static">Jon Doe</p></div>
         <div class="form-group"><label for="inputExampleEmail02">Email address</label><input type="email" id="inputExampleEmail02" placeholder="Enter email"></div>
         <div class="form-group"><label for="inputExamplePassword02">Password</label><input type="password" class="form-control" id="inputExamplePassword02" placeholder="Password"></div>
         <div class="form-group">
@@ -510,11 +513,71 @@
       </fieldset>
     </form>
 
+    <form action="" role="form">
+      <fieldset>
+        <legend>Example for grid-like form</legend>
+        <div class="grid-row">
+          <div class="form-group cell">
+            <label for="inputGridFirstName">First name</label>
+            <input type="text" class="form-control" id="inputGridFirstName" placeholder="Enter your first name">
+          </div>
+          <div class="form-group cell">
+            <label for="inputGridLastName">Last name</label>
+            <input type="text" class="form-control" id="inputGridLastName" placeholder="Enter your last name">
+          </div>
+          <div class="form-group cell">
+            <label for="inputGridEmail">Email</label>
+            <input type="text" class="form-control" id="inputGridEmail" placeholder="Enter your email address">
+          </div>
+        </div>
+        <div class="grid-row">
+          <div class="form-group cell">
+            <label for="inputGridPassword01">Password</label>
+            <input type="text" class="form-control" id="inputGridPassword01" placeholder="Enter your password">
+          </div>
+          <div class="form-group cell">
+            <label for="inputGridPassword02">Password (repeat)</label>
+            <input type="text" class="form-control" id="inputGridPassword02" placeholder="Repeat your password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Favourite word</label>
+          <div class="grid-row">
+            <div class="radio cell"><input type="radio" name="inputGridWord" id="inputGridWord01"><label for="inputGridWord01">Lorem.</label></div>
+            <div class="radio cell"><input type="radio" name="inputGridWord" id="inputGridWord02"><label for="inputGridWord02">Corrupti!</label></div>
+            <div class="radio cell"><input type="radio" name="inputGridWord" id="inputGridWord03"><label for="inputGridWord03">Dolores!</label></div>
+            <div class="radio cell"><input type="radio" name="inputGridWord" id="inputGridWord04"><label for="inputGridWord04">Ad?</label></div>
+            <div class="radio cell"><input type="radio" name="inputGridWord" id="inputGridWord05"><label for="inputGridWord05">Exercitationem!</label></div>
+          </div>
+        </div>
+        <hr>
+        <div class="grid-row">
+          <input type="reset" class="btn cell-1of4" value="Cancel">
+          <div class="cell-1of4"></div>
+          <input type="submit" class="btn btn-primary cell-2of4" value="Register">
+        </div>
+      </fieldset>
+    </form>
+
+    <form action="" role="form">
+      <fieldset class="form-stack">
+        <legend>Grouped inputs</legend>
+        <label for="inputGroup01" class="visually-hidden"></label>
+        <input type="text" placeholder="Field 01" id="inputGroup01">
+        <label for="inputGroup02" class="visually-hidden"></label>
+        <input type="text" placeholder="Field 02" id="inputGroup02">
+        <label for="inputGroup03" class="visually-hidden"></label>
+        <input type="text" placeholder="Field 03" id="inputGroup03">
+        <label for="inputGroup04" class="visually-hidden"></label>
+        <input type="text" placeholder="Field 04" id="inputGroup04">
+      </fieldset>
+    </form>
+
     <h4>Inputs</h4>
 
     <p>Various text-based input elements are supported. Also custom styled checkboxes and radiobuttons are provided. See below. Please remember to set the type accordingly. Styling will only occur after providing a matching type.</p>
 
-    <div class="checkbox-inline">
+    <div class="checkbox-inline input-danger input-xs">
       <input type="checkbox" id="inputExampleCheck01">
       <label for="inputExampleCheck01">Lorem ipsum dolor.</label>
     </div>
@@ -549,5 +612,37 @@
       <input type="radio" id="inputExampleRadio04" checked disabled>
       <label for="inputExampleRadio04">Placeat, quisquam, ipsam.</label>
     </div>
+
+    <hr>
+
+    <textarea rows="3" class="form-control input-danger" placeholder="Placeholder"></textarea>
+
+    <hr>
+
+    <select class="form-control input-success">
+      <option>Lorem ipsum dolor.</option>
+      <option>Officia, quam, est.</option>
+      <option>Expedita, at, qui.</option>
+      <option>Culpa, quo, animi!</option>
+      <option>Odit, maiores, sint!</option>
+      <option>Sunt, perferendis nesciunt?</option>
+      <option>Incidunt, labore, voluptatum.</option>
+      <option>Accusamus, non, dolores.</option>
+      <option>Fugiat, excepturi at!</option>
+      <option>Itaque, excepturi, rem.</option>
+    </select>
+
+    <select multiple class="form-control input-warning">
+      <option>Lorem ipsum dolor.</option>
+      <option>Officia, quam, est.</option>
+      <option>Expedita, at, qui.</option>
+      <option>Culpa, quo, animi!</option>
+      <option>Odit, maiores, sint!</option>
+      <option>Sunt, perferendis nesciunt?</option>
+      <option>Incidunt, labore, voluptatum.</option>
+      <option>Accusamus, non, dolores.</option>
+      <option>Fugiat, excepturi at!</option>
+      <option>Itaque, excepturi, rem.</option>
+    </select>
   </body>
 </html>

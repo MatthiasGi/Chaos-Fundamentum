@@ -24,10 +24,6 @@ table.table {
     padding: $table-padding;
   }
 
-  tr {
-    transition: background-color #{$animation-spec};
-  }
-
   // Striped table
   &.table-striped tbody tr:nth-child(odd) {
     background-color: fade-out($color-gray-lighter, .75);
@@ -43,6 +39,8 @@ table.table {
 
   // Hover enabled table
   &.table-hover tbody tr {
+    transition: background-color #{$animation-spec};
+
     @include hover {
       background-color: fade-out($color-gray-lighter, .5);
     }
@@ -52,7 +50,7 @@ table.table {
   &.table-condensed {
     th,
     td {
-      padding: 0 $table-padding/2;
+      padding: 0 ($table-padding / 2);
     }
   }
 }
@@ -73,6 +71,7 @@ table.table {
     margin-bottom: 0;
     min-width: $table-responsive-breakpoint;
 
+    // Stripping doubled borders
     tbody tr:last-child {
       border-bottom: none;
 
@@ -108,27 +107,29 @@ table.table {
     $class: nth($class, 1);
   }
 
-  // Actual table style
-  table.table {
-    tr.#{$class} {
-      background-color: lighten($background, 30%);
-    }
+  // Actual row style
+  tr.#{$class} {
+    background-color: lighten($background, 30%);
+  }
 
-    &.table-hover tbody tr.#{$class} {
-      @include hover {
-        background-color: lighten($background, 20%);
-      }
+  &.table-hover tbody tr.#{$class} {
+    @include hover {
+      background-color: lighten($background, 20%);
     }
   }
+
 }
 
-// Generate colored rows
-@each $color in $colors {
-  @include table-colored-row($color);
-}
+// Actual table style
+table.table {
+  // Generate colored rows
+  @each $color in $colors {
+    @include table-colored-row($color);
+  }
 
-// Inverted row
-@include table-colored-row("invert", $color-text);
-table.table tr.invert {
-  color: $color-background;
+  // Inverted row
+  @include table-colored-row("invert", $color-text);
+  table.table tr.invert {
+    color: $color-background;
+  }
 }

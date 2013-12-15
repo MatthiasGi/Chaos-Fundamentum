@@ -7,12 +7,13 @@
 
 // Customizable variables
 // -----------------------------------------------------------------------------
+@import 'functions';
 @import 'variables';
 
 
 // Normalizing, fonts, ...
 // -----------------------------------------------------------------------------
-@import 'normalize';
+@import 'normalize';   // TODO(matthiasgi): Reintegrate as full version
 @import 'boilerplate'; // TODO(matthiasgi): Make obsolete as soon as possible
 @import 'fonts.scss';
 

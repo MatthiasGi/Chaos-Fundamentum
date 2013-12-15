@@ -2,11 +2,6 @@
 // Mixins
 // -----------------------------------------------------------------------------
 
-// Strips a number of its unit (http://stackoverflow.com/questions/12328259)
-@function strip($number) {
-  @return $number / ($number * 0 + 1);
-}
-
 // Creates basic active-style for various ways of "hovering"
 @mixin hover {
   &:hover,
@@ -16,8 +11,9 @@
   }
 }
 
-// iOS-Fix of rounded corners
-%fix-ios-inputs {
+// Standardise all inputs
+%fix-inputs {
+  -moz-appearance: none;
   -webkit-appearance: none;
   border-radius: 0;
   min-height: #{strip($line-height) + .5}em;
@@ -26,11 +22,6 @@
 // Native scroll behaviour on mobile devices
 %native-scroll {
   -webkit-overflow-scrolling: touch;
-}
-
-// Standardised outline for focused elements
-%native-outline {
-
 }
 
 // Standardised Outline

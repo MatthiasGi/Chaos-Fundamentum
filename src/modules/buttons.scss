@@ -18,19 +18,22 @@
   border-color: darken($background, 10%);
   color: $color;
 
-  &, &.active {
+  // Force hover and focus state even for class-triggered active state
+  &,
+  &.active {
     &:hover,
     &:focus {
       background-color: darken($background, 10%);
     }
   }
 
+  // Active state
   &:active,
   &.active {
     background-color: darken($background, 20%);
   }
 
-  // Reset for anchor element
+  // Reset mainly for anchor element
   @include hover {
     color: $color;
   }
@@ -52,9 +55,11 @@
   transition: #{$animation-spec};
   transition-property: background-color, border-color;
 
+  // Set style globally on all devices
+  @extend %fix-inputs;
+
   // Basic button style
   @include button(#fff, $color-gray-darker);
-  @extend %fix-ios-inputs;
 
   // Generate colored versions
   @each $color in $colors {
@@ -111,7 +116,6 @@ a.btn {
 // Basic group
 .btn-group {
   @extend .clearfix;
-
   margin: .25em 0;
 
   .btn {
@@ -128,7 +132,7 @@ a.btn {
     display: flex;
 
     .btn {
-      flex: 1 1 auto;
+      flex: 1 1;
     }
   }
 }

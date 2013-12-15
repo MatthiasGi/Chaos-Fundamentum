@@ -1,0 +1,18 @@
+//
+// Functions
+// -----------------------------------------------------------------------------
+
+// Strips a number of its unit (http://stackoverflow.com/questions/12328259)
+@function strip($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// Returns a list value by key
+@function get($list, $key, $pos: 2, $kPos: 1) {
+  @each $k in $list {
+    @if nth($k, $kPos) == $key {
+      @return nth($k, $pos);
+    }
+  }
+  @return null;
+}

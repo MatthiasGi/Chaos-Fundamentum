@@ -107,9 +107,11 @@ h6 {
 // Quotes
 // -----------------------------------------------------------------------------
 
-:lang(fr) > q {quotes: '«' '»' '“' '”'}
-:lang(de) > q {quotes: '„' '“' '‚' '‘'}
-:lang(ja) > q {quotes: '「' '」' '『' '』'}
+@each $q in $q-quotes {
+  :lang(#{nth($q, 1)}) > q {
+    quotes: #{nth($q, 2)};
+  }
+}
 
 blockquote {
   border-left: 5px solid $blockquote-color-border;
@@ -135,15 +137,13 @@ samp {
 pre {
   background: $color-gray-lighter;
   border: 1px solid $color-gray-light;
-  padding: .5em 1em;
-
+  max-height: #{strip($pre-lines * $line-height) + .5}em;
   overflow: auto;
+  padding: .5em 1em;
   white-space: pre-wrap;
   word-wrap: break-word;
 
   @extend %native-scroll;
-
-  max-height: #{strip($pre-lines * $line-height) + .5}em;
 }
 
 
@@ -163,4 +163,8 @@ hr {
   display: block;
   height: 1px;
   margin: 1em 0;
+}
+
+label {
+  font-weight: normal;
 }

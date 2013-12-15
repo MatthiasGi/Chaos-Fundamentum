@@ -38,17 +38,41 @@
 }
 
 
+// Visibility
+// -----------------------------------------------------------------------------
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
 // Various
 // -----------------------------------------------------------------------------
 
 // Disabled elements
-.disabled, [disabled], [readonly] {
+.disabled,
+[disabled],
+[readonly] {
   pointer-events: none;
   opacity: .7;
 }
 
 // Adjust box-sizing
-*, *:before, *:after, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

@@ -27,15 +27,23 @@
 // Cells
 // -----------------------------------------------------------------------------
 
-@mixin grid-cell($width: 1, $columns: 1) {
-  flex: $width 1 percentage($width / $columns);
+// Basic cell style
+%cell {
   padding: 0 ($grid-gutter / 2);
 }
 
+// Mixin for generating the cell
+@mixin grid-cell($width: 1, $columns: 1) {
+  @extend %cell;
+  flex: $width 1 percentage($width / $columns);
+}
+
+// Basic cell for even distribution
 .cell {
   @include grid-cell;
 }
 
+// Generating the actual sized cells
 @each $columns in $grid-columns {
   @for $width from 1 through $columns - 1 {
     .cell-#{$width}of#{$columns} {

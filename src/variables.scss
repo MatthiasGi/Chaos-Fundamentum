@@ -57,8 +57,13 @@ $link-color:              $color-brand-primary;
 // Horizontal rule
 $hr-color:                $color-gray;
 
-// Blockquote
+// Quotes
 $blockquote-color-border: $color-gray-darker;
+$q-quotes: (
+    (fr, '«' '»' '“' '”'),
+    (de, '„' '“' '‚' '‘'),
+    (ja, '「' '」' '『' '』')
+  );
 
 // Pre
 $pre-lines:               10;
@@ -99,6 +104,7 @@ $animation-spec: .3s ease-out;
 $grid-gutter:  .5rem;
 $grid-columns: 2, 3, 4, 5, 6, 12;
 
+
 // Buttons
 // -----------------------------------------------------------------------------
 
@@ -113,10 +119,12 @@ $button-sizes: (
 // -----------------------------------------------------------------------------
 
 $table-padding:               .4em;
-$table-responsive-breakpoint: nth(nth($breakpoints, 2), 2);
+$table-responsive-breakpoint: get($breakpoints, 'sm');
 
 
 // Forms
 // -----------------------------------------------------------------------------
 
 $form-responsive-breakpoint: $table-responsive-breakpoint;
+$form-input-sizes:           $button-sizes;
+$form-input-required-color:  get($colors, 'danger');
