@@ -10,3 +10,13 @@
   text-align: center;
   padding: .5em;
 }
+
+.demo-headline h1,
+.demo-headline h2,
+.demo-headline h3,
+.demo-headline h4,
+.demo-headline h5,
+.demo-headline h6 {
+  margin: 0;
+  line-height: normal;
+}
