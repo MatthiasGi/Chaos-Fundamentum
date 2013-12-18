@@ -7,18 +7,25 @@
 // -----------------------------------------------------------------------------
 
 @each $float in "left", "right" {
-  .float-#{$float} {
+  .pull-#{$float} {
     float: #{$float};
   }
 }
 
-.clearfix:before, .clearfix:after {
-  content: " ";
-  display: table;
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
 }
 
-.clearfix:after {
-  clear: both;
+.clearfix {
+  @include clearfix;
 }
 
 
@@ -41,6 +48,7 @@
 // Visibility
 // -----------------------------------------------------------------------------
 
+// Global
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -55,6 +63,11 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+// Responsive
+@each $breakpoint in $breakpoints {
+  // TODO(matthiasgi): Add responsive and print utilities...
 }
 
 

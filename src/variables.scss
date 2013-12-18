@@ -65,6 +65,10 @@ $q-quotes: (
     (ja, '「' '」' '『' '』')
   );
 
+// Lists
+$list-inline-padding:     1em;
+$list-aligned-breakpoint: get($breakpoints, 'sm');
+
 // Pre
 $pre-lines:               10;
 

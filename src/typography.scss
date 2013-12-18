@@ -116,10 +116,15 @@ h6 {
 blockquote {
   border-left: 5px solid $blockquote-color-border;
   margin: 1.5em;
-  padding-left: 1em;
+  padding: 0 1em;
 
   cite:before {
     content: '— ';
+  }
+
+  &.pull-right {
+    border-left: 0;
+    border-right: 5px solid $blockquote-color-border;
   }
 }
 
@@ -144,6 +149,50 @@ pre {
   word-wrap: break-word;
 
   @extend %native-scroll;
+}
+
+
+// Lists
+// -----------------------------------------------------------------------------
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-inline {
+  @extend .list-unstyled;
+
+  > li {
+    display: inline-block;
+    padding-right: $list-inline-padding;
+  }
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 2em;
+}
+
+@media (min-width: $list-aligned-breakpoint) {
+  dl.dl-aligned {
+    @include clearfix;
+
+    > dt {
+      float: left;
+      overflow: hidden;
+      text-align: right;
+      text-overflow: ellipsis;
+      width: 10em;
+    }
+
+    > dd {
+      margin-left: 11em;
+    }
+  }
 }
 
 
