@@ -55,6 +55,13 @@ $normalize-link-larger: false !default;
 // HTML5 display definitions
 // -----------------------------------------------------------------------------
 
+//*Adjusted box-sizing
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 // Correct `block` display not defined in IE 8/9.
 @if $normalize-ie-support <= 9 {
   article,
@@ -252,7 +259,7 @@ small {
   font-size: 80%;
 }
 
-//Prevent `sub` and `sup` affecting `line-height` in all browsers.
+// Prevent `sub` and `sup` affecting `line-height` in all browsers.
 sub,
 sup {
   font-size: 75%;
@@ -435,6 +442,15 @@ textarea {
 //*Set them bold in areas, where you need them to be bold yourself.
 label {
   font-weight: normal;
+}
+
+//*Disabled elements
+.disabled,
+[disabled],
+[readonly] {
+  cursor: default;
+  pointer-events: none;
+  opacity: .7;
 }
 
 

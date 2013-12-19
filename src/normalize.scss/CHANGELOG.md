@@ -1,5 +1,11 @@
 === HEAD
 
+=== 2.1.3-F (December 19, 2013)
+
+* Adjusted box-sizing
+* Disabled elements
+* Print visibility
+
 === 2.1.3-E (December 19, 2013)
 
 * Made `functions.scss` not compilable
