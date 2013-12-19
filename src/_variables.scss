@@ -139,3 +139,20 @@ $form-colors: (
   ('warning', get($colors, 'warning')),
   ('danger', get($colors, 'danger'))
 );
+
+
+// Normalize.scss
+// -----------------------------------------------------------------------------
+
+$normalize-ie-support:           10;
+$normalize-font-family:          $font-family;
+$normalize-background:           $color-background;
+$normalize-color:                $color-text;
+$normalize-h1-care:              false;
+$normalize-code-font-family:     $font-family-monospace;
+$normalize-searchfield-nerf:     false;
+$normalize-hr-color:             $hr-color;
+$normalize-selection-background: lighten($color-brand-primary, 50%);
+$normalize-mark-background:      $mark-color-background;
+$normalize-mark-color:           $mark-color-font;
+$normalize-link-larger:          true;

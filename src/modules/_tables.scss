@@ -14,10 +14,6 @@ table.table {
     border-bottom: 2px solid $color-gray-lighter;
   }
 
-  th {
-    font-weight: bold;
-  }
-
   th,
   td {
     text-align: left;
@@ -41,7 +37,7 @@ table.table {
   &.table-hover tbody tr {
     transition: background-color #{$animation-spec};
 
-    @include hover {
+    &:hover {
       background-color: fade-out($color-gray-lighter, .5);
     }
   }
@@ -65,7 +61,7 @@ table.table {
   margin-bottom: 1em;
   overflow-x: auto;
 
-  @extend %native-scroll;
+  @extend %normalize-scroll;
 
   table.table {
     margin-bottom: 0;
@@ -113,7 +109,7 @@ table.table {
   }
 
   &.table-hover tbody tr.#{$class} {
-    @include hover {
+    &:hover {
       background-color: lighten($background, 20%);
     }
   }

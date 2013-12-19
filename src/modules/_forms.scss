@@ -55,8 +55,10 @@ select {
   outline: 0 !important;
   padding: .5em;
 
-  // Extend more basic styling
-  @extend %outline-primary;
+  // Focus outline
+  &:focus {
+    @include outline($color-brand-primary);
+  }
 
   // Indicate required style by tinting the element.
   &[required] {
@@ -67,7 +69,10 @@ select {
   @each $color in $form-colors {
     &.input-#{nth($color, 1)} {
       border-color: nth($color, 2);
-      @extend %outline-#{nth($color, 1)};
+
+      &:focus {
+        @include outline(nth($color, 2));
+      }
     }
   }
 
@@ -120,7 +125,7 @@ select {
 
     // Allow focussing the fake input
     &:focus + label {
-      @include outline-base($color-brand-primary);
+      @include outline($color-brand-primary);
     }
 
     // Imitate checked style
@@ -163,7 +168,7 @@ select {
 
       input {
         &:focus + label {
-          @include outline-base($color);
+          @include outline($color);
         }
 
         &:checked + label::before {

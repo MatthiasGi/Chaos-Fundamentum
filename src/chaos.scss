@@ -5,29 +5,20 @@
 \******************************************************************************/
 
 
-// Customizable variables
-// -----------------------------------------------------------------------------
-@import 'functions';
-@import 'variables';
-
-
-// Normalizing, fonts, ...
-// -----------------------------------------------------------------------------
-@import 'normalize';   // TODO(matthiasgi): Reintegrate as full version
-@import 'boilerplate'; // TODO(matthiasgi): Make obsolete as soon as possible
-@import 'fonts.scss';
-
-
 // Core components
 // -----------------------------------------------------------------------------
-@import 'mixins';
-@import 'utilities';
-@import 'typography';
+@import 'normalize.scss/functions';
+@import 'variables';
+@import 'fonts';
+@import 'normalize.scss/normalize';
+@import 'core/mixins';
+@import 'core/utilities';
+@import 'core/typography';
 
 
 // Optional modules
 // -----------------------------------------------------------------------------
-@import 'modules/grid-row';
+@import 'modules/grid';
 @import 'modules/buttons';
 @import 'modules/tables';
 @import 'modules/forms';
@@ -35,6 +26,4 @@
 
 // Printing styles
 // -----------------------------------------------------------------------------
-@media print {
-  @import 'print';
-}
+@import 'normalize.scss/print';

@@ -34,7 +34,9 @@
   }
 
   // Reset mainly for anchor element
-  @include hover {
+  &:active,
+  &:hover,
+  &:focus {
     color: $color;
   }
 
@@ -100,7 +102,9 @@
 a.btn {
   line-height: normal;
 
-  @include hover {
+  &:active,
+  &:hover,
+  &:focus {
     text-decoration: none;
   }
 

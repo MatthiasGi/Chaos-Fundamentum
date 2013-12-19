@@ -1,0 +1,16 @@
+//
+// Mixins
+// -----------------------------------------------------------------------------
+
+// Standardise all inputs
+%fix-inputs {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  min-height: #{strip($line-height) + .5}em;
+}
+
+// Standardised Outline
+@mixin outline($color) {
+  box-shadow: 0 0 0 2px $color;
+}
