@@ -51,7 +51,7 @@
 // Global
 .hidden {
   display: none !important;
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 .visually-hidden {
@@ -67,7 +67,34 @@
 
 // Responsive
 @each $breakpoint in $breakpoints {
-  // TODO(matthiasgi): Add responsive and print utilities...
+  .visible-#{nth($breakpoint, 1)} {
+    display: none !important;
+
+    @media(min-width: #{nth($breakpoint, 2)}) {
+      display: block !important;
+    }
+  }
+
+  .hidden-#{nth($breakpoint, 1)} {
+    @media(min-width: #{nth($breakpoint, 2)}) {
+      display: none !important;
+    }
+  }
+}
+
+// Print
+.hidden-print {
+  @media print {
+    display: none !important;
+  }
+}
+
+.visibile-print {
+  display: none !important;
+
+  @media print {
+    display: block !important;
+  }
 }
 
 

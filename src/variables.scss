@@ -132,3 +132,10 @@ $table-responsive-breakpoint: get($breakpoints, 'sm');
 $form-responsive-breakpoint: $table-responsive-breakpoint;
 $form-input-sizes:           $button-sizes;
 $form-input-required-color:  get($colors, 'danger');
+
+// Colors to generate
+$form-colors: (
+  ('success', get($colors, 'success')),
+  ('warning', get($colors, 'warning')),
+  ('danger', get($colors, 'danger'))
+);
