@@ -116,6 +116,11 @@
   box-sizing: border-box;
 }
 
+// Inline elements
+.embedded {
+  display: inline-block;
+}
+
 // Disable pointer events on scroll
 // (http://www.thecssninja.com/javascript/pointer-events-60fps)
 .c-hover-disable,

@@ -72,8 +72,7 @@ select {
   }
 
   // Additionally indicate disabled state by background color.
-  &[disabled],
-  &.disabled {
+  &[disabled] {
     background: $color-gray-lighter;
   }
 
@@ -102,7 +101,6 @@ select {
 // -----------------------------------------------------------------------------
 
 // Common styling
-// TODO(mattiasgi): Code optimasation!!!
 .checkbox,
 .radio {
   display: block;
@@ -110,19 +108,14 @@ select {
   position: relative;
 
   // Hide actual input and redirect functionality
-  input[type=checkbox],
-  input[type=radio] {
-    height: 0;
+  input {
     opacity: 0;
     position: absolute;
-    width: 0;
+    z-index: -1;
 
     // Clearly indicate disabled state
-    &[disabled],
-    .disabled {
-      + label {
-        @extend .disabled;
-      }
+    &[disabled] + label {
+      @extend .disabled;
     }
 
     // Allow focussing the fake input
@@ -168,8 +161,7 @@ select {
     &.input-#{nth($color, 1)} {
       $color: nth($color, 2);
 
-      input[type='checkbox'],
-      input[type='radio'] {
+      input {
         &:focus + label {
           @include outline-base($color);
         }
@@ -194,17 +186,6 @@ select {
 // Make radio round
 .radio label::before {
   border-radius: 50%;
-}
-
-// Inline styles
-.checkbox-inline {
-  @extend .checkbox;
-  display: inline-block;
-}
-
-.radio-inline {
-  @extend .radio;
-  display: inline-block;
 }
 
 
