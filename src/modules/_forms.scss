@@ -121,7 +121,7 @@ select {
 
     // Clearly indicate disabled state
     &[disabled] + label {
-      @extend .disabled;
+      @extend [disabled];
     }
 
     // Allow focussing the fake input

@@ -141,6 +141,26 @@
         "autoprefixer": true,
         "sourcemaps": false
       }
+    },
+    "125cda80": {
+      "id": "125cda80",
+      "pid": "533650c3",
+      "name": "navbar.scss",
+      "input": "src\\components\\navbar.scss",
+      "customOutput": false,
+      "type": "Scss",
+      "config": {
+        "autoCompile": true,
+        "lineNumbers": false,
+        "unixNewlines": false,
+        "debug": false,
+        "compass": false,
+        "fullCompass": false,
+        "compassConfigRb": false,
+        "outputStyle": "expanded",
+        "autoprefixer": true,
+        "sourcemaps": false
+      }
     }
   },
   "imports": {
@@ -156,14 +176,6 @@
       "id": "35d9a5ce",
       "pid": "533650c3",
       "path": "src\\normalize.scss\\normalize.scss",
-      "parents": [
-        "ab442ad3"
-      ]
-    },
-    "9e213ae4": {
-      "id": "9e213ae4",
-      "pid": "533650c3",
-      "path": "src\\normalize.scss\\print.scss",
       "parents": [
         "ab442ad3"
       ]
@@ -237,6 +249,22 @@
       "id": "5837d32e",
       "pid": "533650c3",
       "path": "src\\modules\\_grid.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    },
+    "d8cd07db": {
+      "id": "d8cd07db",
+      "pid": "533650c3",
+      "path": "src\\components\\_navbar.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    },
+    "9e213ae4": {
+      "id": "9e213ae4",
+      "pid": "533650c3",
+      "path": "src\\normalize.scss\\print.scss",
       "parents": [
         "ab442ad3"
       ]
