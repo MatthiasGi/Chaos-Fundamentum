@@ -1,0 +1,274 @@
+{
+  "id": "cc2bfc1e",
+  "cfgVersion": 1,
+  "name": "Chaos-Fundamentum",
+  "files": {
+    "2e8f9ea2": {
+      "id": "2e8f9ea2",
+      "pid": "cc2bfc1e",
+      "name": "README.md",
+      "input": "README.md",
+      "customOutput": false,
+      "type": "Md",
+      "config": {
+        "autoCompile": false,
+        "sanitize": false,
+        "gfm": true
+      }
+    },
+    "cb38432d": {
+      "id": "cb38432d",
+      "pid": "cc2bfc1e",
+      "name": "CHANGELOG.md",
+      "input": "src\\normalize.scss\\CHANGELOG.md",
+      "customOutput": false,
+      "type": "Md",
+      "config": {
+        "autoCompile": false,
+        "sanitize": false,
+        "gfm": true
+      }
+    },
+    "5de6de15": {
+      "id": "5de6de15",
+      "pid": "cc2bfc1e",
+      "name": "demo.scss",
+      "input": "demo.scss",
+      "customOutput": false,
+      "type": "Scss",
+      "config": {
+        "autoCompile": true,
+        "lineNumbers": false,
+        "unixNewlines": false,
+        "sourcemaps": false,
+        "debug": false,
+        "compass": false,
+        "fullCompass": false,
+        "outputStyle": "expanded",
+        "autoprefixer": true
+      }
+    },
+    "ab442ad3": {
+      "id": "ab442ad3",
+      "pid": "cc2bfc1e",
+      "name": "chaos.scss",
+      "input": "src\\chaos.scss",
+      "customOutput": "chaos.css",
+      "type": "Scss",
+      "config": {
+        "autoCompile": true,
+        "lineNumbers": false,
+        "unixNewlines": false,
+        "sourcemaps": false,
+        "debug": false,
+        "compass": false,
+        "fullCompass": false,
+        "outputStyle": "expanded",
+        "autoprefixer": true
+      }
+    },
+    "80862a1b": {
+      "id": "80862a1b",
+      "pid": "cc2bfc1e",
+      "name": "fonts.scss",
+      "input": "src\\fonts.scss",
+      "customOutput": false,
+      "type": "Scss",
+      "config": {
+        "autoCompile": false,
+        "lineNumbers": false,
+        "unixNewlines": false,
+        "sourcemaps": false,
+        "debug": false,
+        "compass": false,
+        "fullCompass": false,
+        "outputStyle": "expanded",
+        "autoprefixer": false
+      }
+    },
+    "35d9a5ce": {
+      "id": "35d9a5ce",
+      "pid": "cc2bfc1e",
+      "name": "normalize.scss",
+      "input": "src\\normalize.scss\\normalize.scss",
+      "customOutput": false,
+      "type": "Scss",
+      "config": {
+        "autoCompile": false,
+        "lineNumbers": false,
+        "unixNewlines": false,
+        "sourcemaps": false,
+        "debug": false,
+        "compass": false,
+        "fullCompass": false,
+        "outputStyle": "expanded",
+        "autoprefixer": false
+      }
+    },
+    "3c1d8618": {
+      "id": "3c1d8618",
+      "pid": "cc2bfc1e",
+      "name": "README.md",
+      "input": "src\\normalize.scss\\README.md",
+      "customOutput": false,
+      "type": "Md",
+      "config": {
+        "autoCompile": false,
+        "sanitize": false,
+        "gfm": true
+      }
+    },
+    "9e213ae4": {
+      "id": "9e213ae4",
+      "pid": "cc2bfc1e",
+      "name": "print.scss",
+      "input": "src\\normalize.scss\\print.scss",
+      "customOutput": false,
+      "type": "Scss",
+      "config": {
+        "autoCompile": false,
+        "lineNumbers": false,
+        "unixNewlines": false,
+        "sourcemaps": false,
+        "debug": false,
+        "compass": false,
+        "fullCompass": false,
+        "outputStyle": "expanded",
+        "autoprefixer": false
+      }
+    }
+  },
+  "imports": {
+    "fa82cf3e": {
+      "id": "fa82cf3e",
+      "pid": "cc2bfc1e",
+      "path": "src\\_variables.scss",
+      "parents": [
+        "5de6de15",
+        "ab442ad3"
+      ]
+    },
+    "398bd53d": {
+      "id": "398bd53d",
+      "pid": "cc2bfc1e",
+      "path": "src\\normalize.scss\\_functions.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    },
+    "80862a1b": {
+      "id": "80862a1b",
+      "pid": "cc2bfc1e",
+      "path": "src\\fonts.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    },
+    "35d9a5ce": {
+      "id": "35d9a5ce",
+      "pid": "cc2bfc1e",
+      "path": "src\\normalize.scss\\normalize.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    },
+    "4b921063": {
+      "id": "4b921063",
+      "pid": "cc2bfc1e",
+      "path": "src\\core\\_mixins.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    },
+    "a3bd02d4": {
+      "id": "a3bd02d4",
+      "pid": "cc2bfc1e",
+      "path": "src\\core\\_utilities.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    },
+    "1be14c3c": {
+      "id": "1be14c3c",
+      "pid": "cc2bfc1e",
+      "path": "src\\core\\_typography.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    },
+    "5837d32e": {
+      "id": "5837d32e",
+      "pid": "cc2bfc1e",
+      "path": "src\\modules\\_grid.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    },
+    "2fa4f8b1": {
+      "id": "2fa4f8b1",
+      "pid": "cc2bfc1e",
+      "path": "src\\modules\\_buttons.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    },
+    "898a3af9": {
+      "id": "898a3af9",
+      "pid": "cc2bfc1e",
+      "path": "src\\modules\\_tables.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    },
+    "2aa6356c": {
+      "id": "2aa6356c",
+      "pid": "cc2bfc1e",
+      "path": "src\\modules\\_forms.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    },
+    "9e213ae4": {
+      "id": "9e213ae4",
+      "pid": "cc2bfc1e",
+      "path": "src\\normalize.scss\\print.scss",
+      "parents": [
+        "ab442ad3"
+      ]
+    }
+  },
+  "images": {},
+  "config": {
+    "watch": true,
+    "liveRefresh": true,
+    "liveRefreshDelay": 0,
+    "filterPatterns": "",
+    "useCustomServer": false,
+    "customServerUrl": "",
+    "cssPath": "css/",
+    "jsPath": "js/",
+    "htmlPath": "html/",
+    "minJsPath": "min/",
+    "htmlExtension": ".html",
+    "cssPathType": "REPLACE_TYPE",
+    "htmlPathType": "REPLACE_TYPE",
+    "jsPathType": "REPLACE_TYPE",
+    "minJsPathType": "RELATIVE_FILEDIR",
+    "htmlTypes": "jade, haml, slim, markdown, md",
+    "cssTypes": "less, sass, stylus, scss, styl",
+    "jsTypes": "coffee, coffeescript, coffeescripts, ls, livescript, livescripts",
+    "cssPreprocessorPath": "",
+    "htmlPreprocessorPath": "",
+    "jsPreprocessorPath": "",
+    "minJsPreprocessorPath": "",
+    "autoprefixerBrowsers": "",
+    "ftpHost": "",
+    "ftpPort": "21",
+    "ftpRemotePath": "",
+    "ftpIgnorePreprocessorFiles": true,
+    "ftpType": "FTP",
+    "ftpExcludePatterns": "",
+    "ftpPassword": "",
+    "ftpUsername": ""
+  }
+}

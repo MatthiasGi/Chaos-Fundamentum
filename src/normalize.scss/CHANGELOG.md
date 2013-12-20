@@ -1,5 +1,10 @@
 === HEAD
 
+=== 2.1.3-G (December 19, 2013)
+
+* Fixed a bug with `print.scss` not compiling because of `h2` and `h3` extending
+  `p`
+
 === 2.1.3-F (December 19, 2013)
 
 * Adjusted box-sizing

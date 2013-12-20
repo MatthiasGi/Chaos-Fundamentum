@@ -49,39 +49,9 @@
   }
 }
 
-// Print
-.hidden-print {
-  @media print {
-    display: none !important;
-  }
-}
-
-.visibile-print {
-  display: none !important;
-
-  @media print {
-    display: block !important;
-  }
-}
-
 
 // Various
 // -----------------------------------------------------------------------------
-
-// Disabled elements
-.disabled,
-[disabled],
-[readonly] {
-  pointer-events: none;
-  opacity: .7;
-}
-
-// Adjust box-sizing
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 // Inline elements
 .embedded {
