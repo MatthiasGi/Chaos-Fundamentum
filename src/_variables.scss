@@ -17,9 +17,10 @@ $color-gray-lighter:    lighten(#000, 93.5%);
 $color-brand-primary:   #2980b9;
 
 // Layout colors
-$color-background:      #fff;
+$color-background:      $color-gray-lighter;
 $color-text:            $color-gray-dark;
 $color-selection:       lighten($color-brand-primary, 50%);
+$color-card:            #fff;
 
 // Colors for batch-creating different elements
 $colors: (
