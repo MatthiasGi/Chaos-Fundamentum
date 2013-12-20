@@ -38,23 +38,34 @@
   padding: 0 ($grid-gutter / 2);
 }
 
-// Mixin for generating the cell
-@mixin grid-cell($width: 1, $columns: 1) {
-  @extend %cell;
-  flex: $width 1 percentage($width / $columns);
-}
-
 // Basic cell for even distribution
 .cell {
-  @include grid-cell;
+  @extend %cell;
+  flex: 1 1 100%;
 }
 
-// Generating the actual sized cells
+// Mixin for generated cells
+@mixin grid-cell($width, $columns, $generated) {
+  // Trim fraction
+  $fraction: fraction($width, $columns);
+  $width:   nth($fraction, 1);
+  $columns: nth($fraction, 2);
+
+  // Search, if already generated. Else generate
+  @if not find($generated, $fraction) {
+    .cell-#{$width}of#{$columns} {
+      @extend %cell;
+      flex: $width 1 percentage($width / $columns);
+    }
+  }
+}
+
+// Generate cells
+$grid-generated: null;
 @each $columns in $grid-columns {
   @for $width from 1 through $columns - 1 {
-    .cell-#{$width}of#{$columns} {
-      @include grid-cell($width, $columns)
-    }
+    @include grid-cell($width, $columns, $grid-generated);
+    $grid-generated: append($grid-generated, ($width, $columns));
   }
 }
 

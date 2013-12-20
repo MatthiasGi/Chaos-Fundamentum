@@ -37,12 +37,13 @@ $colors: (
 // -----------------------------------------------------------------------------
 
 // Screen size presets (name, breakpoint, base-factor, container-width)
-$breakpoints:
-  'xs' 30em 1.00 100%,
-  'sm' 48em 1.05 100%,
-  'md' 62em 1.10 40rem, // 45rem
-  'lg' 75em 1.15 58rem, // 70rem
-  'xl' 90em 1.20 65rem; // 85rem
+$breakpoints: (
+  ('xs' 30em 1.00 100%),
+  ('sm' 48em 1.05 100%),
+  ('md' 62em 1.10 40rem), // 45rem
+  ('lg' 75em 1.15 58rem), // 70rem
+  ('xl' 90em 1.20 65rem)  // 85rem
+);
 
 
 // Elements
@@ -107,7 +108,7 @@ $animation-spec: .3s ease-out;
 // -----------------------------------------------------------------------------
 
 $grid-gutter:  .5rem;
-$grid-columns: 2, 3, 4, 5, 6, 12;
+$grid-columns: 5, 12;
 
 
 // Buttons
