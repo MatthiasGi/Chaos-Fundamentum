@@ -62,7 +62,7 @@
 
 // Inline elements
 .embedded {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 // Disable pointer events on scroll

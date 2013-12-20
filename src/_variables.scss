@@ -17,7 +17,7 @@ $color-gray-lighter:    lighten(#000, 93.5%);
 $color-brand-primary:   #2980b9;
 
 // Layout colors
-$color-background:      $color-gray-lighter;
+$color-background:      #fff;
 $color-text:            $color-gray-dark;
 $color-selection:       lighten($color-brand-primary, 50%);
 $color-card:            #fff;
@@ -38,11 +38,11 @@ $colors: (
 
 // Screen size presets (name, breakpoint, base-factor, container-width)
 $breakpoints:
-  'xs' 30em 1.05 100%,
-  'sm' 48em 1.10 100%,
-  'md' 62em 1.15 40rem, // 45rem
-  'lg' 75em 1.20 58rem, // 70rem
-  'xl' 90em 1.30 65rem; // 85rem
+  'xs' 30em 1.00 100%,
+  'sm' 48em 1.05 100%,
+  'md' 62em 1.10 40rem, // 45rem
+  'lg' 75em 1.15 58rem, // 70rem
+  'xl' 90em 1.20 65rem; // 85rem
 
 
 // Elements

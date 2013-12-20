@@ -58,6 +58,7 @@ select {
   // Focus outline
   &:focus {
     @include outline($color-brand-primary);
+    border-color: $color-brand-primary;
   }
 
   // Indicate required style by tinting the element.
