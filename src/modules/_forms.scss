@@ -63,31 +63,31 @@ select {
 
   // Indicate required style by tinting the element.
   &[required] {
-    background: fade-out($form-input-required-color, .95);
-  }
-
-  // Generate colored inputs
-  @each $color in $form-colors {
-    &.input-#{nth($color, 1)} {
-      border-color: nth($color, 2);
-
-      &:focus {
-        @include outline(nth($color, 2));
-      }
-    }
+    background: fade-out($form-input-required-color, .9);
   }
 
   // Additionally indicate disabled state by background color.
   &[disabled] {
     background: $color-gray-lighter;
   }
+}
 
-  // Form controls extend to maximal available width
-  &.form-control {
-    display: block;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
+// Form controls extend to maximal available width
+.form-control {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
+// Generate colored inputs
+@each $color in $form-colors {
+  .input-#{nth($color, 1)} {
+    border-color: nth($color, 2) !important;
+
+    &:focus {
+      @include outline(nth($color, 2));
+    }
   }
 }
 
@@ -208,11 +208,7 @@ select {
     font-weight: bold;
   }
 
-  input,
-  select,
-  textarea,
-  .checkbox,
-  .radio {
+  * {
     margin: 0;
   }
 }
@@ -272,8 +268,7 @@ fieldset {
     width: 100%;
   }
 
-  &[disabled],
-  &.disabled {
+  &[disabled] {
     input,
     select {
       background: $color-gray-lighter;

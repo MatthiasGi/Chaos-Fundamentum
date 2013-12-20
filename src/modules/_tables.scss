@@ -19,38 +19,37 @@ table.table {
     text-align: left;
     padding: $table-padding;
   }
+}
 
-  // Striped table
-  &.table-striped tbody tr:nth-child(odd) {
-    background-color: fade-out($color-gray-lighter, .75);
-  }
+// Striped table
+.table-striped tbody tr:nth-child(odd) {
+  background-color: fade-out($color-gray-lighter, .75);
+}
 
-  // Bordered table
-  &.table-bordered {
-    td,
-    th {
-      border: 1px solid $color-gray-lighter;
-    }
-  }
-
-  // Hover enabled table
-  &.table-hover tbody tr {
-    transition: background-color #{$animation-spec};
-
-    &:hover {
-      background-color: fade-out($color-gray-lighter, .5);
-    }
-  }
-
-  // Condensed style
-  &.table-condensed {
-    th,
-    td {
-      padding: 0 ($table-padding / 2);
-    }
+// Bordered table
+.table-bordered {
+  td,
+  th {
+    border: 1px solid $color-gray-lighter;
   }
 }
 
+// Hover enabled table
+.table-hover tbody tr {
+  transition: background-color #{$animation-spec};
+
+  &:hover {
+    background-color: fade-out($color-gray-lighter, .5);
+  }
+}
+
+// Condensed style
+.table-condensed {
+  th,
+  td {
+    padding: 0 ($table-padding / 2);
+  }
+}
 
 // Table with minimal width
 // -----------------------------------------------------------------------------
@@ -63,7 +62,7 @@ table.table {
 
   @extend %normalize-scroll;
 
-  table.table {
+  table {
     margin-bottom: 0;
     min-width: $table-responsive-breakpoint;
 
@@ -125,7 +124,7 @@ table.table {
 
   // Inverted row
   @include table-colored-row("invert", $color-text);
-  table.table tr.invert {
+  tr.invert {
     color: $color-background;
   }
 }

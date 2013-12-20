@@ -1,24 +1,30 @@
 //
-// Module: Grid (Rows)
+// Module: Grid
 // -----------------------------------------------------------------------------
 
 
 // Rows
 // -----------------------------------------------------------------------------
 
-@mixin grid-row {
-  display: flex;
+%grid {
   justify-content: space-between;
 }
 
-.grid-row {
-  @include grid-row;
+@mixin grid {
+  display: flex;
+}
+
+.grid {
+  @extend %grid;
+  @include grid;
 }
 
 @each $breakpoint in $breakpoints {
-  .grid-row-#{nth($breakpoint, 1)} {
+  .grid-#{nth($breakpoint, 1)} {
+    @extend %grid;
+
     @media (min-width: #{nth($breakpoint, 2)}) {
-      @include grid-row;
+      @include grid;
     }
   }
 }
@@ -74,18 +80,18 @@
 }
 
 // Global cell alignments per row
-.grid-row-top {
+.grid-top {
   align-items: flex-start;
 }
 
-.grid-row-center {
+.grid-center {
   align-items: center;
 }
 
-.grid-row-bottom {
+.grid-bottom {
   align-items: flex-end;
 }
 
-.grid-row-baseline {
+.grid-baseline {
   align-items: baseline;
 }

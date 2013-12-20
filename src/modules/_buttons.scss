@@ -62,40 +62,6 @@
 
   // Basic button style
   @include button(#fff, $color-gray-darker);
-
-  // Generate colored versions
-  @each $color in $colors {
-    &.btn-#{nth($color, 1)} {
-      @include button($color);
-    }
-  }
-
-  &.btn-invert {
-    @include button($color-text, $color-background);
-  }
-
-  // Link style
-  &.btn-link {
-    @extend %link;
-    border: none;
-
-    &:focus {
-      @extend a:focus;
-    }
-  }
-
-  // Different button sizes
-  @each $size in $button-sizes {
-    &.btn-#{nth($size, 1)} {
-      font-size: nth($size, 2);
-    }
-  }
-
-  // Block style button
-  &.btn-block {
-    display: block;
-    width: 100%;
-  }
 }
 
 // Reset for anchor element
@@ -111,6 +77,45 @@ a.btn {
   &:not(.btn-link):focus {
     @include outline(transparent);
   }
+}
+
+// Generate colored versions
+@each $color in $colors {
+  .btn-#{nth($color, 1)} {
+    @include button($color);
+  }
+}
+
+.btn-invert {
+  @include button($color-text, $color-background);
+}
+
+// Different button sizes
+@each $size in $button-sizes {
+  .btn-#{nth($size, 1)} {
+    font-size: nth($size, 2);
+  }
+}
+
+// Link style
+.btn-link {
+  @extend %link;
+  border: 0;
+
+  &:focus {
+    @extend a:focus;
+  }
+}
+
+// Block style button
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Reset for inputs
+input.btn:focus {
+  box-shadow: none;
 }
 
 
@@ -130,14 +135,14 @@ a.btn {
       border-left: none;
     }
   }
+}
 
-  // Justified button group
-  &.btn-group-justified {
-    display: flex;
+// Justified button group
+.btn-group-justified {
+  display: flex;
 
-    .btn {
-      flex: 1 1;
-    }
+  .btn {
+    flex: 1 1;
   }
 }
 
@@ -162,8 +167,7 @@ a.btn {
 
 // Sizing
 @each $size in $button-sizes {
-  $size: nth($size, 1);
-  .btn-group-#{$size} {
-    @extend .btn.btn-#{$size};
+  .btn-group-#{nth($size, 1)} {
+    font-size: nth($size, 2);
   }
 }

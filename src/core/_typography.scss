@@ -43,7 +43,6 @@ body {
 
 // Prototype object for external uses
 %link {
-  background-color: transparent;
   color: $link-color;
   text-decoration: none;
   transition: color #{$animation-spec};
@@ -56,7 +55,7 @@ body {
     text-decoration: underline;
   }
 
-  &:foucs {
+  &:focus:not(:hover):not(:active) {
     outline: 0;
     @include outline($color-brand-primary);
   }

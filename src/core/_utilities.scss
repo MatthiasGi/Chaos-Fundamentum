@@ -16,7 +16,6 @@
 // Containers for fixed layouts
 // -----------------------------------------------------------------------------
 
-.card,
 .container {
   margin: 0 auto;
   padding: 1rem;
@@ -32,8 +31,8 @@
 .card {
   background: $color-card;
   border: 1px solid darken($color-card, 15%);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 // Visibility

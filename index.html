@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   </head>
 
-  <body>    
+  <body>
     <div class="container">
     <h1 class="text-center">Chaos Fundamentum</h1>
 
@@ -53,32 +53,32 @@
     <p>Line height and font size are fully responsive. Try it for yourself and resize the browser or view the page on your mobile device. The most common elements for text semantics and structuring are used in this section.</p>
 
     <div class="demo-headline">
-      <div class="grid-row-sm grid-row-baseline">
+      <div class="grid-sm grid-baseline">
         <small class="text-muted cell-1of6">Heading 1</small>
         <h1 class="cell">Lorem ipsum dolor sit amet. <small>h1</small></h1>
       </div>
-      <div class="grid-row-sm grid-row-baseline">
+      <div class="grid-sm grid-baseline">
         <small class="text-muted cell-1of6">Heading 2</small>
         <h2 class="cell">Quisquam, officiis eum aperiam autem. <small>h2</small></h2>
       </div>
-      <div class="grid-row-sm grid-row-baseline">
+      <div class="grid-sm grid-baseline">
         <small class="text-muted cell-1of6">Heading 3</small>
         <h3 class="cell">Distinctio, consequatur iste voluptatibus dignissimos! <small>h3</small></h3>
       </div>
-      <div class="grid-row-sm grid-row-baseline">
+      <div class="grid-sm grid-baseline">
         <small class="text-muted cell-1of6">Heading 4</small>
         <h4 class="cell">Consequuntur fugiat perferendis at hic? <small>h4</small></h4>
       </div>
-      <div class="grid-row-sm grid-row-baseline">
+      <div class="grid-sm grid-baseline">
         <small class="text-muted cell-1of6">Heading 5</small>
         <h5 class="cell">Laboriosam, impedit sint excepturi delectus? <small>h5</small></h5>
       </div>
-      <div class="grid-row-sm grid-row-baseline">
+      <div class="grid-sm grid-baseline">
         <small class="text-muted cell-1of6">Heading 6</small>
         <h6 class="cell">Cupiditate voluptatem dolores recusandae voluptates? <small>h6</small></h6>
       </div>
     </div>
-    <div class="grid-row-sm grid-row-baseline">
+    <div class="grid-sm grid-baseline">
       <small class="text-muted cell-1of6">Simple paragraphs</small>
       <div class="cell">
         <p>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing</strong> elit. Est, rerum <b>ipsum in odit</b> nemo debitis veritatis totam. <em>Accusamus, tenetur</em>, deserunt expedita <i>eaque enim</i> molestias quasi animi doloribus <small>debitis odit ad quis quaerat</small> aspernatur iure tempora <mark>mollitia est excepturi</mark> voluptate inventore iusto assumenda <del>impedit laboriosam nesciunt blanditiis</del> <ins>consequatur quia totam vero corrupti</ins> maiores alias harum <s>nemo rem natus dolorem temporibus</s> atque pariatur sint aliquam praesentium voluptatibus minima velit eos veniam magnam fugiat dicta. Pariatur, dicta ad voluptates distinctio libero minus voluptatibus tenetur molestias recusandae aliquid nam repudiandae quae voluptate debitis error doloremque atque. Modi quis numquam <a href="#">neque consequatur rerum</a> commodi temporibus.</p>
@@ -86,7 +86,7 @@
       </div>
     </div>
 
-    <div class="grid-row-sm grid-row-baseline">
+    <div class="grid-sm grid-baseline">
       <small class="text-muted cell-1of6">Blockquote</small>
       <div class="cell">
         <blockquote cite="http://en.wikipedia.org/wiki/Lorem_ipsum">
@@ -96,7 +96,7 @@
       </div>
     </div>
 
-    <div class="grid-row-sm grid-row-baseline">
+    <div class="grid-sm grid-baseline">
       <small class="text-muted cell-1of6">Codeblock</small>
       <div class="cell">
         <pre>pre {
@@ -113,7 +113,7 @@
       </div>
     </div>
 
-    <div class="grid-row-sm grid-row-baseline">
+    <div class="grid-sm grid-baseline">
       <small class="text-muted cell-1of6">Lists</small>
       <div class="cell">
         <ul>
@@ -185,11 +185,11 @@
     <p>The simple grid system allows you to align cells inside a single row (no fancy multiline grid is provided at the moment). It uses the modern and futureproof <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" alt="MDN explanation for the flexbox-layout-model">flexbox-model</a>. As such, there's no real fallback for old browsers possible (however they will render the content stacked vertically).</p>
 
     <p>Nesting columns and auto-computing is easy.</p>
-    <div class="grid-row demo">
+    <div class="grid demo">
       <div class="cell">.cell</div>
       <div class="cell">
-        .cell.grid-row
-        <div class="grid-row">
+        .cell.grid
+        <div class="grid">
           <div class="cell">.cell</div>
           <div class="cell">.cell</div>
         </div>
@@ -197,17 +197,17 @@
     </div>
 
     <p>Different sizes are provided:</p>
-    <div class="grid-row demo">
+    <div class="grid demo">
       <div class="cell-1of2">.cell-1of2</div>
       <div class="cell-1of2">.cell-1of2</div>
     </div>
-    <div class="grid-row demo">
+    <div class="grid demo">
       <div class="cell-1of3">.cell-1of3</div>
       <div class="cell-2of3">.cell-2of3</div>
     </div>
 
     <p>It's even responsive! Go ahead, try it out!</p>
-    <div class="grid-row-md demo">
+    <div class="grid-md demo">
       <div class="cell-1of6">.cell-1of6</div>
       <div class="cell-2of6">.cell-2of6</div>
       <div class="cell-2of6">.cell-2of6</div>
@@ -256,7 +256,7 @@
     </p>
 
     <p>Maybe you want to arrange them in block level? Here you go:</p>
-    <div class="grid-row-sm">
+    <div class="grid-sm">
       <div class="cell-1of4"></div>
       <div class="cell-2of4">
         <button class="btn btn-block">button.btn.btn-block</button>
@@ -580,7 +580,7 @@
     <form action="" role="form">
       <fieldset>
         <legend>Example for grid-like form</legend>
-        <div class="grid-row">
+        <div class="grid-sm">
           <div class="form-group cell">
             <label for="inputGridFirstName">First name</label>
             <input type="text" class="form-control" id="inputGridFirstName" placeholder="Enter your first name">
@@ -594,7 +594,7 @@
             <input type="text" class="form-control" id="inputGridEmail" placeholder="Enter your email address">
           </div>
         </div>
-        <div class="grid-row">
+        <div class="grid-sm">
           <div class="form-group cell">
             <label for="inputGridPassword01">Password</label>
             <input type="text" class="form-control" id="inputGridPassword01" placeholder="Enter your password">
@@ -606,7 +606,7 @@
         </div>
         <div class="form-group">
           <label>Favourite word</label>
-          <div class="grid-row">
+          <div class="grid">
             <div class="radio cell"><input type="radio" name="inputGridWord" id="inputGridWord01"><label for="inputGridWord01">Lorem.</label></div>
             <div class="radio cell"><input type="radio" name="inputGridWord" id="inputGridWord02"><label for="inputGridWord02">Corrupti!</label></div>
             <div class="radio cell"><input type="radio" name="inputGridWord" id="inputGridWord03"><label for="inputGridWord03">Dolores!</label></div>
@@ -615,7 +615,7 @@
           </div>
         </div>
         <hr>
-        <div class="grid-row">
+        <div class="grid-sm">
           <input type="reset" class="btn cell-1of4" value="Cancel">
           <div class="cell-1of4"></div>
           <input type="submit" class="btn btn-primary cell-2of4" value="Register">
