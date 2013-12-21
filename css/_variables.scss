@@ -157,6 +157,7 @@ $form-colors: (
 // -----------------------------------------------------------------------------
 
 $navbar-background: $color-gray-lighter;
+$navbar-breakpoint: get($breakpoints, 'md');
 $navbar-color:      $color-text;
 
 

@@ -6,36 +6,28 @@
     <link rel="stylesheet" href="chaos.css">
     <link rel="stylesheet" href="demo.css">
 
-    <script>
-      var body = document.body;
-      var timer;
-
-      window.addEventListener('scroll', function() {
-        clearTimeout(timer);
-        if (!body.classList.contains('c-hover-disable')) {
-          body.classList.add('c-hover-disable');
-        }
-
-        timer = setTimeout(function() {
-          body.classList.remove('c-hover-disable');
-        }, 500);
-      }, false);
-    </script>
+    <script src="chaos.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   </head>
 
   <body>
-    <nav class="navbar" role="navigation">
+    <nav class="navbar collapsed" role="navigation" id="navbar-main">
       <div class="container">
-        <a href="/" class="navbar-brand">Chaos</a>
-        <ul class="navbar-nav">
-          <li><a href="#">Lorem.</a></li>
-          <li><a href="#">Eaque!</a></li>
-          <li><a href="#">Libero.</a></li>
-          <li><a href="#">Odio?</a></li>
-          <li><a href="#">Pariatur!</a></li>
-        </ul>
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">Chaos</a>
+          <button type="button" class="navbar-toggle" aria-label="Toggle Menu" data-target="#navbar-main" data-action="collapse"><span class="icon"></span></button>
+        </div>
+        <div class="navbar-collapse">
+          <ul class="navbar-nav">
+            <li><a href="#">Lorem.</a></li>
+            <li class="active"><a href="#">Eaque!</a></li>
+            <li><a href="#">Libero.</a></li>
+            <li><a href="#">Odio?</a></li>
+            <li><a href="#">Pariatur!</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 

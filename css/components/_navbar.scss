@@ -1,0 +1,211 @@
+//
+// Component: Navbar
+// -----------------------------------------------------------------------------
+
+
+// Basic styling
+// -----------------------------------------------------------------------------
+
+// Base of all navbars
+.navbar {
+  @extend .clearfix;
+
+  background: $navbar-background;
+  border-bottom: 1px solid darken($navbar-background, 10%);
+  display: block;
+  width: 100%;
+
+  // Reset links
+  a {
+    color: $navbar-color;
+    margin: 0;
+    padding: .5rem .6rem;
+
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: lighten($navbar-color, 30%);
+    }
+  }
+}
+
+// Exposed brand element
+a.navbar-brand,
+.navbar-brand {
+  color: $color-text;
+  display: inline-block;
+  font-weight: bold;
+  padding: .5rem 1rem;
+}
+
+// Navigation inside of navbar
+ul.navbar-nav {
+  @extend .list-inline;
+  display: inline-block;
+  margin: 0;
+
+  li {
+    padding: 0;
+
+    &.active a {
+      background: lighten($navbar-background, 5%);
+    }
+
+    a {
+      display: block;
+    }
+  }
+}
+
+// Buttons inside of tables
+.navbar-btn {
+  margin: .2rem 0;
+  padding: .4rem .5rem;
+}
+
+// Floatation
+.navbar-right {
+  float: right;
+}
+
+
+// Collapsable navbar
+// -----------------------------------------------------------------------------
+
+// Container for the collapsing content
+.navbar-collapse {
+  display: block;
+  transition: max-height #{$animation-spec};
+  max-height: 0;
+  margin: 0 -1rem;
+  overflow-y: auto;
+  @extend %normalize-scroll;
+
+  ul.navbar-nav {
+    display: block;
+
+    li {
+      display: block;
+
+      a {
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+// Extended container
+.navbar.expanded .navbar-collapse {
+  max-height: 10em;
+}
+
+// Button to toggle the collapsable content
+.navbar-toggle {
+  @extend .btn;
+  @extend .navbar-btn;
+
+  box-sizing: content-box;
+  float: right;
+  height: 1rem;
+  margin-right: .2rem;
+  width: 1.2rem;
+
+  .icon {
+    &,
+    &::after,
+    &::before {
+      display: block;
+      width: 100%;
+      height: (1em/7);
+      background: $color-gray-dark;
+      transition: $animation-spec;
+    }
+
+    position: relative;
+    transition-property: background-color;
+    vertical-align: middle;
+
+    &::after,
+    &::before {
+      position: absolute;
+      left: 0;
+      content: '';
+      transform-origin: 50% 50%;
+      transition-property: top, transform;
+    }
+
+    &::after {
+      top: -(1em/4);
+    }
+
+    &::before {
+      top: (1em/4)
+    }
+  }
+
+  &:hover .icon {
+    &::after {
+      top: -(1em/2.5);
+    }
+
+    &::before {
+      top: (1em/2.5);
+    }
+  }
+}
+
+// Transform to close icon
+.navbar.expanded .navbar-toggle .icon {
+  background: transparent;
+
+  &::after {
+    top: 0;
+    transform: rotate3d(0, 0, 1, 45deg);
+  }
+
+  &::before {
+    top: 0;
+    transform: rotate3d(0, 0, 1, -45deg);
+  }
+}
+
+// Format the header for collapsed contents
+.navbar-header {
+  border-bottom: 1px solid transparent;
+  margin: 0 -1rem;
+  transition: border-bottom-color $animation-spec;
+}
+
+.navbar.expanded .navbar-header {
+  border-color: darken($navbar-background, 10%);
+}
+
+
+// Reset formats for widescreen
+@media (min-width: $navbar-breakpoint) {
+  .navbar-header {
+    border-color: transparent !important;
+    display: inline-block;
+    margin: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: inline-block;
+    margin: 0;
+    max-height: none;
+    overflow-y: visible;
+
+    ul.navbar-nav li {
+      display: inline-block;
+
+      a {
+        padding-left: .6rem;
+      }
+    }
+  }
+}

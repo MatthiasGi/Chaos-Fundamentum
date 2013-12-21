@@ -29,6 +29,7 @@ input[type='url'],
 textarea {
   @extend %fix-inputs;
   @extend %form-inputtext;
+  min-height: #{strip($line-height) + .5}em;
 }
 
 // Allow only vertical resizing of textareas
