@@ -1,0 +1,5 @@
+name: Chaos-Fundamentum Documentation
+markdown: redcarpet
+pygments: false
+safe: true
+source: page

@@ -1,0 +1,46 @@
+{
+  "name": "Chaos-Fundamentum-Documentation",
+  "description": "Documentation and showcase for Chaos-Fundamentum",
+  "version": "0.1.0",
+  "homepage": "http://chaoticlabs.github.io/Chaos-Fundamentum/",
+  "author": {
+    "name": "Chaotic Labs",
+    "url": "https://github.com/chaoticlabs"
+  },
+  "contributors": [
+    {
+      "name": "Matthias Gianfelice",
+      "url": "https://github.com/MatthiasGi"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chaoticlabs/Chaos-Fundamentum.git",
+    "branch": "gh-pages"
+  },
+  "bugs": {
+    "url": "https://github.com/chaoticlabs/Chaos-Fundamentum/issues"
+  },
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "https://raw.github.com/chaoticlabs/Chaos-Fundamentum/gh-pages/LICENSE"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-jekyll": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.7.0"
+  },
+  "peerDependencies": {},
+  "keywords": [
+    "Chaos",
+    "Fundamentum",
+    "Documentation"
+  ]
+}
