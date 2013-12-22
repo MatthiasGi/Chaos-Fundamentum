@@ -4,7 +4,7 @@
  *
  * http://thecssninja.com/javascript/pointer-events-60fps
  */
-(function(document, window) {
+(function(window, document) {
   'use strict';
 
   var body = document.body;
@@ -20,4 +20,4 @@
       body.classList.remove('c-hover-disable');
     }, 500);
   });
-})(document, window);
+})(window, document);

@@ -12,7 +12,7 @@
       "type": "Js",
       "config": {
         "autoCompile": true,
-        "uglify": false,
+        "uglify": true,
         "mangle": true,
         "sourcemaps": false
       }
@@ -128,6 +128,20 @@
         "autoCompile": false,
         "uglify": false,
         "mangle": false,
+        "sourcemaps": false
+      }
+    },
+    "bcd7d009": {
+      "id": "bcd7d009",
+      "pid": "d6fe14e0",
+      "name": "features.js",
+      "input": "js\\modules\\features.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": true,
+        "uglify": true,
+        "mangle": true,
         "sourcemaps": false
       }
     }
@@ -257,6 +271,14 @@
       "id": "03c50cce",
       "pid": "d6fe14e0",
       "path": "js\\modules\\collapse.js",
+      "parents": [
+        "2b570bd4"
+      ]
+    },
+    "44a4fc23": {
+      "id": "44a4fc23",
+      "pid": "d6fe14e0",
+      "path": "js\\vendor\\fastclick.js",
       "parents": [
         "2b570bd4"
       ]
