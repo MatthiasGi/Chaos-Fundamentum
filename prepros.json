@@ -91,11 +91,11 @@
         "sourcemaps": false
       }
     },
-    "50f93988": {
-      "id": "50f93988",
+    "35d9a5ce": {
+      "id": "35d9a5ce",
       "pid": "d6fe14e0",
       "name": "normalize.scss",
-      "input": "css\\normalize.scss\\normalize.scss",
+      "input": "src\\normalize.scss\\normalize.scss",
       "customOutput": false,
       "type": "Scss",
       "config": {
@@ -111,11 +111,11 @@
         "sourcemaps": false
       }
     },
-    "5e14bcef": {
-      "id": "5e14bcef",
+    "9e213ae4": {
+      "id": "9e213ae4",
       "pid": "d6fe14e0",
       "name": "print.scss",
-      "input": "css\\normalize.scss\\print.scss",
+      "input": "src\\normalize.scss\\print.scss",
       "customOutput": false,
       "type": "Scss",
       "config": {
@@ -243,30 +243,6 @@
       "path": "js\\vendor\\fastclick.js",
       "parents": [
         "2b570bd4"
-      ]
-    },
-    "ff580e80": {
-      "id": "ff580e80",
-      "pid": "d6fe14e0",
-      "path": "css\\normalize.scss\\_functions.scss",
-      "parents": [
-        "2fab38d2"
-      ]
-    },
-    "50f93988": {
-      "id": "50f93988",
-      "pid": "d6fe14e0",
-      "path": "css\\normalize.scss\\normalize.scss",
-      "parents": [
-        "2fab38d2"
-      ]
-    },
-    "5e14bcef": {
-      "id": "5e14bcef",
-      "pid": "d6fe14e0",
-      "path": "css\\normalize.scss\\print.scss",
-      "parents": [
-        "2fab38d2"
       ]
     }
   },
