@@ -82,12 +82,12 @@
       "pid": "d6fe14e0",
       "name": "chaos.js",
       "input": "chaos.js",
-      "customOutput": false,
+      "customOutput": "chaos.min.js",
       "type": "Js",
       "config": {
         "autoCompile": false,
-        "uglify": false,
-        "mangle": false,
+        "uglify": true,
+        "mangle": true,
         "sourcemaps": false
       }
     },

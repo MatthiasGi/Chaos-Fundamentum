@@ -185,7 +185,7 @@ ul.navbar-nav {
 // Reset formats for widescreen
 @media (min-width: $navbar-breakpoint) {
   .navbar-header {
-    border-color: transparent !important;
+    border: 0 !important;
     display: inline-block;
     margin: 0;
   }
