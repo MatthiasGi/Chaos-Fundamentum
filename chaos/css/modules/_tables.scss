@@ -1,0 +1,130 @@
+//
+// Tables
+// -----------------------------------------------------------------------------
+
+
+// Basic table
+// -----------------------------------------------------------------------------
+
+table.table {
+  margin-bottom: 1em;
+  width: 100%;
+
+  thead tr:last-child {
+    border-bottom: 2px solid $color-gray-lighter;
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: $table-padding;
+  }
+}
+
+// Striped table
+.table-striped tbody tr:nth-child(odd) {
+  background-color: fade-out($color-gray-lighter, .75);
+}
+
+// Bordered table
+.table-bordered {
+  td,
+  th {
+    border: 1px solid $color-gray-lighter;
+  }
+}
+
+// Hover enabled table
+.table-hover tbody tr {
+  transition: background-color #{$animation-spec};
+
+  &:hover {
+    background-color: fade-out($color-gray-lighter, .5);
+  }
+}
+
+// Condensed style
+.table-condensed {
+  th,
+  td {
+    padding: 0 ($table-padding / 2);
+  }
+}
+
+// Table with minimal width
+// -----------------------------------------------------------------------------
+
+.table-responsive {
+  border: 1px solid $color-gray-lighter;
+  display: block;
+  margin-bottom: 1em;
+  overflow-x: auto;
+
+  @extend %normalize-scroll;
+
+  table {
+    margin-bottom: 0;
+    min-width: $table-responsive-breakpoint;
+
+    // Stripping doubled borders
+    tbody tr:last-child {
+      border-bottom: none;
+
+      td,
+      th {
+        border-bottom: none;
+      }
+    }
+
+    td,
+    th {
+      &:first-child {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+
+
+// Colored rows
+// -----------------------------------------------------------------------------
+
+// DRY mixin
+@mixin table-colored-row($class, $background: null) {
+
+  // Extract values if necessary
+  @if $background == null {
+    $background: nth($class, 2);
+    $class: nth($class, 1);
+  }
+
+  // Actual row style
+  tr.#{$class} {
+    background-color: lighten($background, 30%);
+  }
+
+  &.table-hover tbody tr.#{$class} {
+    &:hover {
+      background-color: lighten($background, 20%);
+    }
+  }
+
+}
+
+// Actual table style
+table.table {
+  // Generate colored rows
+  @each $color in $colors {
+    @include table-colored-row($color);
+  }
+
+  // Inverted row
+  @include table-colored-row("invert", $color-text);
+  tr.invert {
+    color: $color-background;
+  }
+}

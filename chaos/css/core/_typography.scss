@@ -1,0 +1,185 @@
+//
+// Typography
+// -----------------------------------------------------------------------------
+
+
+// Basic elements
+// -----------------------------------------------------------------------------
+
+html {
+  line-height: $line-height;
+
+  // Responsive font-size
+  @each $breakpoint in $breakpoints {
+    @media (min-width: #{nth($breakpoint, 2)}) {
+      font-size: percentage(nth($breakpoint, 3));
+    }
+  }
+}
+
+body {
+  font-size: $font-size;
+}
+
+
+// Text alignment and color
+// -----------------------------------------------------------------------------
+
+@each $align in 'left', 'center', 'right', 'justify' {
+  .text-#{$align} {
+    text-align: #{$align};
+  }
+}
+
+@each $color in $colors {
+  .text-#{nth($color, 1)} {
+    color: nth($color, 2);
+  }
+}
+
+
+// Anchor element
+// -----------------------------------------------------------------------------
+
+// Prototype object for external uses
+%link {
+  color: $link-color;
+  text-decoration: none;
+  transition: color #{$animation-spec};
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: lighten($link-color, 20%);
+    text-decoration: underline;
+  }
+
+  &:focus:not(:hover):not(:active) {
+    outline: 0;
+    @include outline($color-brand-primary);
+  }
+}
+
+// Actual anchor
+a {
+  @extend %link;
+}
+
+
+// Headings
+// -----------------------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: $font-heading-weight 100%/1.3 $font-heading-family;
+  margin: $font-heading-margin 0;
+
+  small {
+    color: $color-gray;
+    margin-left: 1em;
+    font-size: .8rem;
+  }
+}
+
+// Different sizes
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: nth($font-heading-sizes, $i);
+  }
+}
+
+
+// Quotes
+// -----------------------------------------------------------------------------
+
+@each $q in $q-quotes {
+  :lang(#{nth($q, 1)}) > q {
+    quotes: #{nth($q, 2)};
+  }
+}
+
+blockquote {
+  border-left: 5px solid $blockquote-color-border;
+  margin: 1.5em;
+  padding: 0 1em;
+
+  cite:before {
+    content: '— ';
+  }
+
+  &.pull-right {
+    border-left: 0;
+    border-right: 5px solid $blockquote-color-border;
+  }
+}
+
+
+// Code
+// -----------------------------------------------------------------------------
+
+pre {
+  background: $color-gray-lighter;
+  border: 1px solid $color-gray-light;
+  margin: 1em 0;
+  max-height: #{strip($pre-lines * $line-height) + .5}em;
+  overflow: auto;
+  padding: .5em 1em;
+  word-wrap: break-word;
+
+  @extend %normalize-scroll;
+}
+
+
+// Lists
+// -----------------------------------------------------------------------------
+
+// Ordered and unordered lists
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-inline {
+  @extend .list-unstyled;
+
+  > li {
+    display: inline-block;
+    padding-right: $list-inline-padding;
+  }
+}
+
+// Descriptive lists
+dd {
+  margin-left: 2em;
+}
+
+dl.dl-aligned {
+  @extend .clearfix;
+
+  @media (min-width: $list-aligned-breakpoint) {
+    > dt {
+      float: left;
+      overflow: hidden;
+      text-align: right;
+      text-overflow: ellipsis;
+      width: 10em;
+    }
+
+    > dd {
+      margin-left: 11em;
+    }
+  }
+}
+
+
+// Various elements
+// -----------------------------------------------------------------------------
+
+mark {
+  padding: 0 .25em;
+}

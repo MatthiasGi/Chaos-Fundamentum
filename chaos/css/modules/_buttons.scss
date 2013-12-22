@@ -1,0 +1,173 @@
+//
+// Buttons
+// -----------------------------------------------------------------------------
+
+
+// Basic mixins
+// -----------------------------------------------------------------------------
+
+@mixin button($background, $color: null) {
+
+  // Extract color from list, if necessary
+  @if $color == null {
+    $color: nth($background, 3);
+    $background: nth($background, 2);
+  }
+
+  background: $background;
+  border-color: darken($background, 10%);
+  color: $color;
+
+  // Force hover and focus state even for class-triggered active state
+  &,
+  &.active {
+    &:hover,
+    &:focus {
+      background-color: darken($background, 10%);
+    }
+  }
+
+  // Active state
+  &:active,
+  &.active {
+    background-color: darken($background, 20%);
+  }
+
+  // Reset mainly for anchor element
+  &:active,
+  &:hover,
+  &:focus {
+    color: $color;
+  }
+
+}
+
+
+// Actual button
+// -----------------------------------------------------------------------------
+
+.btn {
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  margin: .25em .1em;
+  outline: 0 !important;
+  padding: .6em 1em;
+  transition: #{$animation-spec};
+  transition-property: background-color, border-color;
+
+  // Set style globally on all devices
+  @extend %fix-inputs;
+
+  // Basic button style
+  @include button(#fff, $color-gray-darker);
+}
+
+// Reset for anchor element
+a.btn {
+  line-height: normal;
+
+  &:active,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:not(.btn-link):focus {
+    @include outline(transparent);
+  }
+}
+
+// Generate colored versions
+@each $color in $colors {
+  .btn-#{nth($color, 1)} {
+    @include button($color);
+  }
+}
+
+.btn-invert {
+  @include button($color-text, $color-background);
+}
+
+// Different button sizes
+@each $size in $button-sizes {
+  .btn-#{nth($size, 1)} {
+    font-size: nth($size, 2);
+  }
+}
+
+// Link style
+.btn-link {
+  @extend %link;
+  border: 0;
+
+  &:focus {
+    @extend a:focus;
+  }
+}
+
+// Block style button
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Reset for inputs
+input.btn:focus {
+  box-shadow: none;
+}
+
+
+// Button group
+// -----------------------------------------------------------------------------
+
+// Basic group
+.btn-group {
+  @extend .clearfix;
+  margin: .25em 0;
+
+  .btn {
+    float: left;
+    margin: 0;
+
+    &:not(:first-child) {
+      border-left: none;
+    }
+  }
+}
+
+// Justified button group
+.btn-group-justified {
+  display: flex;
+
+  .btn {
+    flex: 1 1;
+  }
+}
+
+// Toolbars (as in group of groups)
+.btn-toolbar .btn-group {
+  display: inline-block;
+
+  &:not(:first-child) {
+    margin-left: 1em;
+  }
+}
+
+// Vertical groups
+.btn-group-vertical .btn {
+  display: block;
+  margin: 0;
+
+  &:not(:first-child) {
+    border-top: none;
+  }
+}
+
+// Sizing
+@each $size in $button-sizes {
+  .btn-group-#{nth($size, 1)} {
+    font-size: nth($size, 2);
+  }
+}
