@@ -57,6 +57,40 @@
         "sourcemaps": false
       }
     },
+    "5de6de15": {
+      "id": "5de6de15",
+      "pid": "d6fe14e0",
+      "name": "demo.scss",
+      "input": "demo.scss",
+      "customOutput": false,
+      "type": "Scss",
+      "config": {
+        "autoCompile": true,
+        "lineNumbers": false,
+        "unixNewlines": false,
+        "debug": false,
+        "compass": false,
+        "fullCompass": false,
+        "compassConfigRb": false,
+        "outputStyle": "expanded",
+        "autoprefixer": true,
+        "sourcemaps": false
+      }
+    },
+    "d012276e": {
+      "id": "d012276e",
+      "pid": "d6fe14e0",
+      "name": "chaos.js",
+      "input": "chaos.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": false,
+        "uglify": false,
+        "mangle": false,
+        "sourcemaps": false
+      }
+    },
     "50f93988": {
       "id": "50f93988",
       "pid": "d6fe14e0",
@@ -96,65 +130,9 @@
         "autoprefixer": false,
         "sourcemaps": false
       }
-    },
-    "5de6de15": {
-      "id": "5de6de15",
-      "pid": "d6fe14e0",
-      "name": "demo.scss",
-      "input": "demo.scss",
-      "customOutput": false,
-      "type": "Scss",
-      "config": {
-        "autoCompile": true,
-        "lineNumbers": false,
-        "unixNewlines": false,
-        "debug": false,
-        "compass": false,
-        "fullCompass": false,
-        "compassConfigRb": false,
-        "outputStyle": "expanded",
-        "autoprefixer": true,
-        "sourcemaps": false
-      }
-    },
-    "d012276e": {
-      "id": "d012276e",
-      "pid": "d6fe14e0",
-      "name": "chaos.js",
-      "input": "chaos.js",
-      "customOutput": false,
-      "type": "Js",
-      "config": {
-        "autoCompile": false,
-        "uglify": false,
-        "mangle": false,
-        "sourcemaps": false
-      }
-    },
-    "bcd7d009": {
-      "id": "bcd7d009",
-      "pid": "d6fe14e0",
-      "name": "features.js",
-      "input": "js\\modules\\features.js",
-      "customOutput": false,
-      "type": "Js",
-      "config": {
-        "autoCompile": true,
-        "uglify": true,
-        "mangle": true,
-        "sourcemaps": false
-      }
     }
   },
   "imports": {
-    "ff580e80": {
-      "id": "ff580e80",
-      "pid": "d6fe14e0",
-      "path": "css\\normalize.scss\\_functions.scss",
-      "parents": [
-        "2fab38d2"
-      ]
-    },
     "c6535344": {
       "id": "c6535344",
       "pid": "d6fe14e0",
@@ -167,14 +145,6 @@
       "id": "df365850",
       "pid": "d6fe14e0",
       "path": "css\\fonts.scss",
-      "parents": [
-        "2fab38d2"
-      ]
-    },
-    "50f93988": {
-      "id": "50f93988",
-      "pid": "d6fe14e0",
-      "path": "css\\normalize.scss\\normalize.scss",
       "parents": [
         "2fab38d2"
       ]
@@ -243,14 +213,6 @@
         "2fab38d2"
       ]
     },
-    "5e14bcef": {
-      "id": "5e14bcef",
-      "pid": "d6fe14e0",
-      "path": "css\\normalize.scss\\print.scss",
-      "parents": [
-        "2fab38d2"
-      ]
-    },
     "1e493a0d": {
       "id": "1e493a0d",
       "pid": "d6fe14e0",
@@ -281,6 +243,30 @@
       "path": "js\\vendor\\fastclick.js",
       "parents": [
         "2b570bd4"
+      ]
+    },
+    "ff580e80": {
+      "id": "ff580e80",
+      "pid": "d6fe14e0",
+      "path": "css\\normalize.scss\\_functions.scss",
+      "parents": [
+        "2fab38d2"
+      ]
+    },
+    "50f93988": {
+      "id": "50f93988",
+      "pid": "d6fe14e0",
+      "path": "css\\normalize.scss\\normalize.scss",
+      "parents": [
+        "2fab38d2"
+      ]
+    },
+    "5e14bcef": {
+      "id": "5e14bcef",
+      "pid": "d6fe14e0",
+      "path": "css\\normalize.scss\\print.scss",
+      "parents": [
+        "2fab38d2"
       ]
     }
   },
