@@ -3,3 +3,4 @@ markdown: redcarpet
 pygments: true
 safe: true
 exclude: [node_modules, Gruntfile.js, LICENSE, package.json]
+baseurl: /Chaos-Fundamentum
