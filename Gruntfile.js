@@ -7,28 +7,58 @@ module.exports = function(grunt) {
 
     uglify: {
       build: {
-        src: '../master/chaos.js',
-        dest: 'page/chaos.min.js'
+        src: 'chaos/chaos.js',
+        dest: 'res/chaos.min.js'
       }
     },
 
-    cssmin: {
-      combine: {
+    sass: {
+      dist: {
+        options: {
+          style: 'compressed'
+        },
         files: {
-          'page/chaos.css': ['../master/chaos.css', '../master/demo.css']
+          'res/chaos.css': 'chaos/css/chaos.scss'
         }
       }
     },
 
-    jekyll: {
-      build: {}
+    autoprefixer: {
+      dist: {
+        src: 'res/chaos.css',
+        dest: 'res/chaos.css'
+      }
+    },
+
+    shell: {
+      jekyllBuild: {
+        command: 'jekyll build'
+      },
+      jekyllServe: {
+        command: 'jekyll serve'
+      }
+    },
+
+    watch: {
+      files: [
+        '_includes/*.html',
+        '_layouts/*.html',
+        './*.html'
+      ],
+      tasks: ['shell:jekyllBuild', 'shell:jekyllServe'],
+      options: {
+        interrupt: true,
+        atBegin: true
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['uglify', 'cssmin', 'jekyll']);
+  grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'watch']);
 
 };
