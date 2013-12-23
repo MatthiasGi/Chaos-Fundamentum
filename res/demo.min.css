@@ -1,0 +1,23 @@
+h1.demo,
+h2.demo,
+h3.demo,
+h4.demo,
+h5.demo,
+h6.demo {
+  margin: 0;
+}
+
+.example {
+  margin: 1em 0;
+}
+
+.example .output {
+  border: 1px solid #adadad;
+  padding: 1rem;
+}
+
+.example pre {
+  margin: 0;
+  border-top: 0;
+  border-color: #adadad;
+}

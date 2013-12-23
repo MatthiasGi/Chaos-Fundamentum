@@ -2,4 +2,57 @@
 layout: default
 title:  Base
 ---
-<h1>Base</h1>
+<h1>Basic usage <small>XX KB</small></h1>
+
+<h2>Normalization</h2>
+
+<p>Chaos Fundamentum is built on top of <a href="https://github.com/MatthiasGi/normalize.scss" alt="normalize.scss repository">normalize.scss</a> which is basically a port of normalize.css to <abbr title="Syntactically Awesome Style Sheets">SASS</abbr> which makes it more customizable without the need of changing the intern code. Thus the framework does not provide a complete reset, but is built around a normalization for every browser. That means that you won't get pixel-perfect applications on each browser, but who need's that anyway? Is it even really possible?</p>
+
+<p>What does normalize.(s)css do except for fixing some browser bugs? It even styles a few elements, so that there is no need to really create styles for each <a href="http://joshduck.com/periodic-table.html" alt="Periodic Table of the Elements">element there is</a>. Also it provides a stylesheet for basic print-styles. This site won't go deeper into normalization, if you really want to know, what is set by this style sheet, check out it's repository (mentioned above).</p>
+
+<h2>Typography</h2>
+
+<p>The line height and font size are completly responsive. Try it for yourself and resize the browser and / or view the page on your mobile device. As such, most sizes are defined in percents, <code>em</code> or <code>rem</code>. The most common elements for text semantics and structuring will be showcased in this section.</p>
+
+
+<h3>Headings</h3>
+
+The six basic headings are designed to be as responsive, as the rest.
+<div class="example">
+  <div class="output">
+    <h1 class="demo">Heading 1<small>Small Sidenote</small></h1>
+    <h2 class="demo">Heading 2<small>Small Sidenote</small></h2>
+    <h3 class="demo">Heading 3<small>Small Sidenote</small></h3>
+    <h4 class="demo">Heading 4<small>Small Sidenote</small></h4>
+    <h5 class="demo">Heading 5<small>Small Sidenote</small></h5>
+    <h6 class="demo">Heading 6<small>Small Sidenote</small></h6>
+  </div>
+  <pre>&lt;h1&gt;Heading 1 &lt;small&gt;Small Sidenote&lt;/small&gt;&lt;/h1&gt;</pre>
+</div>
+
+
+<h3>Blocktypes</h3>
+
+Blockquotes are individually styled with two orientations available.
+<div class="example">
+  <div class="output">
+    <blockquote cite="http://en.wikipedia.org/wiki/Lorem_ipsum">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, recusandae, nesciunt fuga aperiam harum animi amet odit voluptate doloribus voluptatem.</p>
+        <cite><a href="http://en.wikipedia.org/wiki/Lorem_ipsum">Marcus Tullius Cicero</a></cite>
+    </blockquote>
+  </div>
+  <pre>&lt;blockquote cite="http://en.wikipedia.org/wiki/Lorem_ipsum"&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, recusandae, nesciunt fuga aperiam harum animi amet odit voluptate doloribus voluptatem.&lt;/p&gt;
+  &lt;cite&gt;&lt;a href="http://en.wikipedia.org/wiki/Lorem_ipsum"&gt;Marcus Tullius Cicero&lt;/a&gt;&lt;/cite&gt;
+&lt;/blockquote&gt;</pre>
+  <div class="output clearfix">
+    <blockquote class="pull-right" cite="http://en.wikipedia.org/wiki/Lorem_ipsum">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, recusandae, nesciunt fuga aperiam harum animi amet odit voluptate doloribus voluptatem.</p>
+        <cite><a href="http://en.wikipedia.org/wiki/Lorem_ipsum">Marcus Tullius Cicero</a></cite>
+    </blockquote>
+  </div>
+  <pre>&lt;blockquote cite="http://en.wikipedia.org/wiki/Lorem_ipsum"&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, recusandae, nesciunt fuga aperiam harum animi amet odit voluptate doloribus voluptatem.&lt;/p&gt;
+  &lt;cite&gt;&lt;a href="http://en.wikipedia.org/wiki/Lorem_ipsum"&gt;Marcus Tullius Cicero&lt;/a&gt;&lt;/cite&gt;
+&lt;/blockquote&gt;</pre>
+</div>

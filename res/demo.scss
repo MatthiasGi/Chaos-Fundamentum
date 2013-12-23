@@ -1,0 +1,29 @@
+// Headings
+%demo-heading {
+  margin: 0;
+}
+
+@for $i from 1 through 6 {
+  h#{$i}.demo {
+    @extend %demo-heading;
+  }
+}
+
+// Example cards
+.example {
+  margin: 1em 0;
+
+  .output,
+  pre {
+    border: 1px solid #adadad;
+    margin: 0;
+  }
+
+  .output {
+    padding: 1rem;
+  }
+
+  > :not(:first-child) {
+    border-top: 0;
+  }
+}

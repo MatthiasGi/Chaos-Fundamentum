@@ -18,15 +18,20 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'res/chaos.css': 'chaos/css/chaos.scss'
+          'res/chaos.css': 'chaos/css/chaos.scss',
+          'res/demo.css': 'res/demo.scss'
         }
       }
     },
 
     autoprefixer: {
-      dist: {
+      chaos: {
         src: 'res/chaos.css',
-        dest: 'res/chaos.css'
+        dest: 'res/chaos.min.css'
+      },
+      demo: {
+        src: 'res/demo.css',
+        dest: 'res/demo.min.css'
       }
     },
 
@@ -40,15 +45,28 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      files: [
-        '_includes/*.html',
-        '_layouts/*.html',
-        './*.html'
-      ],
-      tasks: ['shell:jekyllBuild', 'shell:jekyllServe'],
-      options: {
-        interrupt: true,
-        atBegin: true
+      jekyll: {
+        files: [
+          '_includes/*.html',
+          '_layouts/*.html',
+          './*.html'
+        ],
+        tasks: ['shell:jekyllBuild', 'shell:jekyllServe'],
+        options: {
+          interrupt: true,
+          atBegin: true
+        }
+      },
+      source: {
+        files: [
+          'chaos/*',
+          'res/demo.scss'
+        ],
+        tasks: ['uglify', 'sass', 'autoprefixer', 'shell:jekyllBuild', 'shell:jekyllServe'],
+        options: {
+          interrupt: true,
+          atBegin: true
+        }
       }
     }
   });
