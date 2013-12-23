@@ -1,0 +1,29 @@
+@import 'src/variables';
+
+.demo {
+  & > * {
+    background: $color-gray-lighter;
+    margin: .5em;
+    text-align: center;
+    padding: .5em;
+
+    .cell {
+      background: #fff;
+      margin: .5em;
+      text-align: center;
+      padding: .5em;
+    }
+  }
+}
+
+.demo-headline {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    line-height: normal;
+  }
+}
