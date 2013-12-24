@@ -1,7 +1,7 @@
 <ul class="navbar-nav">
   {% for node in site.pages %}
   {% if node.title %}
-  <li{% if page.url == node.url %} class="active"{% endif %}><a href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a></li>
+  <li{% if page.url == node.url %} class="active"{% endif %}><a href="{{ site.baseurl }}/{{ node.url | replace: '/', ' ' | truncatewords: 1 | remove: '...' }}/">{{ node.title }}</a></li>
   {% endif %}
   {% endfor %}
 </ul>
