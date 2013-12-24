@@ -49,7 +49,8 @@ module.exports = function(grunt) {
         files: [
           '_includes/*.html',
           '_layouts/*.html',
-          './*.html'
+          './*.html',
+          'res/demo.js'
         ],
         tasks: ['shell:jekyllBuild', 'shell:jekyllServe'],
         options: {

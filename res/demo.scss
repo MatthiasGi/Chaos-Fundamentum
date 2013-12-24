@@ -27,3 +27,23 @@
     border-top: 0;
   }
 }
+
+// Visible / Hidden demo
+%demoresponsiveness {
+  border: 1px solid;
+  margin: 1em;
+  text-align: center;
+  overflow: hidden;
+}
+
+.demo-visible {
+  @extend %demoresponsiveness;
+  background: fade-out(#27ae60, .7);
+  border-color: #27ae60;
+}
+
+.demo-hidden {
+  @extend %demoresponsiveness;
+  background: fade-out(#c0392b, .7);
+  border-color: #c0392b;
+}

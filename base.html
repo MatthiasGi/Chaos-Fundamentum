@@ -2,7 +2,9 @@
 layout: default
 title:  Base
 ---
-<h1>Basic usage <small>XX KB</small></h1>
+<h1 class="text-center">Basic usage <small>XX KB</small></h1>
+<h3 class="text-center text-muted">Normalizing, Typography, Utilities</h3>
+<hr>
 
 <h2>Normalization</h2>
 
@@ -13,7 +15,6 @@ title:  Base
 <h2>Typography</h2>
 
 <p>The line height and font size are completly responsive. Try it for yourself and resize the browser and / or view the page on your mobile device. As such, most sizes are defined in percents, <code>em</code> or <code>rem</code>. The most common elements for text semantics and structuring will be showcased in this section.</p>
-
 
 <h3>Headings</h3>
 
@@ -30,15 +31,14 @@ The six basic headings are designed to be as responsive, as the rest.
   <pre>&lt;h1&gt;Heading 1 &lt;small&gt;Small Sidenote&lt;/small&gt;&lt;/h1&gt;</pre>
 </div>
 
-
-<h3>Blocktypes</h3>
+<h3>Quotes</h3>
 
 Blockquotes are individually styled with two orientations available.
 <div class="example">
   <div class="output">
     <blockquote cite="http://en.wikipedia.org/wiki/Lorem_ipsum">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, recusandae, nesciunt fuga aperiam harum animi amet odit voluptate doloribus voluptatem.</p>
-        <cite><a href="http://en.wikipedia.org/wiki/Lorem_ipsum">Marcus Tullius Cicero</a></cite>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, recusandae, nesciunt fuga aperiam harum animi amet odit voluptate doloribus voluptatem.</p>
+      <cite><a href="http://en.wikipedia.org/wiki/Lorem_ipsum">Marcus Tullius Cicero</a></cite>
     </blockquote>
   </div>
   <pre>&lt;blockquote cite="http://en.wikipedia.org/wiki/Lorem_ipsum"&gt;
@@ -47,12 +47,153 @@ Blockquotes are individually styled with two orientations available.
 &lt;/blockquote&gt;</pre>
   <div class="output clearfix">
     <blockquote class="pull-right" cite="http://en.wikipedia.org/wiki/Lorem_ipsum">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, recusandae, nesciunt fuga aperiam harum animi amet odit voluptate doloribus voluptatem.</p>
-        <cite><a href="http://en.wikipedia.org/wiki/Lorem_ipsum">Marcus Tullius Cicero</a></cite>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, recusandae, nesciunt fuga aperiam harum animi amet odit voluptate doloribus voluptatem.</p>
+      <cite><a href="http://en.wikipedia.org/wiki/Lorem_ipsum">Marcus Tullius Cicero</a></cite>
     </blockquote>
   </div>
-  <pre>&lt;blockquote cite="http://en.wikipedia.org/wiki/Lorem_ipsum"&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, recusandae, nesciunt fuga aperiam harum animi amet odit voluptate doloribus voluptatem.&lt;/p&gt;
-  &lt;cite&gt;&lt;a href="http://en.wikipedia.org/wiki/Lorem_ipsum"&gt;Marcus Tullius Cicero&lt;/a&gt;&lt;/cite&gt;
-&lt;/blockquote&gt;</pre>
+  <pre>&lt;blockquote class="pull-right"&gt;&lt;/blockquote&gt;</pre>
 </div>
+
+The inline quote element adjusts the quotes automatically by the selected document language.
+<div class="example">
+  <div class="output">
+    <p id="demoQuoteTarget" lang="en">I'd like to <q>quote</q>.</p>
+    <ul class="list-inline">
+      <li><div class="radio radio-inline"><input type="radio" id="demoQuoteEn" name="demoQuote" value="en" checked><label for="demoQuoteEn">English</label></div></li>
+      <li><div class="radio radio-inline"><input type="radio" id="demoQuoteDe" name="demoQuote" value="de"><label for="demoQuoteDe">German</label></div></li>
+      <li><div class="radio radio-inline"><input type="radio" id="demoQuoteFr" name="demoQuote" value="fr"><label for="demoQuoteFr">French</label></div></li>
+      <li><div class="radio radio-inline"><input type="radio" id="demoQuoteJa" name="demoQuote" value="ja"><label for="demoQuoteJa">Japanese</label></div></li>
+      <li><div class="radio radio-inline"><input type="radio" id="demoQuoteKl" name="demoQuote" value="klingon"><label for="demoQuoteKl">Unsupported</label></div></li>
+    </ul>
+  </div>
+  <pre>I'd like to &lt;q&gt;quote&lt;/q&gt;.</pre>
+</div>
+
+<h3>Lists</h3>
+<p>Of course all different types of lists are supported.</p>
+<div class="example">
+  <div class="output">
+    <ul>
+      <li>Lorem ipsum.</li>
+      <li>Cum, aliquam.</li>
+      <li>Vel, corporis!<ol>
+        <li>Lorem ipsum.</li>
+        <li>Dolorum, facilis?</li>
+        </ol></li>
+      <li>Doloremque, ullam?</li>
+    </ul>
+  </div>
+  <pre>&lt;ul&gt;&lt;/ul&gt;
+&lt;ol&gt;&lt;/ol&gt;</pre>
+  <div class="output">
+    <ul class="list-unstyled">
+      <li>Lorem ipsum.</li>
+      <li>Quibusdam, debitis.</li>
+      <li>Rerum, asperiores.</li>
+    </ul>
+  </div>
+  <pre>&lt;ul class="list-unstyled"&gt;&lt;/ul&gt;</pre>
+  <div class="output">
+    <ul class="list-inline">
+      <li>Lorem.</li>
+      <li>Mollitia.</li>
+      <li>Soluta.</li>
+    </ul>
+  </div>
+  <pre>&lt;ul class="list-inline"&gt;&lt;/ul&gt;</pre>
+  <div class="output">
+    <dl>
+      <dt>Lorem ipsum.</dt>
+      <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, reiciendis voluptate temporibus quo excepturi fugiat quasi recusandae modi impedit dicta. Maxime, voluptas accusantium quia aut ad dolore cum voluptate nulla?</dd>
+      <dt>Vitae, quos.</dt>
+      <dd>Beatae ut quasi vitae modi ipsa! Excepturi, expedita, ratione, reprehenderit accusamus soluta ad ut perspiciatis maxime est quisquam velit adipisci recusandae aut. Aliquid, est recusandae omnis voluptatem officiis modi nam!</dd>
+    </dl>
+  </div>
+  <pre>&lt;dl&gt;&lt;/dl&gt;</pre>
+  <div class="output">
+    <dl class="dl-aligned">
+      <dt>Lorem ipsum.</dt>
+      <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quibusdam vero eum eaque obcaecati in alias voluptate enim eius sequi et fuga unde officiis officia qui nisi cupiditate distinctio deserunt?</dd>
+      <dt>Dolores, adipisci.</dt>
+      <dd>Molestias mollitia velit ipsa reiciendis corporis id! Explicabo nisi soluta temporibus delectus dolores nam necessitatibus inventore quo maiores voluptate. Quae dignissimos est doloremque perspiciatis atque ratione sed minima quaerat asperiores!</dd>
+    </dl>
+  </div>
+  <pre>&lt;dl class="dl-aligned"&gt;&lt;/dl&gt;</pre>
+</div>
+Note, that the description list in aligned mode will collapse at a certain, customizable device width.
+
+<h3>Various inline elements</h3>
+<p>Of course, all standard inline elements are designed.</p>
+<div class="example">
+  <div class="output">
+    <p>You can <em>emphasize</em> text, make it <strong>strong</strong>, <mark>mark</mark> it, <dfn>define</dfn> something, output <code>code</code>, <kbd>input</kbd>, <samp>sample output</samp>, define <sup>sups</sup> and <sub>subs</sub>, write <small>small</small> or <abbr title="Sample abbreviation">abbreviate</abbr>.</p>
+  </div>
+  <pre>&lt;p&gt;You can &lt;em&gt;emphasize&lt;/em&gt; text, make it &lt;strong&gt;strong&lt;/strong&gt;, &lt;mark&gt;mark&lt;/mark&gt; it, &lt;dfn&gt;define&lt;/dfn&gt; something, output &lt;code&gt;code&lt;/code&gt;, &lt;kbd&gt;input&lt;/kbd&gt;, &lt;samp&gt;sample output&lt;/samp&gt;, define &lt;sup&gt;sups&lt;/sup&gt; and &lt;sub&gt;subs&lt;/sub&gt;, write &lt;small&gt;small&lt;/small&gt; or &lt;abbr title="Sample abbreviation"&gt;abbreviate&lt;/abbr&gt;.&lt;/p&gt;</pre>
+</div>
+
+<h2>Utilities</h2>
+
+<p>Fundamentum provides you with different utility classes to eliminate the need of big code changes. They will be presented below.</p>
+
+<h3>Color &amp; alignment</h3>
+
+<p>On compiling Chaos Fundamentum you have the choice of selecting a color scheme. The default one provides enough colors for nearly all situations. One way of actually <em>using</em> this scheme is by coloring text. You can also align text with various classes as in this example:</p>
+<div class="example">
+  <div class="output">
+    <p class="text-primary text-left">Left aligned primary text</p>
+    <p class="text-success text-center">Centered success text</p>
+    <p class="text-info text-right">Right aligned info text</p>
+    <p class="text-warning text-justify">Justified warning text</p>
+    <p class="text-danger">Danger text</p>
+    <p class="text-muted">Muted text</p>
+  </div>
+  <pre>&lt;p class="text-primary text-left"&gt;Left aligned primary text&lt;/p&gt;
+&lt;p class="text-success text-center"&gt;Centered success text&lt;/p&gt;
+&lt;p class="text-info text-right"&gt;Right aligned info text&lt;/p&gt;
+&lt;p class="text-warning text-justify"&gt;Justified warning text&lt;/p&gt;
+&lt;p class="text-danger"&gt;Danger text&lt;/p&gt;
+&lt;p class="text-muted"&gt;Muted text&lt;/p&gt;</pre>
+</div>
+
+<p>To float items, use the <code>pull-left</code> and <code>pull-right</code> classes. There is also a <code>clearfix</code> class available for the parent container.</p>
+
+<p>If you want a proper container for your content, wrap it in a <code>div</code> with the <code>container</code> class. This will center the container and also calculate a size according to the device width. There's also a <code>card</code> class, which has a slight border and additional padding. As the background can be selected independently by the body background, it can be used to create a more native feel for mobile applications.</p>
+
+<p>To display block type elements inline, just give them the <code>embedded</code> class, which will overwrite the display with <code>inline-block</code>.</p>
+
+<h3>Visbility</h3>
+
+There are various classes to detect the screen size of a device. You will only see those you are supposed to see in the example below. Try to resize your browser.
+
+<div class="example">
+  <div class="output">
+    <div class="grid">
+      <div class="cell visible-xs demo-visible">xs</div>
+      <div class="cell visible-sm demo-visible">sm</div>
+      <div class="cell visible-md demo-visible">md</div>
+      <div class="cell visible-lg demo-visible">lg</div>
+      <div class="cell visible-xl demo-visible">xl</div>
+    </div>
+    <div class="grid">
+      <div class="cell hidden-xs demo-hidden">xs</div>
+      <div class="cell hidden-sm demo-hidden">sm</div>
+      <div class="cell hidden-md demo-hidden">md</div>
+      <div class="cell hidden-lg demo-hidden">lg</div>
+      <div class="cell hidden-xl demo-hidden">xl</div>
+    </div>
+  </div>
+  <pre>&lt;div class="visible-xs"&gt;xs&lt;/div&gt;
+&lt;div class="hidden-xs"&gt;xs&lt;/div&gt;</pre>
+</div>
+
+<p>To completly hide an element, apply the <code>hidden</code> attribute or class. To only hide it but make it accessible for screen-readers and similar, apply the <code>visually-hidden</code> class to it.</p>
+
+<p>There are also print classes. Similiar to the example above, the corresponding classes are <code>hidden-print</code> and <code>visible-print</code>.</p>
+
+<h3>Additional utilities</h3>
+
+The framework also includes a bit of JavaScript that's made as optional as possible. It currently includes the following libraries:
+<dl class="dl-aligned">
+  <dt><a href="http://ftlabs.github.io/fastclick/" alt="Project page of the fastclick library">Fastclick.js</a></dt>
+  <dd>Removes the 300 ms delay on mobile devices.</dd>
+</dl>
