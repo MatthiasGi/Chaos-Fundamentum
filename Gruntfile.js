@@ -47,8 +47,10 @@ module.exports = function(grunt) {
     watch: {
       jekyll: {
         files: [
-          '*.html',
-          'res/demo.js'
+          './*.html',
+          'res/demo.js',
+          '_includes/*',
+          '_layouts/*'
         ],
         tasks: ['shell:jekyllBuild', 'shell:jekyllServe'],
         options: {
