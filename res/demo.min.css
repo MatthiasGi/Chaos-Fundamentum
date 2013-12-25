@@ -42,3 +42,15 @@ h6.demo {
   background: rgba(192,57,43,0.3);
   border-color: #c0392b;
 }
+
+.demo-grid>*,
+.demo-grid .cell {
+  background: #eee;
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+.demo-grid>* .cell {
+  background: #fff;
+}

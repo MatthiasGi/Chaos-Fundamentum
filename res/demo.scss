@@ -47,3 +47,16 @@
   background: fade-out(#c0392b, .7);
   border-color: #c0392b;
 }
+
+// Grid demo
+.demo-grid > *,
+.demo-grid .cell {
+  background: #eee;
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+.demo-grid > * .cell {
+  background: #fff;
+}
