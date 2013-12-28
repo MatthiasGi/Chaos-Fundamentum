@@ -60,3 +60,11 @@
 .demo-grid > * .cell {
   background: #fff;
 }
+
+// Table demo
+.example {
+  table.table,
+  div.table-responsive {
+    margin: 0;
+  }
+}

@@ -54,3 +54,8 @@ h6.demo {
 .demo-grid>* .cell {
   background: #fff;
 }
+
+.example table.table,
+.example div.table-responsive {
+  margin: 0;
+}
