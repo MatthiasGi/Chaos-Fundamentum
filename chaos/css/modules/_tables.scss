@@ -67,23 +67,30 @@ table.table {
     min-width: $table-responsive-breakpoint;
 
     // Stripping doubled borders
-    tbody tr:last-child {
-      border-bottom: none;
-
+    > :first-child tr:first-child,
+    > tr:first-child {
       td,
       th {
-        border-bottom: none;
+        border-top: 0;
+      }
+    }
+
+    > :last-child tr:last-child,
+    > tr:last-child {
+      td,
+      th {
+        border-bottom: 0;
       }
     }
 
     td,
     th {
       &:first-child {
-        border-left: none;
+        border-left: 0;
       }
 
       &:last-child {
-        border-right: none;
+        border-right: 0;
       }
     }
   }

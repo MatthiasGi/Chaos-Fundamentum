@@ -1340,23 +1340,28 @@ table.table td {
   min-width: 48em;
 }
 
-.table-responsive table tbody tr:last-child {
-  border-bottom: none;
+.table-responsive table>:first-child tr:first-child td,
+.table-responsive table>:first-child tr:first-child th,
+.table-responsive table>tr:first-child td,
+.table-responsive table>tr:first-child th {
+  border-top: 0;
 }
 
-.table-responsive table tbody tr:last-child td,
-.table-responsive table tbody tr:last-child th {
-  border-bottom: none;
+.table-responsive table>:last-child tr:last-child td,
+.table-responsive table>:last-child tr:last-child th,
+.table-responsive table>tr:last-child td,
+.table-responsive table>tr:last-child th {
+  border-bottom: 0;
 }
 
 .table-responsive table td:first-child,
 .table-responsive table th:first-child {
-  border-left: none;
+  border-left: 0;
 }
 
 .table-responsive table td:last-child,
 .table-responsive table th:last-child {
-  border-right: none;
+  border-right: 0;
 }
 
 table.table tr.primary {
@@ -1490,7 +1495,10 @@ select[disabled] {
   background: #eee;
 }
 
-.form-control {
+input.form-control,
+select.form-control,
+textarea.form-control,
+.input-static.form-control {
   display: block;
   margin-left: 0;
   margin-right: 0;
@@ -1701,12 +1709,14 @@ select[disabled] {
   }
 
   .form-aligned .form-group>input,
+  .form-aligned .form-group>textarea,
   .form-aligned .form-group>select,
   .form-aligned .form-group>.input-static {
     display: inline-block;
   }
 
   .form-aligned .form-group>input.form-control,
+  .form-aligned .form-group>textarea.form-control,
   .form-aligned .form-group>select.form-control,
   .form-aligned .form-group>.input-static.form-control {
     width: 15em;

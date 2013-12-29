@@ -73,12 +73,17 @@ select {
   }
 }
 
-// Form controls extend to maximal available width
-.form-control {
-  display: block;
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
+// Form controls extend to maximal available widthinput,
+input,
+select,
+textarea,
+.input-static {
+  &.form-control {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
 }
 
 // Generate colored inputs
@@ -226,6 +231,7 @@ select {
     }
 
     > input,
+    > textarea,
     > select,
     > .input-static {
       display: inline-block;
