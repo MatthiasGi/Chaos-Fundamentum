@@ -91,15 +91,15 @@
         "sourcemaps": false
       }
     },
-    "35d9a5ce": {
-      "id": "35d9a5ce",
+    "50f93988": {
+      "id": "50f93988",
       "pid": "d6fe14e0",
       "name": "normalize.scss",
-      "input": "src\\normalize.scss\\normalize.scss",
+      "input": "css\\normalize.scss\\normalize.scss",
       "customOutput": false,
       "type": "Scss",
       "config": {
-        "autoCompile": false,
+        "autoCompile": true,
         "lineNumbers": false,
         "unixNewlines": false,
         "debug": false,
@@ -107,19 +107,19 @@
         "fullCompass": false,
         "compassConfigRb": false,
         "outputStyle": "expanded",
-        "autoprefixer": false,
+        "autoprefixer": true,
         "sourcemaps": false
       }
     },
-    "9e213ae4": {
-      "id": "9e213ae4",
+    "5e14bcef": {
+      "id": "5e14bcef",
       "pid": "d6fe14e0",
       "name": "print.scss",
-      "input": "src\\normalize.scss\\print.scss",
+      "input": "css\\normalize.scss\\print.scss",
       "customOutput": false,
       "type": "Scss",
       "config": {
-        "autoCompile": false,
+        "autoCompile": true,
         "lineNumbers": false,
         "unixNewlines": false,
         "debug": false,
@@ -127,7 +127,41 @@
         "fullCompass": false,
         "compassConfigRb": false,
         "outputStyle": "expanded",
-        "autoprefixer": false,
+        "autoprefixer": true,
+        "sourcemaps": false
+      }
+    },
+    "ba071ebc": {
+      "id": "ba071ebc",
+      "pid": "d6fe14e0",
+      "name": "demo.js",
+      "input": "_site\\res\\demo.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": true,
+        "uglify": true,
+        "mangle": true,
+        "sourcemaps": false
+      }
+    },
+    "7da9ca08": {
+      "id": "7da9ca08",
+      "pid": "d6fe14e0",
+      "name": "demo.scss",
+      "input": "_site\\res\\demo.scss",
+      "customOutput": false,
+      "type": "Scss",
+      "config": {
+        "autoCompile": true,
+        "lineNumbers": false,
+        "unixNewlines": false,
+        "debug": false,
+        "compass": false,
+        "fullCompass": false,
+        "compassConfigRb": false,
+        "outputStyle": "expanded",
+        "autoprefixer": true,
         "sourcemaps": false
       }
     }
@@ -213,14 +247,6 @@
         "2fab38d2"
       ]
     },
-    "1e493a0d": {
-      "id": "1e493a0d",
-      "pid": "d6fe14e0",
-      "path": "js\\vendor\\classList.js",
-      "parents": [
-        "2b570bd4"
-      ]
-    },
     "67502d12": {
       "id": "67502d12",
       "pid": "d6fe14e0",
@@ -243,6 +269,30 @@
       "path": "js\\vendor\\fastclick.js",
       "parents": [
         "2b570bd4"
+      ]
+    },
+    "ff580e80": {
+      "id": "ff580e80",
+      "pid": "d6fe14e0",
+      "path": "css\\normalize.scss\\_functions.scss",
+      "parents": [
+        "2fab38d2"
+      ]
+    },
+    "50f93988": {
+      "id": "50f93988",
+      "pid": "d6fe14e0",
+      "path": "css\\normalize.scss\\normalize.scss",
+      "parents": [
+        "2fab38d2"
+      ]
+    },
+    "5e14bcef": {
+      "id": "5e14bcef",
+      "pid": "d6fe14e0",
+      "path": "css\\normalize.scss\\print.scss",
+      "parents": [
+        "2fab38d2"
       ]
     }
   },
