@@ -477,5 +477,45 @@ permalink: modules/
 &lt;/table&gt;</pre>
 </div>
 
-
 <h2>Form elements <small>XX KB</small></h2>
+
+<p>The framework provides standardised input elements. The most basic form of a form is the inline version:</p>
+
+<div class="example">
+  <div class="output">
+    <form action="" role="form" class="form-inline">
+      <label for="demoInlineEmail" class="visually-hidden">Email address</label>
+      <input type="email" id="demoInlineEmail" placeholder="Enter email">
+      <label for="demoInlinePassword" class="visually-hidden">Password</label>
+      <input type="password" id="demoInlinePassword" placeholder="Password">
+      <div class="checkbox"><input type="checkbox" id="demoInlineRemember"><label for="demoInlineRemember">Remember me</label></div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+  <pre>&lt;form action="" role="form" class="form-inline"&gt;
+  &lt;label for="demoInlineEmail" class="visually-hidden"&gt;Email address&lt;/label&gt;
+  &lt;input type="email" id="demoInlineEmail" placeholder="Enter email"&gt;
+  &lt;label for="demoInlinePassword" class="visually-hidden"&gt;Password&lt;/label&gt;
+  &lt;input type="password" id="demoInlinePassword" placeholder="Password"&lt;/label&gt;
+  &lt;div class="checkbox"&gt;&lt;input type="checkbox" id="demoInlineRemember"&gt;&lt;label for="demoInlineRemember"&gt;Remember me&lt;/label&gt;&lt;/div&gt;
+  &lt;button type="submit" class="btn btn-primary"&gt;Login&lt;/button&gt;
+&lt;/form&gt;</pre>
+</div>
+
+<p>Please do <em>always</em> provide labels for your inputs. You can hide them for visual devices by applying the <code>visually-hidden</code> class to them.</p>
+
+<p>Without applying a class but by wrapping the form elements in a <code>.form-group</code> container, you will archieve a stacked formular. You can even use fieldsets and apply colors to the inputs. The <code>form-control</code> class will expand an input as wide as possible.</p>
+
+<div class="example">
+  <div class="output">
+    <form action="" role="form">
+      <fieldset>
+        <legend>Stacked form</legend>
+        <div class="form-group input-danger">
+          <label for="inputStackedEmail">Email address</label>
+          <input type="email" class="form-control" id="inputStackedEmail" placeholder="Enter email">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
