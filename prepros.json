@@ -130,40 +130,6 @@
         "autoprefixer": true,
         "sourcemaps": false
       }
-    },
-    "ba071ebc": {
-      "id": "ba071ebc",
-      "pid": "d6fe14e0",
-      "name": "demo.js",
-      "input": "_site\\res\\demo.js",
-      "customOutput": false,
-      "type": "Js",
-      "config": {
-        "autoCompile": true,
-        "uglify": true,
-        "mangle": true,
-        "sourcemaps": false
-      }
-    },
-    "7da9ca08": {
-      "id": "7da9ca08",
-      "pid": "d6fe14e0",
-      "name": "demo.scss",
-      "input": "_site\\res\\demo.scss",
-      "customOutput": false,
-      "type": "Scss",
-      "config": {
-        "autoCompile": true,
-        "lineNumbers": false,
-        "unixNewlines": false,
-        "debug": false,
-        "compass": false,
-        "fullCompass": false,
-        "compassConfigRb": false,
-        "outputStyle": "expanded",
-        "autoprefixer": true,
-        "sourcemaps": false
-      }
     }
   },
   "imports": {
