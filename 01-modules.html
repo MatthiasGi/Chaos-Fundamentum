@@ -477,7 +477,81 @@ permalink: modules/
 &lt;/table&gt;</pre>
 </div>
 
-<h2>Form elements <small>XX KB</small></h2>
+<h2>Forms <small>XX KB</small></h2>
+
+<h3>Inputs</h3>
+
+<p>Various text-based input elements are supported. Please remember to set the input-type accordingly.</p>
+<div class="example">
+  <div class="output">
+    <input type="text" placeholder="Input your text">
+    <br>
+    <textarea rows="3" placeholder="Input more text"></textarea>
+    <br>
+    <select>
+      <option selected>Lorem ipsum dolor.</option>
+      <option>Odio, iure, iste.</option>
+      <option>Perferendis, assumenda, velit?</option>
+      <option>Adipisci, fuga, temporibus?</option>
+      <option>Qui, eos, laborum.</option>
+      <option>Provident, ad, neque?</option>
+      <option>Nisi, eligendi ipsum.</option>
+    </select>
+    <br>
+    <select multiple>
+      <option>Lorem ipsum dolor.</option>
+      <option>Odio, iure, iste.</option>
+      <option>Perferendis, assumenda, velit?</option>
+      <option>Adipisci, fuga, temporibus?</option>
+      <option>Qui, eos, laborum.</option>
+      <option>Provident, ad, neque?</option>
+      <option>Nisi, eligendi ipsum.</option>
+    </select>
+  </div>
+  <pre>&lt;input type="text" placeholder="Input your text"&gt;
+&lt;textarea rows="3" placeholder="Input more text"&gt;&lt;/textarea&gt;
+&lt;select&gt;&lt;/select&gt;</pre>
+</div>
+
+<p>Custom styled checkboxes and radiobuttons are also provided.</p>
+<div class="example">
+  <div class="output">
+    <div class="checkbox embedded"><input type="checkbox" id="demoCheck1"><label for="demoCheck1">Lorem ipsum dolor.</label></div>
+    <div class="checkbox embedded"><input type="checkbox" id="demoCheck2" checked><label for="demoCheck2">Sapiente, quos doloremque!</label></div>
+    <div class="checkbox embedded"><input type="checkbox" id="demoCheck3" disabled><label for="demoCheck3">Distinctio, iusto, culpa.</label></div>
+    <div class="checkbox embedded"><input type="checkbox" id="demoCheck4" checked disabled><label for="demoCheck4">Error, ducimus, maiores.</label></div>
+    <hr>
+    <div class="radio embedded"><input type="radio" id="demoRadio1" name="demoRadio1"><label for="demoRadio1">Lorem ipsum dolor.</label></div>
+    <div class="radio embedded"><input type="radio" id="demoRadio2" name="demoRadio1" checked><label for="demoRadio2">Inventore, temporibus, repellendus!</label></div>
+    <div class="radio embedded"><input type="radio" id="demoRadio3" name="demoRadio2" disabled><label for="demoRadio3">Maxime, cum, ducimus.</label></div>
+    <div class="radio embedded"><input type="radio" id="demoRadio4" name="demoRadio2" checked disabled><label for="demoRadio4">Voluptatibus, obcaecati, veniam.</label></div>
+  </div>
+  <pre>&lt;div class="checkbox"&gt;&lt;input type="checkbox" id="demoCheck1"&gt;&lt;label for="demoCheck1"&gt;Lorem ipsum dolor.&lt;/label&gt;&lt;/div&gt;
+&lt;div class="radio"&gt;&lt;input type="radio" id="demoRadio1" name="demoRadio1"&gt;&lt;label for="radio"&gt;Lorem ipsum dolor.&lt;/label&gt;&lt;/div&gt;</pre>
+</div>
+
+<p>Color and sizing work similiar to buttons.</p>
+<div class="example">
+  <div class="output">
+    <input type="text" class="input-xs input-primary" placeholder="Input your text here">
+    <br>
+    <select class="input-sm input-success">
+      <option>Lorem ipsum dolor.</option>
+      <option>Non, numquam, aperiam.</option>
+      <option>Est, laboriosam, ex!</option>
+    </select>
+    <br>
+    <textarea rows="3" class="input-warning" placeholder="Input your long text here"></textarea>
+    <br>
+    <div class="checkbox input-lg input-danger"><input type="checkbox" id="demoSizingCheck"><label for="demoSizingCheck">Select your awesom option</label></div>
+  </div>
+  <pre>&lt;input type="text" class="input-xs input-primary" placeholder="Input your text here"&gt;
+&lt;select class="input-sm input-success"&gt;&lt;/select&gt;
+&lt;textarea rows="3" class="input-warning" placeholder="Input your long text here"&gt;&lt;/textarea&gt;
+&lt;div class="checkbox input-lg input-danger"&gt;&lt;input type="checkbox" id="demoSizingCheck"&gt;&lt;label for="demoSizingCheck"&gt;&lt;/label&gt;&lt;/div&gt;</pre>
+</div>
+
+<h3>Form-structure</h3>
 
 <p>The framework provides standardised input elements. The most basic form of a form is the inline version:</p>
 
@@ -504,18 +578,167 @@ permalink: modules/
 
 <p>Please do <em>always</em> provide labels for your inputs. You can hide them for visual devices by applying the <code>visually-hidden</code> class to them.</p>
 
-<p>Without applying a class but by wrapping the form elements in a <code>.form-group</code> container, you will archieve a stacked formular. You can even use fieldsets and apply colors to the inputs. The <code>form-control</code> class will expand an input as wide as possible.</p>
+<p>Without applying a class but by wrapping the form elements in a <code>.form-group</code> container, you will archieve a stacked formular. The <code>form-control</code> class will expand an input as wide as possible.</p>
 
 <div class="example">
   <div class="output">
     <form action="" role="form">
       <fieldset>
         <legend>Stacked form</legend>
-        <div class="form-group input-danger">
-          <label for="inputStackedEmail">Email address</label>
-          <input type="email" class="form-control" id="inputStackedEmail" placeholder="Enter email">
+        <div class="form-group">
+          <label for="demoStackedEmail">Email address</label>
+          <input type="email" class="form-control" id="demoStackedEmail" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="demoStackedPassword">Password</label>
+          <input type="password" class="form-control" id="demoStackedPassword" placeholder="Enter password">
+        </div>
+        <div class="form-group">
+          <div class="checkbox"><input type="checkbox" id="demoStackedRemember"><label for="demoStackedRemember">Remember me</label></div>
+          <p class="text-muted">Simple block level help text.</p>
+        </div>
+        <div class="grid">
+          <button type="reset" class="btn cell-1of4">Cancel</button>
+          <div class="cell-1of4"></div>
+          <button type="submit" class="btn btn-primary cell-1of2">Login</button>
         </div>
       </fieldset>
     </form>
   </div>
+  <pre>&lt;form action="" role="form"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Stacked form&lt;/legend&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="demoStackedEmail"&gt;Email address&lt;/label&gt;
+      &lt;input type="email" class="form-control" id="demoStackedEmail" placeholder="Enter email"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;label for="demoStackedPassword"&gt;Password&lt;/label&gt;
+      &lt;input type="password" class="form-control" id="demoStackedPassword" placeholder="Enter password"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+      &lt;div class="checkbox"&gt;&lt;input type="checkbox" id="demoStackedRemember"&gt;&lt;label for="demoStackedRemember"&gt;Remember me&lt;/label&gt;&lt;/div&gt;
+      &lt;p class="text-muted"&gt;Simple block level help text.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="grid"&gt;
+      &lt;button type="reset" class="btn cell-1of4"&gt;Cancel&lt;/button&gt;
+      &lt;div class="cell-1of4"&gt;&lt;/div&gt;
+      &lt;button type="submit" class="btn btn-primary cell-1of2"&gt;Login&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+</div>
+
+<p>Above a configurable breakpoint you can align the form horizontally by adding the <code>form-aligned</code> class. Hint: The <code>disabled</code> attribute can also be applied to fieldsets. To display text as it was a static input, use the <code>input-static</code> class.</p>
+<div class="example">
+  <div class="output">
+      <form action="" role="form" class="form-aligned">
+      <fieldset disabled>
+        <legend>Aligned form</legend>
+        <div class="form-group"><label for="demoAlignedName">Name</label><p class="input-static" id="demoAlignedName">Jon Doe</p></div>
+        <div class="form-group"><label for="demoAlignedEmail">Email address</label><input type="email" class="form-control" id="demoAlignedEmail" placeholder="Enter email"></div>
+        <div class="form-group"><label for="demoAlignedPassword">Password</label><input type="password" class="form-control" id="demoAlignedPassword" placeholder="Password"></div>
+        <div class="form-group"><div class="checkbox"><input type="checkbox" id="demoAlignedRemember"><label for="demoAlignedRemember">Remember me</label></div></div>
+        <div class="grid-sm">
+          <button type="reset" class="btn btn-block cell-1of4">Cancel</button>
+          <div class="cell-1of4"></div>
+          <button type="submit" class="btn btn-block btn-primary cell-1of2">Login</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <pre>&lt;form action="" role="form" class="form-aligned"&gt;
+  &lt;fieldset disabled&gt;
+    &lt;legend&gt;Aligned form&lt;/legend&gt;
+    &lt;div class="form-group"&gt;&lt;label for="demoAlignedName"&gt;Name&lt;/label&gt;&lt;p class="input-static" id="demoAlignedName"&gt;Jon Doe&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="form-group"&gt;&lt;label for="demoAlignedEmail"&gt;Email address&lt;/label&gt;&lt;input type="email" class="form-control" id="demoAlignedEmail" placeholder="Enter email"&gt;&lt;/div&gt;
+    &lt;div class="form-group"&gt;&lt;label for="demoAlignedPassword"&gt;Password&lt;/label&gt;&lt;input type="password" class="form-control" id="demoAlignedPassword" placeholder="Password"&gt;&lt;/div&gt;
+    &lt;div class="form-group"&gt;&lt;div class="checkbox"&gt;&lt;input type="checkbox" id="demoAlignedRemember"&gt;&lt;label for="demoAlignedRemember"&gt;Remember me&lt;/label&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="grid-sm"&gt;
+      &lt;button type="reset" class="btn btn-block cell-1of4"&gt;Cancel&lt;/button&gt;
+      &lt;div class="cell-1of4"&gt;&lt;/div&gt;
+      &lt;button type="submit" class="btn btn-block btn-primary cell-1of2"&gt;Login&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+</div>
+
+<p>Use the grid-module to structure more complex grids.</p>
+<div class="example">
+  <div class="output">
+    <form action="" role="form">
+      <fieldset>
+        <legend>Grid-like form</legend>
+        <div class="grid-md">
+          <div class="form-group cell">
+            <label for="demoGridFirstName">First name</label>
+            <input type="text" class="form-control" id="demoGridFirstName" placeholder="Enter your first name">
+          </div>
+          <div class="form-group cell">
+            <label for="demoGridLastName">Last name</label>
+            <input type="text" class="form-control" id="demoGridLastName" placeholder="Enter your last name">
+          </div>
+          <div class="form-group cell">
+            <label for="demoGridEmail">Email address</label>
+            <input type="email" class="form-control" id="demoGridEmail" placeholder="Enter your email address">
+          </div>
+        </div>
+        <div class="grid-md">
+          <div class="form-group cell">
+            <label for="demoGridPassword1">Password</label>
+            <input type="password" class="form-control" id="demoGridPassword1" placeholder="Enter your password">
+          </div>
+          <div class="form-group cell">
+            <label for="demoGridPassword2">Password (repeat)</label>
+            <input type="password" class="form-control" id="demoGridPassword2" placeholder="Repeat your password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Favourite colour</label>
+          <div class="grid-xs">
+            <div class="radio cell input-primary"><input type="radio" name="demoGridColour" id="demoGridColour1"><label for="demoGridColour1">Primary</label></div>
+            <div class="radio cell input-success"><input type="radio" name="demoGridColour" id="demoGridColour2"><label for="demoGridColour2">Success</label></div>
+            <div class="radio cell input-warning"><input type="radio" name="demoGridColour" id="demoGridColour3"><label for="demoGridColour3">Warning</label></div>
+            <div class="radio cell input-danger"><input type="radio" name="demoGridColour" id="demoGridColour4"><label for="demoGridColour4">Danger</label></div>
+          </div>
+        </div>
+        <hr>
+        <div class="grid-md">
+          <button type="reset" class="btn cell-1of4">Cancel</button>
+          <div class="cell-1of4"></div>
+          <button type="submit" class="btn btn-primary cell-1of2">Register</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <pre>&lt;div class="grid-md"&gt;
+  &lt;div class="form-group cell"&gt;
+    &lt;label for="demoGridFirstName"&gt;First name&lt;/label&gt;
+    &lt;input type="text" class="form-control" id="demoGridFirstName" placeholder="Enter your first name"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+
+<p>To stack many inputs and unify them, you can wrap them with a <code>.form-stack</code> container.</p>
+
+<div class="example">
+  <div class="output">
+    <form action="" role="form">
+      <fieldset class="form-stack">
+        <legend>Grouped inputs</legend>
+        <label for="demoStacked1" class="visually-hidden">Input 1</label>
+        <input type="text" id="demoStacked1" class="form-control" placeholder="Input 1">
+        <label for="demoStacked2" class="visually-hidden">Input 2</label>
+        <input type="text" id="demoStacked2" class="form-control" placeholder="Input 2">
+        <label for="demoStacked3" class="visually-hidden">Input 3</label>
+        <input type="text" id="demoStacked3" class="form-control" placeholder="Input 3">
+        <label for="demoStacked4" class="visually-hidden">Input 4</label>
+        <input type="text" id="demoStacked4" class="form-control" placeholder="Input 4">
+      </fieldset>
+    </form>
+  </div>
+  <pre>&lt;fieldset class="form-stack"&gt;
+  &lt;label for="demoStacked1" class="visually-hidden"&gt;Input 1&lt;/label&gt;
+  &lt;input type="text" id="demoStacked1" class="form-control" placeholder="Input 1"&gt;
+&lt;/fieldset&gt;</pre>
 </div>
