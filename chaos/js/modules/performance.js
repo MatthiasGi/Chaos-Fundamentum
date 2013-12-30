@@ -10,8 +10,6 @@
     var body = document.body;
     var timer;
 
-    body.classList.add('c-performance');
-
     window.addEventListener('scroll', function() {
       clearTimeout(timer);
       if (!body.classList.contains('c-hover-disable')) {
@@ -22,5 +20,7 @@
         body.classList.remove('c-hover-disable');
       }, 500);
     });
+
+    body.classList.add('c-performance');
   });
 })(window, document);

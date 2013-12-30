@@ -819,8 +819,6 @@ if (typeof define !== 'undefined' && define.amd) {
     var body = document.body;
     var timer;
 
-    body.classList.add('c-performance');
-
     window.addEventListener('scroll', function() {
       clearTimeout(timer);
       if (!body.classList.contains('c-hover-disable')) {
@@ -831,6 +829,8 @@ if (typeof define !== 'undefined' && define.amd) {
         body.classList.remove('c-hover-disable');
       }, 500);
     });
+
+    body.classList.add('c-performance');
   });
 })(window, document);
 
@@ -838,9 +838,6 @@ if (typeof define !== 'undefined' && define.amd) {
   'use strict';
 
   document.addEventListener('DOMContentLoaded', function(event) {
-
-    document.body.classList.add('c-collapse');
-
     var collapses = document.querySelectorAll('[data-action="collapse"]');
     for (var i = collapses.length - 1; i >= 0; i--) {
       var target = document.querySelector(collapses[i].dataset.target);
@@ -850,10 +847,14 @@ if (typeof define !== 'undefined' && define.amd) {
       }
 
       collapses[i].addEventListener('click', function(event) {
-        var target = document.querySelector(this.dataset.target);
-        target.classList.toggle('collapsed');
-        target.classList.toggle('expanded');
+        var targets = document.querySelectorAll(this.dataset.target);
+        for (var j = targets.length - 1; j >= 0; j--) {
+          targets[j].classList.toggle('collapsed');
+          targets[j].classList.toggle('expanded');
+        }
       });
     }
+
+    document.body.classList.add('c-collapse');
   }, false);
 })(document);
