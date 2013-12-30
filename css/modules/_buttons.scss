@@ -99,12 +99,9 @@ a.btn {
 
 // Link style
 .btn-link {
-  @extend %link;
+  @extend a;
   border: 0;
-
-  &:focus {
-    @extend a:focus;
-  }
+  margin: 0;
 }
 
 // Block style button

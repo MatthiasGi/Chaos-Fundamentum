@@ -41,8 +41,7 @@ body {
 // Anchor element
 // -----------------------------------------------------------------------------
 
-// Prototype object for external uses
-%link {
+a {
   color: $link-color;
   text-decoration: none;
   transition: color #{$animation-spec};
@@ -59,11 +58,6 @@ body {
     outline: 0;
     @include outline($color-brand-primary);
   }
-}
-
-// Actual anchor
-a {
-  @extend %link;
 }
 
 
