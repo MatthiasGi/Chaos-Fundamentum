@@ -41,8 +41,7 @@ body {
 // Anchor element
 // -----------------------------------------------------------------------------
 
-// Prototype object for external uses
-%link {
+a {
   color: $link-color;
   text-decoration: none;
   transition: color #{$animation-spec};
@@ -55,15 +54,10 @@ body {
     text-decoration: underline;
   }
 
-  &:focus:not(:hover):not(:active) {
+  &:focus:not(:active):not(:hover) {
     outline: 0;
     @include outline($color-brand-primary);
   }
-}
-
-// Actual anchor
-a {
-  @extend %link;
 }
 
 

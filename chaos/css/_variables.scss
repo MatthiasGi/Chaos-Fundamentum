@@ -139,9 +139,12 @@ $table-responsive-breakpoint: get($breakpoints, 'sm');
 $form-responsive-breakpoint: $table-responsive-breakpoint;
 $form-input-sizes:           $button-sizes;
 $form-input-required-color:  get($colors, 'danger');
+$form-fieldset-color:        $hr-color;
+$form-group-padding:         $grid-gutter / 2;
 
 // Colors to generate
 $form-colors: (
+  ('primary', get($colors, 'primary')),
   ('success', get($colors, 'success')),
   ('warning', get($colors, 'warning')),
   ('danger', get($colors, 'danger'))

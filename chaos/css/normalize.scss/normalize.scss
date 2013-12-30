@@ -191,9 +191,9 @@ abbr[title] {
 }
 
 // Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
-//*Makes th and dt bold
 b,
 dt,
+label,
 strong,
 th {
   font-weight: bold;
@@ -438,6 +438,7 @@ textarea {
   vertical-align: top; // 2
 }
 
+<<<<<<< HEAD
 //*Reset font weight of labels.
 //*Set them bold in areas, where you need them to be bold yourself.
 label {
@@ -445,7 +446,6 @@ label {
 }
 
 //*Disabled elements
-.disabled,
 [disabled],
 [readonly] {
   cursor: default;
