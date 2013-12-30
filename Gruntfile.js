@@ -5,13 +5,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    uglify: {
-      build: {
-        src: 'chaos/chaos.js',
-        dest: 'res/chaos.min.js'
-      }
-    },
-
     sass: {
       dist: {
         options: {
@@ -48,9 +41,9 @@ module.exports = function(grunt) {
       jekyll: {
         files: [
           './*.html',
-          'res/demo.js',
           '_includes/*',
-          '_layouts/*'
+          '_layouts/*',
+          'res/demo.js'
         ],
         tasks: ['shell:jekyllBuild', 'shell:jekyllServe'],
         options: {
@@ -63,7 +56,7 @@ module.exports = function(grunt) {
           'chaos/*',
           'res/demo.scss'
         ],
-        tasks: ['uglify', 'sass', 'autoprefixer', 'shell:jekyllBuild', 'shell:jekyllServe'],
+        tasks: ['sass', 'autoprefixer', 'shell:jekyllBuild', 'shell:jekyllServe'],
         options: {
           interrupt: true,
           atBegin: true
@@ -78,6 +71,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'watch']);
+  grunt.registerTask('default', ['sass', 'autoprefixer', 'watch']);
 
 };
