@@ -99,7 +99,7 @@
       "customOutput": false,
       "type": "Scss",
       "config": {
-        "autoCompile": true,
+        "autoCompile": false,
         "lineNumbers": false,
         "unixNewlines": false,
         "debug": false,
@@ -107,7 +107,7 @@
         "fullCompass": false,
         "compassConfigRb": false,
         "outputStyle": "expanded",
-        "autoprefixer": true,
+        "autoprefixer": false,
         "sourcemaps": false
       }
     },
@@ -119,7 +119,7 @@
       "customOutput": false,
       "type": "Scss",
       "config": {
-        "autoCompile": true,
+        "autoCompile": false,
         "lineNumbers": false,
         "unixNewlines": false,
         "debug": false,
@@ -127,7 +127,7 @@
         "fullCompass": false,
         "compassConfigRb": false,
         "outputStyle": "expanded",
-        "autoprefixer": true,
+        "autoprefixer": false,
         "sourcemaps": false
       }
     }

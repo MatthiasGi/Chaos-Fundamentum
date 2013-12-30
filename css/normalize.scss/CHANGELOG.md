@@ -1,5 +1,10 @@
 # normalize.scss v2 - Changelog
 
+### 2.1.3-I (December 30, 2013)
+
+* Made labels bold by default as it proved to be more useful
+* Removed `.disabled` class, the attribute is still available
+
 ### 2.1.3-H (December 20, 2013)
 
 * Added three functions (hcf, fraction and find) to `functions.scss`
