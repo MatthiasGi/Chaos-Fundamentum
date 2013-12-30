@@ -6,7 +6,7 @@ This branch contains the documentation of the [Chaos-Fundamentum-Framework](http
 Usage
 -----
 
-To run your own version of the documentation, you will need [Jekyll](http://jekyllrb.com/). Then just pull the branch and run `jekyll build` followed by `jekyll run` in the directory.
+To run your own version of the documentation, you will need [Jekyll](http://jekyllrb.com/). Then just pull the branch and run `jekyll build` followed by `jekyll serve` in the directory.
 
 Modification
 ------------
