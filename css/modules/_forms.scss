@@ -131,7 +131,7 @@ textarea,
     }
 
     // Allow focussing the fake input
-    &:focus + label {
+    &:focus + label:not(:active):not(:hover) {
       @include outline($color-brand-primary);
     }
 

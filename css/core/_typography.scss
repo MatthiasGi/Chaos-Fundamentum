@@ -54,7 +54,7 @@ a {
     text-decoration: underline;
   }
 
-  &:focus:not(:hover):not(:active) {
+  &:focus:not(:active):not(:hover) {
     outline: 0;
     @include outline($color-brand-primary);
   }
