@@ -12,7 +12,7 @@
       "type": "Js",
       "config": {
         "autoCompile": true,
-        "uglify": true,
+        "uglify": false,
         "mangle": true,
         "sourcemaps": false
       }

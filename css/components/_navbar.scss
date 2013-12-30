@@ -77,7 +77,7 @@ ul.navbar-nav {
 .navbar-collapse {
   display: block;
   transition: max-height #{$animation-spec};
-  max-height: 0;
+  max-height: 10em;
   margin: 0 -1rem;
   overflow-y: auto;
   @extend %normalize-scroll;
@@ -96,8 +96,8 @@ ul.navbar-nav {
 }
 
 // Extended container
-.navbar.expanded .navbar-collapse {
-  max-height: 10em;
+.c-collapse .navbar.collapsed .navbar-collapse {
+  max-height: 0;
 }
 
 // Button to toggle the collapsable content
@@ -110,6 +110,9 @@ ul.navbar-nav {
   height: 1rem;
   margin-right: .2rem;
   width: 1.2rem;
+
+  // Hide the button for no-js-browser
+  display: none;
 
   .icon {
     &,
@@ -170,15 +173,20 @@ ul.navbar-nav {
   }
 }
 
+// Re-enable the button
+.c-collapse .navbar-toggle {
+  display: block;
+}
+
 // Format the header for collapsed contents
 .navbar-header {
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid darken($navbar-background, 10%);
   margin: 0 -1rem;
   transition: border-bottom-color $animation-spec;
 }
 
-.navbar.expanded .navbar-header {
-  border-color: darken($navbar-background, 10%);
+.c-collapse .navbar.collapsed .navbar-header {
+  border-color: transparent;
 }
 
 

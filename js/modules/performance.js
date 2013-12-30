@@ -6,19 +6,21 @@
 (function(window, document) {
   'use strict';
 
-  var body = document.body;
-  var timer;
+  document.addEventListener('DOMContentLoaded', function(event) {
+    var body = document.body;
+    var timer;
 
-  body.classList.add('c-performance');
+    body.classList.add('c-performance');
 
-  window.addEventListener('scroll', function() {
-    clearTimeout(timer);
-    if (!body.classList.contains('c-hover-disable')) {
-      body.classList.add('c-hover-disable');
-    }
+    window.addEventListener('scroll', function() {
+      clearTimeout(timer);
+      if (!body.classList.contains('c-hover-disable')) {
+        body.classList.add('c-hover-disable');
+      }
 
-    timer = setTimeout(function() {
-      body.classList.remove('c-hover-disable');
-    }, 500);
+      timer = setTimeout(function() {
+        body.classList.remove('c-hover-disable');
+      }, 500);
+    });
   });
 })(window, document);
