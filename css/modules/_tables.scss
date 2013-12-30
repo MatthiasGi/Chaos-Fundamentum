@@ -51,6 +51,7 @@ table.table {
   }
 }
 
+
 // Table with minimal width
 // -----------------------------------------------------------------------------
 
@@ -66,23 +67,7 @@ table.table {
     margin-bottom: 0;
     min-width: $table-responsive-breakpoint;
 
-    // Stripping doubled borders
-    > :first-child tr:first-child,
-    > tr:first-child {
-      td,
-      th {
-        border-top: 0;
-      }
-    }
-
-    > :last-child tr:last-child,
-    > tr:last-child {
-      td,
-      th {
-        border-bottom: 0;
-      }
-    }
-
+    // Striping double-borders left and right
     td,
     th {
       &:first-child {
