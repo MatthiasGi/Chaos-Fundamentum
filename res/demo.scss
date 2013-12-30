@@ -68,3 +68,17 @@
     margin: 0;
   }
 }
+
+// JS Collapse demo
+.accordion {
+  .section .content {
+    max-height: 0;
+    overflow-y: auto;
+    padding: 0 1em;
+    transition: max-height .5s ease;
+  }
+
+  .section.expanded .content {
+    max-height: 10em;
+  }
+}

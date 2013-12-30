@@ -3,6 +3,74 @@ layout:    default
 title:     JavaScript
 permalink: javascript/
 ---
-<h1 class="text-center">JavaScript <small>XX KB</small></h1>
+<h1 class="text-center">JavaScript</h1>
 <h3 class="text-center text-muted">Additional fanciness!</h3>
 <hr>
+
+<p>For modular interactivity, Chaos-Fundamentum does also provide optional JavaScript-Plugins, that also provide fallback for non JavaScript enabled devices. Check out the features below!</p>
+
+<p>Each module will apply a class to the body on successful load. This allows you to provide fallback, if the load fails. The added class is displayed beside the module name.</p>
+
+<h2>Collapse<small><code>.c-collapse</code></small></h2>
+
+<p>This module allows the creation of collapsable content (for example the navigation bar). It searches for all elements with a <code>data-action="collapse"</code> attribute. The <code>data-target</code> attribute should contain a <a href="https://developer.mozilla.org/en-US/docs/Web/API/document.querySelector" alt="MDN Documentation for query selectors">query slector</a> (e.g. <code>data-target="#navbar"</code>). The plugin will apply a click-listener to the element and toggle the <code>collapsed</code> and <code>expanded</code> classes on the target(s). It will ensure that on load only one of the two is applied as default to the target.</p>
+
+<div class="example">
+  <div class="output">
+    <div class="accordion" id="demoJSCollapse">
+      <div class="section expanded" id="demoJSCollapse1">
+        <div class="header btn btn-block" data-action="collapse" data-target="#demoJSCollapse .section.expanded, #demoJSCollapse1">Lorem ipsum dolor.</div>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, cupiditate, dolor, nostrum, est quisquam velit sequi provident corporis dolorum quas eaque cumque accusantium magni porro expedita quibusdam voluptas explicabo placeat.</p>
+        </div>
+      </div>
+      <div class="section collapsed" id="demoJSCollapse2">
+        <div class="header btn btn-block" data-action="collapse" data-target="#demoJSCollapse .section.expanded, #demoJSCollapse2">Repudiandae, nemo, laborum.</div>
+        <div class="content">
+          <p>Nisi, modi, quidem eligendi eos inventore ratione amet quisquam voluptatem dolorem fugit quaerat fugiat commodi facilis consequuntur expedita. Numquam, delectus minus architecto voluptas odio quisquam vel esse placeat eos voluptatum!</p>
+        </div>
+      </div>
+      <div class="section collapsed" id="demoJSCollapse3">
+        <div class="header btn btn-block" data-action="collapse" data-target="#demoJSCollapse .section.expanded, #demoJSCollapse3">Officiis, aperiam, doloremque.</div>
+        <div class="content">
+          <p>Molestias, quae, rem porro sapiente non ab nemo ea quos in soluta quia delectus explicabo sit tempora possimus temporibus ullam est enim ratione iure quo quibusdam amet quod ad dolor.</p>
+        </div>
+      </div>
+      <div class="section collapsed" id="demoJSCollapse4">
+        <div class="header btn btn-block" data-action="collapse" data-target="#demoJSCollapse .section.expanded, #demoJSCollapse4">Ullam, non, excepturi.</div>
+        <div class="content">
+          <p>Quae, repellendus nostrum ipsum assumenda facilis corporis tenetur nesciunt tempora rerum quod voluptatum facere earum ullam atque animi hic placeat asperiores totam molestiae aut voluptate nisi nam. Ipsum, natus, quam.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h4 class="output">HTML</h4>
+  <pre>&lt;div class="accordion" id="demoJSCollapse"&gt;
+  &lt;div class="section expanded" id="demoJSCollapse1"&gt;
+    &lt;div class="header btn btn-block" data-action="collapse" data-target="#demoJSCollapse .section.expanded, #demoJSCollapse1"&gt;Lorem ipsum dolor.&lt;/div&gt;
+    &lt;div class="content"&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="section collapsed" id="demoJSCollapse2"&gt;
+    &lt;div class="header btn btn-block" data-action="collapse" data-target="#demoJSCollapse .section.expanded, #demoJSCollapse2"&gt;Repudiandae, nemo, laborum.&lt;/div&gt;
+    &lt;div class="content"&gt;
+      &lt;p&gt;Nisi, modi, quidem eligendi.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+  <h4 class="output">CSS</h4>
+  <pre>.accordion .section .content {
+  max-height: 0;
+  overflow-y: auto;
+}
+
+.accordion .section.expanded .content {
+  max-height: 10em;
+}</pre>
+</div>
+
+
+<h3>Performance <small>.c-performance</small></h3>
+
+<p>This module is a simple performance booster on larger sites. Currently, it does only <a href="http://thecssninja.com/javascript/pointer-events-60fps">disable hover events on scroll</a>.</p>

@@ -78,7 +78,6 @@ ul.navbar-nav {
   display: block;
   transition: max-height #{$animation-spec};
   max-height: 10em;
-  margin: 0 -1rem;
   overflow-y: auto;
   @extend %normalize-scroll;
 
@@ -181,8 +180,15 @@ ul.navbar-nav {
 // Format the header for collapsed contents
 .navbar-header {
   border-bottom: 1px solid darken($navbar-background, 10%);
-  margin: 0 -1rem;
   transition: border-bottom-color $animation-spec;
+}
+
+// Remove container margin on small viewports
+.navbar .container {
+  .navbar-collapse,
+  .navbar-header {
+    margin: 0 -1rem;
+  }
 }
 
 .c-collapse .navbar.collapsed .navbar-header {
@@ -192,10 +198,14 @@ ul.navbar-nav {
 
 // Reset formats for widescreen
 @media (min-width: $navbar-breakpoint) {
+  .navbar-collapse,
+  .navbar-header {
+    margin: 0 !important;
+    display: inline-block;
+  }
+
   .navbar-header {
     border: 0 !important;
-    display: inline-block;
-    margin: 0;
   }
 
   .navbar-toggle {
@@ -203,8 +213,6 @@ ul.navbar-nav {
   }
 
   .navbar-collapse {
-    display: inline-block;
-    margin: 0;
     max-height: none;
     overflow-y: visible;
 

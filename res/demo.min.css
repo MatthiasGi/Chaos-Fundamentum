@@ -59,3 +59,15 @@ h6.demo {
 .example div.table-responsive {
   margin: 0;
 }
+
+.accordion .section .content {
+  max-height: 0;
+  overflow-y: auto;
+  padding: 0 1em;
+  -webkit-transition: max-height .5s ease;
+  transition: max-height .5s ease;
+}
+
+.accordion .section.expanded .content {
+  max-height: 10em;
+}

@@ -6,3 +6,47 @@ permalink: components/
 <h1 class="text-center">Components <small>XX KB</small></h1>
 <h3 class="text-center text-muted">Drop-in UI</h3>
 <hr>
+
+<p>If you want even <em>more</em> of the framework, there are already some ready-to-use components, that will continue to evolve and become more.</p>
+
+<h2>Navigation Bar <small>XX KB</small><small>Modules: Buttons</small><small>JavaScript: Collapse</small></h2>
+
+<p>The current implementation is really basic and just allows to display a navigational bar that stretches to the whole available space. But it will become more useful in the future. Here is a full-blown example:</p>
+<div class="example">
+  <div class="output">
+    <div class="navbar collapsed" role="navigation" id="demoNavbar">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand">Brand name</a>
+        <button type="button" class="navbar-toggle" aria-label="Toggle Menu" data-target="#demoNavbar" data-action="collapse"><span class="icon"></span></button>
+      </div>
+      <div class="navbar-collapse">
+        <ul class="navbar-nav">
+          <li><a href="#">Lorem.</a></li>
+          <li><a href="#">Recusandae.</a></li>
+          <li class="active"><a href="#">Est.</a></li>
+          <li><a href="#">Possimus.</a></li>
+          <li><a href="#">Quod?</a></li>
+          <li><a href="#">Saepe.</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <pre>&lt;div class="navbar collapsed" role="navigation" id="demoNavbar"&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;a href="#" class="navbar-brand"&gt;Brand name&lt;/a&gt;
+    &lt;button type="button" class="navbar-toggle" aria-label="Toggle Menu" data-target="#demoNavbar" data-action="collapse"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="navbar-collapse"&gt;
+    &lt;ul class="navbar-nav"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Lorem.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Recusandae.&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="active"&gt;&lt;a href="#"&gt;Est.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Possimus.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Quod?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Saepe.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</div>
+
+<p>The basic navigation bar is just a block-level container with the <code>navbar</code> class. To make it collapsable if the viewport gets to small, just wrap the collapsable content in a <code>.navbar-collapse</code> container and the content, that should remain visible in a <code>.navbar-header</code> container. Use the <code>.navbar-toggle</code> button to allow expansion on JavaScript enabled devices. Use the <code>navbar-nav</code> class for menus for the navigation inside the bar. The <code>navbar-brand</code> class allows prominent display of an element.</p>
