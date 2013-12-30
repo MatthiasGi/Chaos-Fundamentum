@@ -2,9 +2,6 @@
   'use strict';
 
   document.addEventListener('DOMContentLoaded', function(event) {
-
-    document.body.classList.add('c-collapse');
-
     var collapses = document.querySelectorAll('[data-action="collapse"]');
     for (var i = collapses.length - 1; i >= 0; i--) {
       var target = document.querySelector(collapses[i].dataset.target);
@@ -19,5 +16,7 @@
         target.classList.toggle('expanded');
       });
     }
+
+    document.body.classList.add('c-collapse');
   }, false);
 })(document);
