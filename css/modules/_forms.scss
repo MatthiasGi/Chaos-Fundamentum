@@ -206,6 +206,8 @@ textarea,
 
 // Element grouping
 .form-group {
+  @extend .clearfix;
+
   display: block;
   margin: .25em 0;
   padding: 0 $form-group-padding;
@@ -222,9 +224,9 @@ textarea,
 // Aligning elements in grid-like structure
 @media (min-width: $form-responsive-breakpoint) {
   .form-aligned .form-group {
-
     > label {
-      display: inline-block;
+      display: block;
+      float: left;
       padding-right: 1em;
       text-align: right;
       width: 12em;
@@ -234,7 +236,8 @@ textarea,
     > textarea,
     > select,
     > .input-static {
-      display: inline-block;
+      display: block;
+      float: left;
 
       &.form-control {
         width: 15em;
