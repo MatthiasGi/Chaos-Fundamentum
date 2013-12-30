@@ -17,7 +17,7 @@ Updating Chaos
 --------------
 
 To update the version of the framework, just merge the master branch in, as described in [Subtree Merging](http://git-scm.com/book/ch6-7.html). Basically:
-```Shell
+```
 git read-tree --prefix=chaos/ -u master
 git checkout master
 git pull
