@@ -1,4 +1,3 @@
-
 /**
  * Disables every hover action while scrolling.
  *
@@ -9,6 +8,8 @@
 
   var body = document.body;
   var timer;
+
+  body.classList.add('c-performance');
 
   window.addEventListener('scroll', function() {
     clearTimeout(timer);

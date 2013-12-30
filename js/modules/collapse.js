@@ -1,6 +1,8 @@
 (function(document) {
   'use strict';
 
+  document.body.classList.add('c-collapse');
+
   document.addEventListener('DOMContentLoaded', function(event) {
     var collapses = document.querySelectorAll('[data-action="collapse"]');
     for (var i = collapses.length - 1; i >= 0; i--) {
