@@ -2,6 +2,5 @@ name: Chaos-Fundamentum Documentation
 markdown: redcarpet
 pygments: true
 safe: true
-exclude: [node_modules, Gruntfile.js, LICENSE, package.json, chaos, README.md]
-include: [chaos/chaos.js]
+exclude: [node_modules, Gruntfile.js, LICENSE, package.json, README.md]
 baseurl: /Chaos-Fundamentum
