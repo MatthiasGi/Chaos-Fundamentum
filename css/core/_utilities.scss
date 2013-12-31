@@ -6,7 +6,7 @@
 // Floats
 // -----------------------------------------------------------------------------
 
-@each $float in "left", "right" {
+@each $float in 'left', 'right' {
   .pull-#{$float} {
     float: #{$float};
   }
@@ -22,8 +22,8 @@
 
   // Responsiveness
   @each $breakpoint in $breakpoints {
-    @media (min-width: #{nth($breakpoint, 2)}) {
-      width: #{nth($breakpoint, 4)};
+    @media (min-width: nth($breakpoint, 2)) {
+      width: nth($breakpoint, 4);
     }
   }
 }
@@ -35,21 +35,21 @@
   padding: 1rem;
 }
 
+
 // Visibility
 // -----------------------------------------------------------------------------
 
-// Responsive
 @each $breakpoint in $breakpoints {
   .visible-#{nth($breakpoint, 1)} {
-    display: none !important;
+    display: none;
 
     @media(min-width: #{nth($breakpoint, 2)}) {
       display: block !important;
     }
   }
 
-  .hidden-#{nth($breakpoint, 1)} {
-    @media(min-width: #{nth($breakpoint, 2)}) {
+  @media(min-width: #{nth($breakpoint, 2)}) {
+    .hidden-#{nth($breakpoint, 1)} {
       display: none !important;
     }
   }
@@ -66,6 +66,7 @@
 
 // Disable pointer events on scroll
 // (http://www.thecssninja.com/javascript/pointer-events-60fps)
+// Requires JavaScript: Performance
 .c-hover-disable,
 .c-hover-disable * {
   pointer-events: none !important;
