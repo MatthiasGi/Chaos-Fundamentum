@@ -11,3 +11,9 @@ Intended support for
  * Opera 12.1+
  * iOS Safari 5.1+
  * Android Browser 4+
+
+Usage
+-----
+
+Only editing the three SASS-files in `css/` is needed.
+
