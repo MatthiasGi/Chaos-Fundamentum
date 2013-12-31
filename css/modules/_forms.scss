@@ -6,12 +6,6 @@
 // Basic input elements
 // -----------------------------------------------------------------------------
 
-// Base style for text-based inputs
-%form-inputtext {
-  text-overflow: ellipsis;
-  width: 15em;
-}
-
 // Generate styles for appropiate inputs
 input[type='color'],
 input[type='date'],
@@ -28,7 +22,9 @@ input[type='time'],
 input[type='url'],
 textarea {
   @extend %fix-inputs;
-  @extend %form-inputtext;
+
+  text-overflow: ellipsis;
+  width: 15em;
   min-height: #{strip($line-height) + .5}em;
 }
 
@@ -40,8 +36,10 @@ textarea {
 // Select element that preserves mobile-native style
 // TODO(matthiasgi): Flat selects also on mobile
 select {
-  @extend %form-inputtext;
+  text-overflow: ellipsis;
+  width: 15em;
 }
+
 
 // More abstract styling
 // -----------------------------------------------------------------------------
@@ -64,20 +62,15 @@ select {
 
   // Indicate required style by tinting the element.
   &[required] {
-    background: fade-out($form-input-required-color, .9);
+    background: $form-input-required-background;
   }
 
   // Additionally indicate disabled state by background color.
   &[disabled] {
     background: $color-gray-lighter;
   }
-}
 
-// Form controls extend to maximal available widthinput,
-input,
-select,
-textarea,
-.input-static {
+  // Form controls extend to maximal available width
   &.form-control {
     display: block;
     margin-left: 0;
@@ -108,6 +101,7 @@ textarea,
 ::placeholder {
   color: $color-gray-light;
 }
+
 
 // Radio- and checkboxes
 // -----------------------------------------------------------------------------
@@ -153,11 +147,11 @@ textarea,
     &::before {
       border: 1px solid $color-gray-light;
       box-shadow: inset 0 0 0 3px #fff;
-      content: "";
+      content: '';
       display: inline-block;
       height: 1.2em;
       margin-right: .5em;
-      transition: #{$animation-spec};
+      transition: $animation-spec;
       transition-property: background-color, border-color;
       vertical-align: text-bottom;
       width: 1.2em;
@@ -224,7 +218,7 @@ textarea,
 // Aligning elements in grid-like structure
 @media (min-width: $form-responsive-breakpoint) {
   .form-aligned .form-group {
-    > label {
+    > :first-child {
       display: block;
       float: left;
       padding-right: 1em;
@@ -232,22 +226,20 @@ textarea,
       width: 12em;
     }
 
-    > input,
-    > textarea,
-    > select,
-    > .input-static {
+    > :nth-child(2) {
       display: block;
       float: left;
-
-      &.form-control {
-        width: 15em;
-        width: calc(100% - 12em);
-      }
     }
 
     > .checkbox,
     > .radio {
+      left: 1px;
       margin-left: 12em;
+      text-align: left;
+    }
+
+    .form-control {
+      width: calc(100% - 12em);
     }
   }
 }

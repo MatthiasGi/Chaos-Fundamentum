@@ -140,7 +140,7 @@ $table-responsive-breakpoint: get($breakpoints, 'sm');
 
 $form-responsive-breakpoint: $table-responsive-breakpoint;
 $form-input-sizes:           $button-sizes;
-$form-input-required-color:  get($colors, 'danger');
+$form-input-required-background:  fade-out(get($colors, 'danger'), .9);
 $form-fieldset-color:        $hr-color;
 $form-group-padding:         $grid-gutter / 2;
 
