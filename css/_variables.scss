@@ -7,20 +7,20 @@
 // -----------------------------------------------------------------------------
 
 // Gray colors
-$color-gray-darker:     lighten(#000, 13.5%);
-$color-gray-dark:       lighten(#000, 20%);
-$color-gray:            lighten(#000, 33.5%);
-$color-gray-light:      lighten(#000, 60%);
-$color-gray-lighter:    lighten(#000, 93.5%);
+$color-gray-darker:   lighten(#000, 13.5%);
+$color-gray-dark:     lighten(#000, 20%);
+$color-gray:          lighten(#000, 33.5%);
+$color-gray-light:    lighten(#000, 60%);
+$color-gray-lighter:  lighten(#000, 93.5%);
 
 // Brand colors
-$color-brand-primary:   #2980b9;
+$color-brand-primary: #2980b9;
 
 // Layout colors
-$color-background:      #fff;
-$color-text:            $color-gray-dark;
-$color-selection:       lighten($color-brand-primary, 50%);
-$color-card:            #fff;
+$color-background:    #fff;
+$color-text:          $color-gray-dark;
+$color-selection:     lighten($color-brand-primary, 50%);
+$color-card:          #fff;
 
 // Colors for batch-creating different elements
 $colors: (
@@ -62,10 +62,10 @@ $hr-color:                $color-gray;
 // Quotes
 $blockquote-color-border: $color-gray-darker;
 $q-quotes: (
-    (fr, '«' '»' '“' '”'),
-    (de, '„' '“' '‚' '‘'),
-    (ja, '「' '」' '『' '』')
-  );
+  (fr, '«' '»' '“' '”'),
+  (de, '„' '“' '‚' '‘'),
+  (ja, '「' '」' '『' '』')
+);
 
 // Lists
 $list-inline-padding:     1em;
@@ -112,37 +112,55 @@ $animation-spec: .3s ease-out;
 // Grid
 // -----------------------------------------------------------------------------
 
+// Gutter between the grid-cells
 $grid-gutter:  .5rem;
+
+// Column base numbers that should be generated
 $grid-columns: 5, 12;
 
 
 // Buttons
 // -----------------------------------------------------------------------------
 
+// Sizes (Classname, font-size) for buttons / button-groups
 $button-sizes: (
   ('lg', 1.2em),
   ('sm', .9em),
   ('xs', .75em)
 );
+
+// Base colors for default button and inverted button
 $button-color-background: #fff;
-$button-color-font: $color-gray-dark;
+$button-color-font:       $color-gray-dark;
 
 
 // Tables
 // -----------------------------------------------------------------------------
 
+// Base padding for cells
 $table-padding:               .4em;
+
+// Minimal width for responsive table
 $table-responsive-breakpoint: get($breakpoints, 'sm');
 
 
 // Forms
 // -----------------------------------------------------------------------------
 
-$form-responsive-breakpoint: $table-responsive-breakpoint;
-$form-input-sizes:           $button-sizes;
-$form-input-required-background:  fade-out(get($colors, 'danger'), .9);
-$form-fieldset-color:        $hr-color;
-$form-group-padding:         $grid-gutter / 2;
+// Minimal width for aligned form to expand
+$form-responsive-breakpoint:     $table-responsive-breakpoint;
+
+// Sizes (Classname, font-size) for inputs
+$form-input-sizes:               $button-sizes;
+
+// Background for required inputs (consider a light tinted red)
+$form-input-required-background: fade-out(get($colors, 'danger'), .9);
+
+// Bottom-border-color of the fieldset
+$form-fieldset-color:            $hr-color;
+
+// Padding for form groups, set to match grid gutter if combinations are used
+$form-group-padding:             $grid-gutter / 2;
 
 // Colors to generate
 $form-colors: (
@@ -161,15 +179,28 @@ $form-colors: (
 // Navbar
 // -----------------------------------------------------------------------------
 
+// Backgrond color for the navbar (also base for border-color)
 $navbar-background: $color-gray-lighter;
+
+// Viewport-size < this breakpoint will mean a collapsed navbar, if present
 $navbar-breakpoint: get($breakpoints, 'md');
+
+// Base color for text in the navbar
 $navbar-color:      $color-text;
+
+
+// =============================================================================
+// =                                                                           =
+// =                Modification below this point is not needed!               =
+// =                                                                           =
+// =============================================================================
 
 
 //
 // Normalize.scss
 // -----------------------------------------------------------------------------
 
+// Modifies appropriate normalize.scss variables to match the Chaos' ones.
 $normalize-ie-support:           10;
 $normalize-font-family:          $font-family;
 $normalize-background:           $color-background;
