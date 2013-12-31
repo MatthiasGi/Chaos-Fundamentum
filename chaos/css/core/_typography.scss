@@ -11,7 +11,7 @@ html {
 
   // Responsive font-size
   @each $breakpoint in $breakpoints {
-    @media (min-width: #{nth($breakpoint, 2)}) {
+    @media (min-width: nth($breakpoint, 2)) {
       font-size: percentage(nth($breakpoint, 3));
     }
   }
@@ -44,7 +44,7 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
-  transition: color #{$animation-spec};
+  transition: color $animation-spec;
 
   &:active,
   &:hover,
@@ -102,13 +102,13 @@ blockquote {
   margin: 1.5em;
   padding: 0 1em;
 
-  cite:before {
-    content: '— ';
-  }
-
   &.pull-right {
     border-left: 0;
     border-right: 5px solid $blockquote-color-border;
+  }
+
+  cite:before {
+    content: '— ';
   }
 }
 
@@ -120,7 +120,7 @@ pre {
   background: $color-gray-lighter;
   border: 1px solid $color-gray-light;
   margin: 1em 0;
-  max-height: #{strip($pre-lines * $line-height) + .5}em;
+  max-height: #{strip($pre-lines * $line-height)}em;
   overflow: auto;
   padding: .5em 1em;
   word-wrap: break-word;
@@ -152,7 +152,7 @@ dd {
   margin-left: 2em;
 }
 
-dl.dl-aligned {
+.dl-aligned {
   @extend .clearfix;
 
   @media (min-width: $list-aligned-breakpoint) {

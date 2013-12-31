@@ -13,3 +13,7 @@
 @mixin outline($color) {
   box-shadow: 0 0 0 2px $color;
 }
+
+%outline-off {
+  box-shadow: none !important;
+}
