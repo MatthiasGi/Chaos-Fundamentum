@@ -19,12 +19,9 @@
   color: $color;
 
   // Force hover and focus state even for class-triggered active state
-  &,
-  &.active {
-    &:hover,
-    &:focus {
-      background-color: darken($background, 10%);
-    }
+  &:hover,
+  &:focus {
+    background-color: darken($background, 10%) !important;
   }
 
   // Active state
@@ -47,35 +44,29 @@
 // -----------------------------------------------------------------------------
 
 .btn {
-  background: transparent;
-  border: 1px solid transparent;
+  border: 1px solid;
   cursor: pointer;
   display: inline-block;
   margin: .25em .1em;
   outline: 0 !important;
   padding: .6em 1em;
-  transition: #{$animation-spec};
+  transition: $animation-spec;
   transition-property: background-color, border-color;
 
   // Set style globally on all devices
   @extend %fix-inputs;
 
   // Basic button style
-  @include button(#fff, $color-gray-darker);
+  @include button($button-color-background, $button-color-font);
 }
 
 // Reset for anchor element
 a.btn {
   line-height: normal;
+  text-decoration: none !important;
 
-  &:active,
-  &:hover,
   &:focus {
-    text-decoration: none;
-  }
-
-  &:not(.btn-link):focus {
-    @include outline(transparent);
+    @extend %outline-off;
   }
 }
 
@@ -87,7 +78,7 @@ a.btn {
 }
 
 .btn-invert {
-  @include button($color-text, $color-background);
+  @include button($button-color-font, $button-color-background);
 }
 
 // Different button sizes
@@ -112,7 +103,7 @@ a.btn {
 
 // Reset for inputs
 input.btn:focus {
-  box-shadow: none;
+  @extend %outline-off;
 }
 
 
