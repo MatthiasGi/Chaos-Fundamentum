@@ -6,7 +6,7 @@
 // Basic table
 // -----------------------------------------------------------------------------
 
-table.table {
+.table {
   margin-bottom: 1em;
   width: 100%;
 
@@ -108,7 +108,8 @@ table.table {
 }
 
 // Actual table style
-table.table {
+.table {
+
   // Generate colored rows
   @each $color in $colors {
     @include table-colored-row($color);
@@ -119,4 +120,5 @@ table.table {
   tr.invert {
     color: $color-background;
   }
+
 }
