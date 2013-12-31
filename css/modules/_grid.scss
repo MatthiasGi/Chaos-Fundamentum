@@ -23,7 +23,7 @@
   .grid-#{nth($breakpoint, 1)} {
     @extend %grid;
 
-    @media (min-width: #{nth($breakpoint, 2)}) {
+    @media (min-width: nth($breakpoint, 2)) {
       @include grid;
     }
   }
@@ -46,18 +46,20 @@
 
 // Mixin for generated cells
 @mixin grid-cell($width, $columns, $generated) {
+
   // Trim fraction
   $fraction: fraction($width, $columns);
-  $width:   nth($fraction, 1);
-  $columns: nth($fraction, 2);
+  $width:    nth($fraction, 1);
+  $columns:  nth($fraction, 2);
 
   // Search, if already generated. Else generate
   @if not find($generated, $fraction) {
     .cell-#{$width}of#{$columns} {
       @extend %cell;
-      flex: $width 1 percentage($width / $columns);
+      flex: $width 1 percentage($width/$columns);
     }
   }
+
 }
 
 // Generate cells
