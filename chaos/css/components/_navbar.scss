@@ -83,6 +83,7 @@
   transition: max-height $animation-spec;
 
   @extend %normalize-scroll;
+  @extend .clearfix;
 
   .navbar-nav {
     display: block;
@@ -201,8 +202,9 @@
 @media (min-width: $navbar-breakpoint) {
   .navbar-collapse,
   .navbar-header {
-    margin: 0 !important;
     display: inline-block;
+    margin: 0 !important;
+    vertical-align: top;
   }
 
   .navbar-header {
@@ -214,7 +216,7 @@
   }
 
   .navbar-collapse {
-    max-height: none;
+    max-height: none !important;
     overflow-y: visible;
 
     .navbar-nav li {
