@@ -83,6 +83,7 @@
   transition: max-height $animation-spec;
 
   @extend %normalize-scroll;
+  @extend .clearfix;
 
   .navbar-nav {
     display: block;
@@ -215,7 +216,7 @@
   }
 
   .navbar-collapse {
-    max-height: none;
+    max-height: none !important;
     overflow-y: visible;
 
     .navbar-nav li {
