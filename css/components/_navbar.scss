@@ -201,8 +201,9 @@
 @media (min-width: $navbar-breakpoint) {
   .navbar-collapse,
   .navbar-header {
-    margin: 0 !important;
     display: inline-block;
+    margin: 0 !important;
+    vertical-align: top;
   }
 
   .navbar-header {
