@@ -17,16 +17,16 @@
 
 // Optional modules
 // -----------------------------------------------------------------------------
-@if $chaos-fonts   {@import 'modules/fonts';}
-@if $chaos-grid    {@import 'modules/grid';}
-@if $chaos-buttons {@import 'modules/buttons';}
-@if $chaos-tables  {@import 'modules/tables';}
-@if $chaos-forms   {@import 'modules/forms';}
+@import 'modules/fonts';
+@import 'modules/grid';
+@import 'modules/buttons';
+@import 'modules/tables';
+@import 'modules/forms';
 
 
 // Optional components
 // -----------------------------------------------------------------------------
-@if $chaos-navbar {@import 'components/navbar';}
+@import 'components/navbar';
 
 
 // Printing styles

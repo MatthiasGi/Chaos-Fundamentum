@@ -109,17 +109,6 @@ $animation-spec: .3s ease-out !default;
 // -----------------------------------------------------------------------------
 
 
-// Modules to load
-// -----------------------------------------------------------------------------
-
-// Specify, which modules should be loaded
-$chaos-fonts:   true !default;
-$chaos-grid:    true !default;
-$chaos-buttons: true !default;
-$chaos-tables:  true !default;
-$chaos-forms:   true !default;
-
-
 // Grid
 // -----------------------------------------------------------------------------
 
@@ -185,13 +174,6 @@ $form-colors: (
 //
 // Component variables
 // -----------------------------------------------------------------------------
-
-
-// Components to load
-// -----------------------------------------------------------------------------
-
-// Specify, which components should be loaded
-$chaos-navbar: true !default;
 
 
 // Navbar
