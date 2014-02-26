@@ -9,7 +9,6 @@
 // -----------------------------------------------------------------------------
 @import 'normalize.scss/functions';
 @import 'variables';
-@import 'fonts';
 @import 'normalize.scss/normalize';
 @import 'core/mixins';
 @import 'core/utilities';
@@ -18,15 +17,16 @@
 
 // Optional modules
 // -----------------------------------------------------------------------------
-@import 'modules/grid';
-@import 'modules/buttons';
-@import 'modules/tables';
-@import 'modules/forms';
+@if $chaos-fonts   {@import 'modules/fonts';}
+@if $chaos-grid    {@import 'modules/grid';}
+@if $chaos-buttons {@import 'modules/buttons';}
+@if $chaos-tables  {@import 'modules/tables';}
+@if $chaos-forms   {@import 'modules/forms';}
 
 
 // Optional components
 // -----------------------------------------------------------------------------
-@import 'components/navbar';
+@if $chaos-navbar {@import 'components/navbar';}
 
 
 // Printing styles

@@ -7,20 +7,20 @@
 // -----------------------------------------------------------------------------
 
 // Gray colors
-$color-gray-darker:   lighten(#000, 13.5%);
-$color-gray-dark:     lighten(#000, 20%);
-$color-gray:          lighten(#000, 33.5%);
-$color-gray-light:    lighten(#000, 60%);
-$color-gray-lighter:  lighten(#000, 93.5%);
+$color-gray-darker:   lighten(#000, 13.5%) !default;
+$color-gray-dark:     lighten(#000, 20%)   !default;
+$color-gray:          lighten(#000, 33.5%) !default;
+$color-gray-light:    lighten(#000, 60%)   !default;
+$color-gray-lighter:  lighten(#000, 93.5%) !default;
 
 // Brand colors
-$color-brand-primary: #2980b9;
+$color-brand-primary: #2980b9 !default;
 
 // Layout colors
-$color-background:    #fff;
-$color-text:          $color-gray-dark;
-$color-selection:     lighten($color-brand-primary, 50%);
-$color-card:          #fff;
+$color-background:    #fff                               !default;
+$color-text:          $color-gray-dark                   !default;
+$color-selection:     lighten($color-brand-primary, 50%) !default;
+$color-card:          #fff                               !default;
 
 // Colors for batch-creating different elements
 $colors: (
@@ -30,7 +30,7 @@ $colors: (
   ('warning', #f39c12,              $color-background),
   ('danger',  #c0392b,              $color-background),
   ('muted',   $color-gray-light,    $color-background)
-);
+) !default;
 
 
 // Responsiveness
@@ -43,65 +43,65 @@ $breakpoints: (
   ('md' 62em 1.10 40rem), // 45rem
   ('lg' 75em 1.15 58rem), // 70rem
   ('xl' 90em 1.20 65rem)  // 85rem
-);
+) !default;
 
 
 // Elements
 // -----------------------------------------------------------------------------
 
 // Mark
-$mark-color-background:   $color-brand-primary;
-$mark-color-font:         #fff;
+$mark-color-background:   $color-brand-primary !default;
+$mark-color-font:         #fff                 !default;
 
 // Anchor
-$link-color:              $color-brand-primary;
+$link-color:              $color-brand-primary !default;
 
 // Horizontal rule
-$hr-color:                $color-gray;
+$hr-color:                $color-gray          !default;
 
 // Quotes
-$blockquote-color-border: $color-gray-darker;
+$blockquote-color-border: $color-gray-darker   !default;
 $q-quotes: (
   (fr, '«' '»' '“' '”'),
   (de, '„' '“' '‚' '‘'),
   (ja, '「' '」' '『' '』')
-);
+) !default;
 
 // Lists
-$list-inline-padding:     1em;
-$list-aligned-breakpoint: get($breakpoints, 'sm');
+$list-inline-padding:     1em                     !default;
+$list-aligned-breakpoint: get($breakpoints, 'sm') !default;
 
 // Pre
-$pre-lines:               10;
+$pre-lines:               10 !default;
 
 
 // Typography
 // -----------------------------------------------------------------------------
 
 // Font families presets
-$font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-serif:      Georgia, 'Times New Roman', Times, serif;
-$font-family-monospace:  Monaco, Menlo, Consolas, 'Courier New', monospace;
+$font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-serif:      Georgia, 'Times New Roman', Times, serif               !default;
+$font-family-monospace:  Monaco, Menlo, Consolas, 'Courier New', monospace      !default;
 
 // Specific families
-$font-family:            $font-family-sans-serif;
-$font-heading-family:    $font-family;
+$font-family:            $font-family-sans-serif !default;
+$font-heading-family:    $font-family            !default;
 
 // Central font-size / line-height
-$font-size:              .9em;
-$line-height:            1.7;
+$font-size:              .9em !default;
+$line-height:            1.7  !default;
 
 // Heading properties
-$font-heading-sizes:     2.65rem, 2.22rem, 1.71rem, 1.24rem, 1.20rem, 1.03rem;
-$font-heading-margin:    .5rem;
-$font-heading-weight:    700;
+$font-heading-sizes:     2.65rem, 2.22rem, 1.71rem, 1.24rem, 1.20rem, 1.03rem !default;
+$font-heading-margin:    .5rem                                                !default;
+$font-heading-weight:    700                                                  !default;
 
 
 // Various
 // -----------------------------------------------------------------------------
 
 // Central animation specification
-$animation-spec: .3s ease-out;
+$animation-spec: .3s ease-out !default;
 
 
 //
@@ -109,14 +109,25 @@ $animation-spec: .3s ease-out;
 // -----------------------------------------------------------------------------
 
 
+// Modules to load
+// -----------------------------------------------------------------------------
+
+// Specify, which modules should be loaded
+$chaos-fonts:   true !default;
+$chaos-grid:    true !default;
+$chaos-buttons: true !default;
+$chaos-tables:  true !default;
+$chaos-forms:   true !default;
+
+
 // Grid
 // -----------------------------------------------------------------------------
 
 // Gutter between the grid-cells
-$grid-gutter:  .5rem;
+$grid-gutter:  .5rem !default;
 
 // Column base numbers that should be generated
-$grid-columns: 5, 12;
+$grid-columns: 5, 12 !default;
 
 
 // Buttons
@@ -127,40 +138,40 @@ $button-sizes: (
   ('lg', 1.2em),
   ('sm', .9em),
   ('xs', .75em)
-);
+) !default;
 
 // Base colors for default button and inverted button
-$button-color-background: #fff;
-$button-color-font:       $color-gray-dark;
+$button-color-background: #fff             !default;
+$button-color-font:       $color-gray-dark !default;
 
 
 // Tables
 // -----------------------------------------------------------------------------
 
 // Base padding for cells
-$table-padding:               .4em;
+$table-padding:               .4em !default;
 
 // Minimal width for responsive table
-$table-responsive-breakpoint: get($breakpoints, 'sm');
+$table-responsive-breakpoint: get($breakpoints, 'sm') !default;
 
 
 // Forms
 // -----------------------------------------------------------------------------
 
 // Minimal width for aligned form to expand
-$form-responsive-breakpoint:     $table-responsive-breakpoint;
+$form-responsive-breakpoint:     $table-responsive-breakpoint !default;
 
 // Sizes (Classname, font-size) for inputs
-$form-input-sizes:               $button-sizes;
+$form-input-sizes:               $button-sizes !default;
 
 // Background for required inputs (consider a light tinted red)
-$form-input-required-background: fade-out(get($colors, 'danger'), .9);
+$form-input-required-background: fade-out(get($colors, 'danger'), .9) !default;
 
 // Bottom-border-color of the fieldset
-$form-fieldset-color:            $hr-color;
+$form-fieldset-color:            $hr-color !default;
 
 // Padding for form groups, set to match grid gutter if combinations are used
-$form-group-padding:             $grid-gutter / 2;
+$form-group-padding:             $grid-gutter / 2 !default;
 
 // Colors to generate
 $form-colors: (
@@ -168,7 +179,7 @@ $form-colors: (
   ('success', get($colors, 'success')),
   ('warning', get($colors, 'warning')),
   ('danger', get($colors, 'danger'))
-);
+) !default;
 
 
 //
@@ -176,17 +187,24 @@ $form-colors: (
 // -----------------------------------------------------------------------------
 
 
+// Components to load
+// -----------------------------------------------------------------------------
+
+// Specify, which components should be loaded
+$chaos-navbar: true !default;
+
+
 // Navbar
 // -----------------------------------------------------------------------------
 
 // Backgrond color for the navbar (also base for border-color)
-$navbar-background: $color-gray-lighter;
+$navbar-background: $color-gray-lighter !default;
 
 // Viewport-size < this breakpoint will mean a collapsed navbar, if present
-$navbar-breakpoint: get($breakpoints, 'md');
+$navbar-breakpoint: get($breakpoints, 'md') !default;
 
 // Base color for text in the navbar
-$navbar-color:      $color-text;
+$navbar-color:      $color-text !default;
 
 
 // =============================================================================

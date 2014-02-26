@@ -3,37 +3,17 @@
   "cfgVersion": 1,
   "name": "Chaos-Fundamentum",
   "files": {
-    "2b570bd4": {
-      "id": "2b570bd4",
+    "d012276e": {
+      "id": "d012276e",
       "pid": "d6fe14e0",
       "name": "chaos.js",
-      "input": "js\\chaos.js",
-      "customOutput": "chaos.js",
+      "input": "chaos.js",
+      "customOutput": false,
       "type": "Js",
       "config": {
         "autoCompile": true,
-        "uglify": false,
+        "uglify": true,
         "mangle": true,
-        "sourcemaps": false
-      }
-    },
-    "2fab38d2": {
-      "id": "2fab38d2",
-      "pid": "d6fe14e0",
-      "name": "chaos.scss",
-      "input": "css\\chaos.scss",
-      "customOutput": "chaos.css",
-      "type": "Scss",
-      "config": {
-        "autoCompile": true,
-        "lineNumbers": false,
-        "unixNewlines": false,
-        "debug": false,
-        "compass": false,
-        "fullCompass": false,
-        "compassConfigRb": false,
-        "outputStyle": "expanded",
-        "autoprefixer": true,
         "sourcemaps": false
       }
     },
@@ -45,7 +25,7 @@
       "customOutput": false,
       "type": "Scss",
       "config": {
-        "autoCompile": false,
+        "autoCompile": true,
         "lineNumbers": false,
         "unixNewlines": false,
         "debug": false,
@@ -53,15 +33,15 @@
         "fullCompass": false,
         "compassConfigRb": false,
         "outputStyle": "expanded",
-        "autoprefixer": false,
+        "autoprefixer": true,
         "sourcemaps": false
       }
     },
-    "5de6de15": {
-      "id": "5de6de15",
+    "2fab38d2": {
+      "id": "2fab38d2",
       "pid": "d6fe14e0",
-      "name": "demo.scss",
-      "input": "demo.scss",
+      "name": "chaos.scss",
+      "input": "css\\chaos.scss",
       "customOutput": false,
       "type": "Scss",
       "config": {
@@ -77,20 +57,6 @@
         "sourcemaps": false
       }
     },
-    "d012276e": {
-      "id": "d012276e",
-      "pid": "d6fe14e0",
-      "name": "chaos.js",
-      "input": "chaos.js",
-      "customOutput": "chaos.min.js",
-      "type": "Js",
-      "config": {
-        "autoCompile": false,
-        "uglify": true,
-        "mangle": true,
-        "sourcemaps": false
-      }
-    },
     "50f93988": {
       "id": "50f93988",
       "pid": "d6fe14e0",
@@ -99,7 +65,7 @@
       "customOutput": false,
       "type": "Scss",
       "config": {
-        "autoCompile": false,
+        "autoCompile": true,
         "lineNumbers": false,
         "unixNewlines": false,
         "debug": false,
@@ -107,32 +73,20 @@
         "fullCompass": false,
         "compassConfigRb": false,
         "outputStyle": "expanded",
-        "autoprefixer": false,
-        "sourcemaps": false
-      }
-    },
-    "5e14bcef": {
-      "id": "5e14bcef",
-      "pid": "d6fe14e0",
-      "name": "print.scss",
-      "input": "css\\normalize.scss\\print.scss",
-      "customOutput": false,
-      "type": "Scss",
-      "config": {
-        "autoCompile": false,
-        "lineNumbers": false,
-        "unixNewlines": false,
-        "debug": false,
-        "compass": false,
-        "fullCompass": false,
-        "compassConfigRb": false,
-        "outputStyle": "expanded",
-        "autoprefixer": false,
+        "autoprefixer": true,
         "sourcemaps": false
       }
     }
   },
   "imports": {
+    "ff580e80": {
+      "id": "ff580e80",
+      "pid": "d6fe14e0",
+      "path": "css\\normalize.scss\\_functions.scss",
+      "parents": [
+        "2fab38d2"
+      ]
+    },
     "c6535344": {
       "id": "c6535344",
       "pid": "d6fe14e0",
@@ -145,6 +99,14 @@
       "id": "df365850",
       "pid": "d6fe14e0",
       "path": "css\\fonts.scss",
+      "parents": [
+        "2fab38d2"
+      ]
+    },
+    "50f93988": {
+      "id": "50f93988",
+      "pid": "d6fe14e0",
+      "path": "css\\normalize.scss\\normalize.scss",
       "parents": [
         "2fab38d2"
       ]
@@ -213,46 +175,6 @@
         "2fab38d2"
       ]
     },
-    "67502d12": {
-      "id": "67502d12",
-      "pid": "d6fe14e0",
-      "path": "js\\modules\\performance.js",
-      "parents": [
-        "2b570bd4"
-      ]
-    },
-    "03c50cce": {
-      "id": "03c50cce",
-      "pid": "d6fe14e0",
-      "path": "js\\modules\\collapse.js",
-      "parents": [
-        "2b570bd4"
-      ]
-    },
-    "44a4fc23": {
-      "id": "44a4fc23",
-      "pid": "d6fe14e0",
-      "path": "js\\vendor\\fastclick.js",
-      "parents": [
-        "2b570bd4"
-      ]
-    },
-    "ff580e80": {
-      "id": "ff580e80",
-      "pid": "d6fe14e0",
-      "path": "css\\normalize.scss\\_functions.scss",
-      "parents": [
-        "2fab38d2"
-      ]
-    },
-    "50f93988": {
-      "id": "50f93988",
-      "pid": "d6fe14e0",
-      "path": "css\\normalize.scss\\normalize.scss",
-      "parents": [
-        "2fab38d2"
-      ]
-    },
     "5e14bcef": {
       "id": "5e14bcef",
       "pid": "d6fe14e0",
@@ -264,7 +186,7 @@
   },
   "images": {},
   "config": {
-    "watch": true,
+    "watch": false,
     "liveRefresh": true,
     "liveRefreshDelay": 0,
     "filterPatterns": ".md",
