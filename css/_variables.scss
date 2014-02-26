@@ -201,15 +201,15 @@ $navbar-color:      $color-text !default;
 // -----------------------------------------------------------------------------
 
 // Modifies appropriate normalize.scss variables to match the Chaos' ones.
-$normalize-ie-support:           10;
-$normalize-font-family:          $font-family;
-$normalize-background:           $color-background;
-$normalize-color:                $color-text;
-$normalize-h1-care:              false;
-$normalize-code-font-family:     $font-family-monospace;
-$normalize-searchfield-nerf:     false;
-$normalize-hr-color:             $hr-color;
-$normalize-selection-background: lighten($color-brand-primary, 50%);
-$normalize-mark-background:      $mark-color-background;
-$normalize-mark-color:           $mark-color-font;
-$normalize-link-larger:          true;
+$normalize-ie-support:           10                                 !default;
+$normalize-font-family:          $font-family                       !default;
+$normalize-background:           $color-background                  !default;
+$normalize-color:                $color-text                        !default;
+$normalize-h1-care:              false                              !default;
+$normalize-code-font-family:     $font-family-monospace             !default;
+$normalize-searchfield-nerf:     false                              !default;
+$normalize-hr-color:             $hr-color                          !default;
+$normalize-selection-background: lighten($color-brand-primary, 50%) !default;
+$normalize-mark-background:      $mark-color-background             !default;
+$normalize-mark-color:           $mark-color-font                   !default;
+$normalize-link-larger:          true                               !default;
